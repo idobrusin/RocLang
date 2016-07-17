@@ -1,0 +1,47 @@
+{
+  "movements": [
+    {
+      "motions": [
+        {
+          "action_unit": "55",
+          "intensity": "B",
+          "duration": 1000,
+          "duration_unit": "milliseconds"
+        }
+      ]
+    },
+    {
+      "motions": [
+        {
+          "action_unit": "56",
+          "intensity": "B",
+          "duration": 500,
+          "duration_unit": "milliseconds"
+        }
+      ]
+    },
+    {
+      "motions": [
+        {
+          "action_unit": "55",
+          "intensity": "A",
+          "duration": 1000,
+          "duration_unit": "milliseconds"
+        }
+      ]
+    },
+    {
+      "motions": [
+        {
+          "action_unit": "56",
+          "intensity": "E",
+          "duration": 1000,
+          "duration_unit": "milliseconds"
+        }
+      ]
+    }
+  ]
+}
+
+
+
