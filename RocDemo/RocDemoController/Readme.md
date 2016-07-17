@@ -1,39 +1,3 @@
-### Eclipse notes:
-For Development:
-Tested with Eclipse Mars
-Install Xtext
-Install Eclipse Plug-in Development Environment
-
-
-### Eclipse Installation plugin
-Export all projects as zip.
-Place in eclipse dropins/ folder and extract.
-(Jars should be located in folder dropins/plugins)
-Restart eclipse with -clean option
-
-Alternative:
-https://charandeepmatta.com/2012/09/01/how-to-generate-eclipse-plugin-for-your-dsl-written-in-xtext/
-
-Create update-site project.
-Use update site project to deploy project.
-Open site.xml and press build all to rebuild update site folder.
-To import use Install new Softwar and add new Local update site. Choose folder of update site project.
-
-Note: When asked to convert projet to Xtext project, press Yes!
-#### Relevant classes:
-Project:
-    robot.control.RoC
-        src/ folder
-        robot.control.conversion
-            MovementConverter
-                Converts movements to json
-        robot.control.conversion
-            RocGenerator
-                Calls movementConverter to convert movemnts.
-
-    robot.control.Roc.ui
-        robot.control.ui.contentassist.RocProposalProvider
-            Provides autocomplete functionalitiy.
 
 #### When using the Roc plugin:
     Create src-gen folder.
@@ -42,7 +6,7 @@ Project:
 
 
 
-i# Robot Control (RoC)
+# Robot Control (RoC)
 This project is part of the RoC ecosystem is intendet to be used as a reference implementation for controling a robot.
 
 ### Dependencies
