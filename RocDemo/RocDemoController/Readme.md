@@ -1,65 +1,78 @@
+# Demonstration project for Robot control language
+This project contains a demonstration system for the robot control language and contains two subproject. The Arduino demo contains code to program an Arduino to receive [ROS](http://www.ros.org/) messages, which are then translated to servo angles.
+The demo controller uses the ROS messaging mechanism to send commands to either a RVIZ demo or an Arduino.
 
-#### When using the Roc plugin:
-    Create src-gen folder.
-    When saving a .roc file, the generator will create a json file in the src-gen folder.
-    Use watchdog to listen to changes in that folder.
+## Controller
+### Prerequisites
+#### Robot control language
+Install the Roc Eclipse plugin. When saving a `.roc` file in Eclipse, the parser will create a `JSON` file in the src-gen directory.
+#### Dependencies
 
+##### ROS:
+The project requires a ROS installation (tested with ROS indigo).
+##### Rosserial
+`rosserial` is used for the communication between the Arduino and the controlling computer.
+##### python packages:
+  * `yaml`
+  * `watchdog`
+  * `rospy`
 
+### Usage
+The controller demonstration has two main python scripts, both of which create a ROS node.
 
-# Robot Control (RoC)
-This project is part of the RoC ecosystem is intendet to be used as a reference implementation for controling a robot.
+Before using the demonstration system an instance of ROS has to run. Start ROS with the `roscore` command in a Terminal.
 
-### Dependencies
-- ROS:
-Ros indigo has to be installed.
-- Rosserial
-rosserial is used for the communication between the components of the system.
-- python packages:
-yaml
-watchdog
-rospy
+#### Watchdog
+The watchdog script creates a file system watchdog, which should listen to changes in the Roc project `/src-gen` directory.
 
-
-
-### How to
-
-1. Run
+To start the watchdog run the script with the path of the Eclipse workspace location for `/src-gen`
+```bash
+python3 Watchdog.py <PATH_TO_SRC-GEN>
 ```
-roscore
-```
 
-2. cd into MessageController dir
-3. Run
-```
-	python3 Main.py
-```
-Troubleshooting:
-When watchdog does not register change events, check if editor is modifiying file. Some Editors swap a copy in place, rendering the watchdog useless.
-4. Run
-```
-	python3 Scheduler.py
-```
-5. subscribe to /joint_command topic to see output
-6. Edit json file and save
-7. Message should be send and can be seen
-	rostopic list /joint_command
+When a file change is registered, the watchdogs send a ROS message with the file content to following topic: <TODO>
 
-### How to Arduino
-Forward topics to arduino via command:
+###### Command line arguments
+Run `python3 Watchdog.py --help ` to see a complete list of arguments.
+
+###### Troubleshooting
+Some editors don't save files upon saving, but instead replace the file with a cached file. When using the watchdog without Eclipse, make sure that the editor performs a modification on the file, otherwise changes will not be registered. Known editors with this behaviour: vim and gedit. It is possible to change this behaviour in the editor settings.
+
+#### Scheduler
+The scheduler subribes to the <TODO> ROS topic and adds them to a queue, which is then used to send the movement commands to the robot or simulation at the correct time.
+The ROS topic <TODO> is used to encode the command.
+
+## Joint state command
+The interface between the controller and the robot is defined by the ROS `/Joint_State` topic definition.
+
+## Robot (Arduino) and Simulation
+Currentlly it is possible to control a real robot via Arduino or a 3D simulation.
+
+### Arduino
+Start rosserial in order to forward messages to Arduino
 ```
-rosrun rosserial_python serial_node.py /dev/tty.usbmodemFD121
+rosrun rosserial_python serial_node.py <DEVICE_LOCATION>
 ```
-where dev/tty.usbmodemFD121 is the usb port of arduino
+Some possible device locations:
 
+Mac OS X: `/dev/tty.usbmodemFD121`
 
-To program the Arduino, rosserial must be installed and installed in the sketchbook/libraries folder.
-http://wiki.ros.org/rosserial_arduino/Tutorials/Arduino%20IDE%20Setup
+Ubunutu : `/dev/ttyACM0`
 
-Fix permissions for /dev/ttyACM0
+#### Install rosserial
+To program the Arduino, `rosserial` must be installed and installed in the sketchbook/libraries folder.
+[Installation instructions](http://wiki.ros.org/rosserial_arduino/Tutorials/Arduino%20IDE%20Setup)
+
+#### Troubleshooting
+#### Permission denied for USB device (Ubuntu Linux)
 http://arduino-er.blogspot.de/2014/08/arduino-ide-error-avrdude-seropen-cant.html
 
-$ sudo usermod -a -G dialout <username>
-$ sudo chmod a+rw /dev/ttyACM0
+```bash
+sudo usermod -a -G dialout <username>
+```
 
-### Limitations
-Language is stateful, so every action unit stays on its position until changed by new command.
+```bash
+sudo chmod a+rw /dev/ttyACM0
+```
+### Simulation
+TODO
