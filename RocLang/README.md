@@ -8,7 +8,7 @@ Important note: When using the plugin, Eclipse askes if the project should be co
 ### Install via update site
   * Open Help -> Install new Software.
   * Click add to add a repository
-  * Use the following URL: https://github.com/idobrusin/RocLang/raw/master/RocLang/robot.control.roc.parent/robot.control.roc.update-site
+  * Use the following URL: https://github.com/idobrusin/RocLang/raw/master/RocLang/robotcontrol.parent/robotcontrol.update-site
   * Install Roc feature and restart Eclipse.
   * Confirm with yes, when asked to convert project to Xtext project.
 
@@ -21,7 +21,7 @@ Restart eclipse with -clean option
 ## Language development
 The language is based on the Eclipse Xtext Project, and can be developed in Eclipse.
 
-To launch a development instance of Eclipse where the language is installed, right-click on the roc project (robot.control.roc) and select 
+To launch a development instance of Eclipse where the language is installed, right-click on the roc project (robot.control.roc) and select
 
 ### Dependencies
   * Xtext Plugin ([download and instructions](https://eclipse.org/Xtext/download.html "Xtext download"))
@@ -32,13 +32,13 @@ Note: tested with Eclipse Mars, will probably also work with other Eclipse Versi
 ### Development
 
 #### Changing the language grammar
-The language grammar is defined in [Roc.xtext](./robot.control.roc.parent/robot.control.roc/src/robot/control/Roc.xtext).
+The language grammar is defined in [Roc.xtext](./robotcontrol.roc.parent/robot.control.roc/src/robot/control/Roc.xtext).
 After changing the grammar, the Xtext artifact need to be (re-) generated (Right-click on `Roc.xtext` -> `Run As` -> `Generate Xtext Artifacts`). This will auto generate the model classes used by the parser.
 
 #### Changing the ouput format
-The language plugin uses an [converter](./robot.control.roc.parent/robot.control.roc/src/robot/control/conversion/MovementConverter.java) to convert the abstract syntax tree (AST) to a `JSON` file. This behaviour can be changed in the future. The converter traverses the AST and converts the object properties to a `JSON` object and writes the result to the `/src-gen` folder (default behaviour, can be changed via Eclipse Settings when using the plugin).
+The language plugin uses an [converter](./robotcontrol.roc.parent/robot.control.roc/src/robot/control/conversion/MovementConverter.java) to convert the abstract syntax tree (AST) to a `JSON` file. This behaviour can be changed in the future. The converter traverses the AST and converts the object properties to a `JSON` object and writes the result to the `/src-gen` folder (default behaviour, can be changed via Eclipse Settings when using the plugin).
 
-The generation itself is handled by the [generator class](./robot.control.roc.parent/robot.control.roc/src/robot/generator/RocGenerator.xtend).
+The generation itself is handled by the [generator class](./robotcontrol.roc.parent/robot.control.roc/src/robot/generator/RocGenerator.xtend).
 
 #### Update update-site
 To update the update site, open the site.xml file in Eclipse and press build all to rebuild the update site folder.
