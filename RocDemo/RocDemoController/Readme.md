@@ -39,14 +39,14 @@ Run `python3 Watchdog.py --help ` to see a complete list of arguments.
 Some editors don't save files upon saving, but instead replace the file with a cached file. When using the watchdog without Eclipse, make sure that the editor performs a modification on the file, otherwise changes will not be registered. Known editors with this behaviour: vim and gedit. It is possible to change this behaviour in the editor settings.
 
 #### Scheduler
-The scheduler subribes to the <TODO> ROS topic and adds them to a queue, which is then used to send the movement commands to the robot or simulation at the correct time.
-The ROS topic <TODO> is used to encode the command.
+The scheduler subribes to the `/roc_message` ROS topic and adds them to a queue, which is then used to send the movement commands to the robot or simulation at the correct time.
+The ROS topic `/joint_command` with the message type `sensor_msgs/JointState` is used to encode the command.
 
 ## Joint state command
-The interface between the controller and the robot is defined by the ROS `/Joint_State` topic definition.
+The interface between the controller and the robot is defined by the ROS `/joint_command` topic definition.
 
-## Robot (Arduino) and Simulation
-Currentlly it is possible to control a real robot via Arduino or a 3D simulation.
+## Inmoov Robot (Arduino) and Inmoov Simulation
+Currentlly it is possible to control a real robot via Arduino or a 3D simulation of the robot InMoov.
 
 ### Arduino
 Start rosserial in order to forward messages to Arduino
@@ -75,4 +75,32 @@ sudo usermod -a -G dialout <username>
 sudo chmod a+rw /dev/ttyACM0
 ```
 ### Simulation
-TODO
+
+#### Configuration:
+  - git clone https://github.com/alansrobotlab/inmoov_ros.git in the catkin workspace src folder, so in the end, the src folder contains inmoov_description etc.
+```bash
+    cd <catkin workspace>
+    catkin_make
+	catkin_install
+	source ./devel/setup.bash
+```
+Note: source the /devel/setup.bash in your .bashrc, otherwise these steps need to performed each time you want to run the simulation.
+
+#### Subscribe to joint commands
+To see joint published joint commands use the following subscriber:
+```bash
+	rostopic echo joint_states sensor_msgs/JointState
+```
+
+#### Run simulation
+```bash
+	cd <catkin_ws>/src/inmoov_description
+	roslaunch inmoov_description display.launch model:=robots/inmoov.urdf gui:=True
+```
+
+#### Send command to simulation
+You can either use the GUI or send a command via Terminal
+To send a command via terminal use the following command:
+```bash
+rostopic pub -r 20 /joint_command sensor_msgs/JointState '{header: auto, name: [''], position: [], velocity: [], effort: []}'
+```
