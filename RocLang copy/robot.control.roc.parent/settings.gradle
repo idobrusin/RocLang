@@ -1,3 +1,0 @@
-include 'robot.control.roc'
-include 'robot.control.roc.ide'
-include 'robot.control.roc.idea'
