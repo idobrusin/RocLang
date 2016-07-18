@@ -20,9 +20,10 @@ Also each command can have an intensity, so the robot will move to some extend. 
   - `maximum`
 
 When no intensity is provided, `pronounced` is used as a default value.  
-Each command must have a duration, which has the following form: `for <duration> <unit>`.
+Each command must have a duration, which has the following form: `for <duration> <unit>`.  
 Commands can also be chained toghether with the keyword `and` and will be executed in parallel.
-All commands have to end with a period (`.`).
+All commands have to end with a period (`.`).  
+
 Here is an example command in Roc:
 ```
 slightly turn head left for 1000 milliseconds and
