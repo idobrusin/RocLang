@@ -1,0 +1,93 @@
+<idea-plugin version="2">
+	<extensions defaultExtensionNs="org.eclipse.xtext.idea">
+		<package
+			uri="http://www.control.robot/Roc"
+			class="robot.control.roc.RocPackage"
+		/>
+		<resourceFactory 
+			type="roc"
+			class="org.eclipse.xtext.resource.IResourceFactory"
+			factoryClass="robot.control.idea.RocExtensionFactory"
+		/>
+		<resourceServiceProvider
+			uriExtension="roc"
+			class="org.eclipse.xtext.idea.resource.IResourceIdeaServiceProvider"
+			factoryClass="robot.control.idea.RocExtensionFactory"
+		/>
+
+		<lang.setup
+			language="robot.control.Roc"
+			implementationClass="robot.control.idea.RocIdeaSetup"
+		/>
+	</extensions>
+
+	<extensions defaultExtensionNs="com.intellij">
+		<psi.treeChangePreprocessor implementation="robot.control.idea.lang.psi.RocCodeBlockModificationListener"/>
+
+		<fileTypeFactory implementation="robot.control.idea.lang.RocFileTypeFactory"/>
+		<stubElementTypeHolder class="robot.control.idea.lang.RocElementTypeProvider"/>
+		<lang.ast.factory 
+			language="robot.control.Roc"
+			factoryClass="robot.control.idea.RocExtensionFactory"
+			implementationClass="org.eclipse.xtext.idea.lang.BaseXtextASTFactory"
+		/>
+		<lang.parserDefinition 
+			language="robot.control.Roc"
+			factoryClass="robot.control.idea.RocExtensionFactory"
+			implementationClass="robot.control.idea.lang.parser.RocParserDefinition"
+		/>
+		<lang.findUsagesProvider 
+			language="robot.control.Roc"
+			factoryClass="robot.control.idea.RocExtensionFactory"
+			implementationClass="org.eclipse.xtext.idea.findusages.BaseXtextFindUsageProvider"
+		/>
+		<lang.refactoringSupport 
+			language="robot.control.Roc"
+			factoryClass="robot.control.idea.RocExtensionFactory"
+			implementationClass="org.eclipse.xtext.idea.refactoring.BaseXtextRefactoringSupportProvider"
+		/>
+		<lang.namesValidator 
+			language="robot.control.Roc"
+			factoryClass="robot.control.idea.RocExtensionFactory"
+			implementationClass="com.intellij.lang.refactoring.NamesValidator"
+		/>
+		<lang.syntaxHighlighterFactory key="robot.control.Roc" implementationClass="robot.control.idea.highlighting.RocSyntaxHighlighterFactory" />
+		<lang.braceMatcher 
+			language="robot.control.Roc"
+			factoryClass="robot.control.idea.RocExtensionFactory"
+			implementationClass="com.intellij.lang.PairedBraceMatcher"
+		/>
+		<annotator 
+			language="robot.control.Roc"
+			factoryClass="robot.control.idea.RocExtensionFactory"
+			implementationClass="org.eclipse.xtext.idea.annotation.IssueAnnotator"
+		/>
+		<completion.contributor language="robot.control.Roc" implementationClass="robot.control.idea.completion.RocCompletionContributor"/>
+		<pom.declarationSearcher implementation="robot.control.idea.lang.pom.RocPomDeclarationSearcher"/>
+
+		<lang.psiStructureViewFactory 
+			language="robot.control.Roc"
+			factoryClass="robot.control.idea.RocExtensionFactory"
+			implementationClass="com.intellij.lang.PsiStructureViewFactory"
+		/>
+		<facetType implementation="robot.control.idea.facet.RocFacetType"/>
+		<lang.documentationProvider 
+			language="robot.control.Roc"
+			factoryClass="robot.control.idea.RocExtensionFactory"
+			implementationClass="org.eclipse.xtext.idea.documentation.IdeaDocumentationProvider"
+		/>
+		<colorSettingsPage implementation="robot.control.idea.highlighting.RocColorSettingsPage"/>
+		<highlightVisitor implementation="robot.control.idea.highlighting.RocSemanticHighlightVisitor"/>
+
+		<lang.formatter 
+			language="robot.control.Roc"
+			factoryClass="robot.control.idea.RocExtensionFactory"
+			implementationClass="com.intellij.formatting.FormattingModelBuilder"
+		/>
+		<lang.commenter 
+			language="robot.control.Roc"
+			factoryClass="robot.control.idea.RocExtensionFactory"
+			implementationClass="com.intellij.lang.CodeDocumentationAwareCommenter"
+		/>
+	</extensions>
+</idea-plugin>

@@ -1,0 +1,83 @@
+grammar robot.control.Roc with org.eclipse.xtext.common.Terminals
+
+generate roc "http://www.control.robot/Roc"
+
+Program hidden(WS, ML_COMMENT, SL_COMMENT):
+	(movements+=Movement)*;
+
+Movement hidden(WS, ML_COMMENT, SL_COMMENT):
+	motions+=Motion(AND motions+=Motion)* PERIOD;
+
+Motion:
+	action=Action FOR duration=Duration durationUnit=DurationUnit;
+
+Action:
+    actionHolder=CompleteAction
+    | (intensity=Intensity)? actionHolder=SingleAction
+    | (intensity=Intensity)? actionHolder=DirectedAction;
+
+// Intensity------------------------------------------------------------------------
+enum Intensity:
+	  C='pronounced'
+    | A='trace of'
+    | B='slightly'
+    | D='severe'
+    | E='maximum';
+
+// Actions ------------------------------------------------------------------------
+CompleteAction:
+    actionName='neutral' 'face';
+
+SingleAction:
+      actionName='drop jaw'
+    | actionName='nod Head';
+
+DirectedAction:
+      actionName=LeftRightDirectedAction direction=LeftRightDirection
+    | actionName=BackForthDirectedAction direction=BackForthDirection
+    | actionName=FullDirectedAction direction=Direction;
+
+LeftRightDirectedAction:
+      tiltHead='tilt' 'head';
+
+LeftRightDirection:
+      left='left'
+    | right='right';
+
+BackForthDirectedAction:
+      head='head';
+
+BackForthDirection:
+      back='back'
+    | forth='forth';
+
+FullDirectedAction:
+      turnHead='turn' 'head'
+    | turnEyes='turn' 'eyes';
+
+Direction:
+      UP='up'
+    | DOWN='down'
+    | LEFT='left'
+    | RIGHT='right';
+
+
+// Duration ------------------------------------------------------------------------
+terminal Duration:
+	INT;
+
+enum DurationUnit:
+	  MILLISECONDS='milliseconds'
+	| SECONDS='seconds'
+	| MINUTES='minutes';
+
+// Keywords ------------------------------------------------------------------------
+terminal FOR:
+	'for';
+
+terminal AND:
+	'and';
+
+// Punctuation ---------------------------------------------------------------------
+terminal PERIOD:
+	'.';

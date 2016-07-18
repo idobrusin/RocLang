@@ -15,7 +15,6 @@ import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
 import org.eclipse.xtext.xbase.lib.Exceptions;
-import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 import robotcontrol.conversion.MovementConverter;
 import robotcontrol.roc.Movement;
@@ -35,19 +34,10 @@ public class RocGenerator extends AbstractGenerator {
       String _lastSegment = _uRI.lastSegment();
       String _replace = _lastSegment.replace(".roc", ".json");
       StringConcatenation _builder = new StringConcatenation();
-      _builder.newLine();
-      TreeIterator<EObject> _allContents = resource.getAllContents();
-      Iterator<Program> _filter = Iterators.<Program>filter(_allContents, Program.class);
-      Iterable<Program> test = IteratorExtensions.<Program>toIterable(_filter);
-      _builder.newLineIfNotEmpty();
-      int _size = IterableExtensions.size(test);
-      String _string = Integer.valueOf(_size).toString();
-      _builder.append(_string, "");
-      _builder.newLineIfNotEmpty();
       {
-        TreeIterator<EObject> _allContents_1 = resource.getAllContents();
-        Iterator<Program> _filter_1 = Iterators.<Program>filter(_allContents_1, Program.class);
-        Iterable<Program> _iterable = IteratorExtensions.<Program>toIterable(_filter_1);
+        TreeIterator<EObject> _allContents = resource.getAllContents();
+        Iterator<Program> _filter = Iterators.<Program>filter(_allContents, Program.class);
+        Iterable<Program> _iterable = IteratorExtensions.<Program>toIterable(_filter);
         for(final Program program : _iterable) {
           EList<Movement> _movements = program.getMovements();
           String _convertMovements = MovementConverter.convertMovements(_movements);

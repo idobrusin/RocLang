@@ -1,4 +1,35 @@
 # Robot Control language - Language project
+## Usage
+Follow install instructions to use the language.
+
+The language has a sentence like syntax, where you can write the command which should be performed. Currently commands for moving a robot head are implemented.  
+A command has the following base form:
+`<intensity> <action> <direction> for <duration> <unit>.`  
+Commands consist of the following base actions:
+  - `turn head`
+  - `tilt head`
+  - `turn eyes`
+  - `drop jaw`
+
+Some commands have a direction, when it makes sence (left, right, up, down).  
+Also each command can have an intensity, so the robot will move to some extend. The intesities are (in order from low to high):
+  - `trace of`
+  - `slightly`
+  - `pronounced`
+  - `severe`
+  - `maximum`
+
+When no intensity is provided, `pronounced` is used as a default value.  
+Each command must have a duration, which has the following form: `for <duration> <unit>`.
+Commands can also be chained toghether with the keyword `and` and will be executed in parallel.
+All commands have to end with a period (`.`).
+Here is an example command in Roc:
+```
+slightly turn head left for 1000 milliseconds and
+severe turn eyes right for 1000 milliseconds.
+maximum drop jaw for 1000 milliseconds.
+```
+
 ## Install Robot Control Language Eclipse Plugin
 The language can be used via an Eclipse plugin.
 The are two possible methods to install the plugin: via an update site or as a manual plugin installation. It is recommended to use the first method.  

@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<feature id="robotcontrol.feature"
-	label="Roc Feature "
-	version="1.0.0.qualifier">
-	<plugin
-			id="robotcontrol"
-			download-size="0"
-			install-size="0"
-			version="0.0.0"
-			unpack="false"/>
-	<plugin
-			id="robotcontrol.ide"
-			download-size="0"
-			install-size="0"
-			version="0.0.0"
-			unpack="false"/>
-	<plugin
-			id="robotcontrol.ui"
-			download-size="0"
-			install-size="0"
-			version="0.0.0"
-			unpack="false"/>
+<feature
+      id="robotcontrol.roc"
+      label="Roc Language"
+      version="1.0.0.qualifier">
+
+   <plugin
+         id="robotcontrol"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="robotcontrol.ide"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="robotcontrol.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
 </feature>
