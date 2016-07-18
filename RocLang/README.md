@@ -23,8 +23,7 @@ The language is based on the Eclipse Xtext Project, and can be developed in Ecli
 
 Note: tested with Eclipse Mars, will probably also work with other Eclipse Versions.
 
-### Development:
-There are some important classes for the Robot Control language.
+### Development
 
 #### Changing the language grammar
 The language grammar is defined in [Roc.xtext](./robot.control.roc.parent/robot.control.roc/src/robot/control/Roc.xtext).
@@ -35,7 +34,7 @@ The language plugin uses an [converter](./robot.control.roc.parent/robot.control
 
 The generation itself is handled by the [generator class](./robot.control.roc.parent/robot.control.roc/src/robot/generator/RocGenerator.xtend).
 
-##### Update update-site
+#### Update update-site
 To update the update site, open the site.xml file in Eclipse and press build all to rebuild the update site folder.
 
 
