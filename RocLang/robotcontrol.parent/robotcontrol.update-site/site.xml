@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/robotcontrol.feature_1.0.0.201607181259.jar" id="robotcontrol.feature" version="1.0.0.201607181259">
+      <category name="RobotControlLanguage"/>
+   </feature>
+   <category-def name="RobotControlLanguage" label="Robot Control Language">
+      <description>
+         Update site for the robot control language
+      </description>
+   </category-def>
+</site>

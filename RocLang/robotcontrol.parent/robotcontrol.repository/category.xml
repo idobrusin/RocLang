@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+	<feature id="robotcontrol.feature" version="0.0.0">
+		<category name="main"/>
+	</feature>
+	<feature id="robotcontrol.feature.source" version="0.0.0">
+		<category name="main.source"/>
+	</feature>
+	<category-def name="main" label="Roc"/>
+	<category-def name="main.source" label="Roc (Sources)"/>
+</site>

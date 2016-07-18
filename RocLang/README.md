@@ -6,7 +6,11 @@ The are two possible methods to install the plugin: via an update site or as a m
 Important note: When using the plugin, Eclipse askes if the project should be converted to a Xtext project. Press Yes, otherwise the code generation will not work properly.
 
 ### Install via update site
-TODO
+  * Open Help -> Install new Software.
+  * Click add to add a repository
+  * Use the following URL: https://github.com/idobrusin/RocLang/raw/master/RocLang/robot.control.roc.parent/robot.control.roc.update-site
+  * Install Roc feature and restart Eclipse.
+  * Confirm with yes, when asked to convert project to Xtext project.
 
 ### Manual install
 Export all projects as zip.
@@ -16,6 +20,8 @@ Restart eclipse with -clean option
 
 ## Language development
 The language is based on the Eclipse Xtext Project, and can be developed in Eclipse.
+
+To launch a development instance of Eclipse where the language is installed, right-click on the roc project (robot.control.roc) and select 
 
 ### Dependencies
   * Xtext Plugin ([download and instructions](https://eclipse.org/Xtext/download.html "Xtext download"))
