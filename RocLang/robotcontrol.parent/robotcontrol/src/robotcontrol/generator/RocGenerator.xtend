@@ -19,9 +19,6 @@ class RocGenerator extends AbstractGenerator {
 
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		   fsa.generateFile(resource.URI.lastSegment.replace(".roc", ".json"), ''' 
-            
-            «var test = resource.allContents.filter(Program).toIterable»
-            «test.size.toString»
             «FOR program : resource.allContents.filter(Program).toIterable»
             	«MovementConverter.convertMovements(program.movements)»
             «ENDFOR»
