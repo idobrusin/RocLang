@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/robotcontrol.feature_1.0.0.201607181259.jar" id="robotcontrol.feature" version="1.0.0.201607181259">
+   <feature url="features/robotcontrol.roc_1.0.0.201607181327.jar" id="robotcontrol.roc" version="1.0.0.201607181327">
       <category name="RobotControlLanguage"/>
    </feature>
    <category-def name="RobotControlLanguage" label="Robot Control Language">
