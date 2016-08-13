@@ -26,25 +26,25 @@ Servo servos[NUM_SERVOS];
 Joint* jointList[NUM_SERVOS];
 
 // TODO: Configure ports / pins
-int PIN_HEAD_TILT               = 9;
+int PIN_HEAD_TILT               = 1;
 int PIN_HEAD_UPDOWN             = 2;
 int PIN_HEAD_LEFTRIGHT          = 3;
-int PIN_EYES_UPDOWN             = 4;
-int PIN_EYE_LEFTRIGHT           = 5;
+int PIN_EYES_UPDOWN             = 10;
+int PIN_EYE_LEFTRIGHT           = 9;
 int PIN_JAW                     = 6;
 
 int MIN_ANGLE_HEAD_TILT         = 0;
 int MIN_ANGLE_HEAD_UPDOWN       = 0;
 int MIN_ANGLE_HEAD_LEFTRIGHT    = 0;
-int MIN_ANGLE_EYES_UPDOWN       = 0;
-int MIN_ANGLE_EYES_LEFTRIGHT    = 0;
+int MIN_ANGLE_EYES_UPDOWN       = 0;   // Correct
+int MIN_ANGLE_EYES_LEFTRIGHT    = 55;  // Correct
 int MIN_ANGLE_JAW               = 0;
 
 int MAX_ANGLE_HEAD_TILT         = 180;
 int MAX_ANGLE_HEAD_UPDOWN       = 180;
 int MAX_ANGLE_HEAD_LEFTRIGHT    = 180;
-int MAX_ANGLE_EYES_UPDOWN       = 180;
-int MAX_ANGLE_EYES_LEFTRIGHT    = 180;
+int MAX_ANGLE_EYES_UPDOWN       = 90;  // Correct
+int MAX_ANGLE_EYES_LEFTRIGHT    = 125; // Correct
 int MAX_ANGLE_JAW               = 180;
 
 
@@ -92,9 +92,6 @@ void servoCallback(const sensor_msgs::JointState &cmd_msg) {
             // Move servo to specified position
             servos[joint->servoIndex].write(joint->convertJointPositionToServoAngle(cmd_msg.position[i]));
         }
-
-//        Joint* joint = jointList[0];
-//        servos[joint->servoIndex].write(joint->convertJointPositionToServoAngle(cmd_msg.position[0]));
     }
     digitalWrite(13, HIGH - digitalRead(13));  //toggle led
 }
@@ -102,14 +99,15 @@ void servoCallback(const sensor_msgs::JointState &cmd_msg) {
 ros::Subscriber<sensor_msgs::JointState> sub("joint_command", servoCallback);
 
 void setup() {
-    Servo servo = Servo();
-    servo.attach(9,0, 180);
-    servo.write(0);
-//    pinMode(13, OUTPUT);
-//    nh.initNode();
-//    nh.subscribe(sub);
-//
-//    initServosJoints();
+//    Servo servo = Servo();
+//    servo.attach(9, 0, 180);
+//    servo.write(87);
+
+    pinMode(13, OUTPUT);
+    nh.initNode();
+    nh.subscribe(sub);
+
+    initServosJoints();
 }
 
 void loop() {

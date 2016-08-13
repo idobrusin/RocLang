@@ -105,24 +105,6 @@ public interface RocFactory extends EFactory
   LeftRightDirection createLeftRightDirection();
 
   /**
-   * Returns a new object of class '<em>Back Forth Directed Action</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Back Forth Directed Action</em>'.
-   * @generated
-   */
-  BackForthDirectedAction createBackForthDirectedAction();
-
-  /**
-   * Returns a new object of class '<em>Back Forth Direction</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Back Forth Direction</em>'.
-   * @generated
-   */
-  BackForthDirection createBackForthDirection();
-
-  /**
    * Returns a new object of class '<em>Full Directed Action</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -139,6 +121,15 @@ public interface RocFactory extends EFactory
    * @generated
    */
   Direction createDirection();
+
+  /**
+   * Returns a new object of class '<em>Speed</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Speed</em>'.
+   * @generated
+   */
+  Speed createSpeed();
 
   /**
    * Returns the package supported by this factory.

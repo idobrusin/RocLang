@@ -14,8 +14,6 @@ import org.eclipse.xtext.serializer.ISerializationContext;
 import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
-import robotcontrol.roc.BackForthDirectedAction;
-import robotcontrol.roc.BackForthDirection;
 import robotcontrol.roc.CompleteAction;
 import robotcontrol.roc.DirectedAction;
 import robotcontrol.roc.Direction;
@@ -27,6 +25,7 @@ import robotcontrol.roc.Movement;
 import robotcontrol.roc.Program;
 import robotcontrol.roc.RocPackage;
 import robotcontrol.roc.SingleAction;
+import robotcontrol.roc.Speed;
 import robotcontrol.services.RocGrammarAccess;
 
 @SuppressWarnings("all")
@@ -45,12 +44,6 @@ public class RocSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			switch (semanticObject.eClass().getClassifierID()) {
 			case RocPackage.ACTION:
 				sequence_Action(context, (robotcontrol.roc.Action) semanticObject); 
-				return; 
-			case RocPackage.BACK_FORTH_DIRECTED_ACTION:
-				sequence_BackForthDirectedAction(context, (BackForthDirectedAction) semanticObject); 
-				return; 
-			case RocPackage.BACK_FORTH_DIRECTION:
-				sequence_BackForthDirection(context, (BackForthDirection) semanticObject); 
 				return; 
 			case RocPackage.COMPLETE_ACTION:
 				sequence_CompleteAction(context, (CompleteAction) semanticObject); 
@@ -82,6 +75,9 @@ public class RocSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case RocPackage.SINGLE_ACTION:
 				sequence_SingleAction(context, (SingleAction) semanticObject); 
 				return; 
+			case RocPackage.SPEED:
+				sequence_Speed(context, (Speed) semanticObject); 
+				return; 
 			}
 		if (errorAcceptor != null)
 			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
@@ -95,36 +91,6 @@ public class RocSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (actionHolder=CompleteAction | (intensity=Intensity? actionHolder=SingleAction) | (intensity=Intensity? actionHolder=DirectedAction))
 	 */
 	protected void sequence_Action(ISerializationContext context, robotcontrol.roc.Action semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     BackForthDirectedAction returns BackForthDirectedAction
-	 *
-	 * Constraint:
-	 *     head='head'
-	 */
-	protected void sequence_BackForthDirectedAction(ISerializationContext context, BackForthDirectedAction semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, RocPackage.Literals.BACK_FORTH_DIRECTED_ACTION__HEAD) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RocPackage.Literals.BACK_FORTH_DIRECTED_ACTION__HEAD));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getBackForthDirectedActionAccess().getHeadHeadKeyword_0(), semanticObject.getHead());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     BackForthDirection returns BackForthDirection
-	 *
-	 * Constraint:
-	 *     (back='back' | forth='forth')
-	 */
-	protected void sequence_BackForthDirection(ISerializationContext context, BackForthDirection semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -152,11 +118,7 @@ public class RocSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DirectedAction returns DirectedAction
 	 *
 	 * Constraint:
-	 *     (
-	 *         (actionName=LeftRightDirectedAction direction=LeftRightDirection) | 
-	 *         (actionName=BackForthDirectedAction direction=BackForthDirection) | 
-	 *         (actionName=FullDirectedAction direction=Direction)
-	 *     )
+	 *     ((actionName=LeftRightDirectedAction direction=LeftRightDirection) | (actionName=FullDirectedAction direction=Direction))
 	 */
 	protected void sequence_DirectedAction(ISerializationContext context, DirectedAction semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -180,7 +142,7 @@ public class RocSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     FullDirectedAction returns FullDirectedAction
 	 *
 	 * Constraint:
-	 *     (turnHead='turn' | turnEyes='turn')
+	 *     (turnHead='turn head' | turnEyes='turn eyes')
 	 */
 	protected void sequence_FullDirectedAction(ISerializationContext context, FullDirectedAction semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -222,22 +184,10 @@ public class RocSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Motion returns Motion
 	 *
 	 * Constraint:
-	 *     (action=Action duration=Duration durationUnit=DurationUnit)
+	 *     ((action=Action duration=DURATION durationUnit=DurationUnit) | (action=Action speed=Speed))
 	 */
 	protected void sequence_Motion(ISerializationContext context, Motion semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, RocPackage.Literals.MOTION__ACTION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RocPackage.Literals.MOTION__ACTION));
-			if (transientValues.isValueTransient(semanticObject, RocPackage.Literals.MOTION__DURATION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RocPackage.Literals.MOTION__DURATION));
-			if (transientValues.isValueTransient(semanticObject, RocPackage.Literals.MOTION__DURATION_UNIT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RocPackage.Literals.MOTION__DURATION_UNIT));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getMotionAccess().getActionActionParserRuleCall_0_0(), semanticObject.getAction());
-		feeder.accept(grammarAccess.getMotionAccess().getDurationDurationTerminalRuleCall_2_0(), semanticObject.getDuration());
-		feeder.accept(grammarAccess.getMotionAccess().getDurationUnitDurationUnitEnumRuleCall_3_0(), semanticObject.getDurationUnit());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -270,9 +220,21 @@ public class RocSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     SingleAction returns SingleAction
 	 *
 	 * Constraint:
-	 *     (actionName='drop jaw' | actionName='nod Head')
+	 *     (actionName='drop jaw' | actionName='nod head')
 	 */
 	protected void sequence_SingleAction(ISerializationContext context, SingleAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Speed returns Speed
+	 *
+	 * Constraint:
+	 *     (SLOWEST='slowest' | SLOW='slow' | NORMAL='normal' | FAST='fast' | FULL='full')
+	 */
+	protected void sequence_Speed(ISerializationContext context, Speed semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

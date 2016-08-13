@@ -152,13 +152,22 @@ public interface RocPackage extends EPackage
   int MOTION__DURATION_UNIT = 2;
 
   /**
+   * The feature id for the '<em><b>Speed</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MOTION__SPEED = 3;
+
+  /**
    * The number of structural features of the '<em>Motion</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MOTION_FEATURE_COUNT = 3;
+  int MOTION_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link robotcontrol.roc.impl.ActionImpl <em>Action</em>}' class.
@@ -356,71 +365,6 @@ public interface RocPackage extends EPackage
   int LEFT_RIGHT_DIRECTION_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link robotcontrol.roc.impl.BackForthDirectedActionImpl <em>Back Forth Directed Action</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see robotcontrol.roc.impl.BackForthDirectedActionImpl
-   * @see robotcontrol.roc.impl.RocPackageImpl#getBackForthDirectedAction()
-   * @generated
-   */
-  int BACK_FORTH_DIRECTED_ACTION = 9;
-
-  /**
-   * The feature id for the '<em><b>Head</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BACK_FORTH_DIRECTED_ACTION__HEAD = 0;
-
-  /**
-   * The number of structural features of the '<em>Back Forth Directed Action</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BACK_FORTH_DIRECTED_ACTION_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link robotcontrol.roc.impl.BackForthDirectionImpl <em>Back Forth Direction</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see robotcontrol.roc.impl.BackForthDirectionImpl
-   * @see robotcontrol.roc.impl.RocPackageImpl#getBackForthDirection()
-   * @generated
-   */
-  int BACK_FORTH_DIRECTION = 10;
-
-  /**
-   * The feature id for the '<em><b>Back</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BACK_FORTH_DIRECTION__BACK = 0;
-
-  /**
-   * The feature id for the '<em><b>Forth</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BACK_FORTH_DIRECTION__FORTH = 1;
-
-  /**
-   * The number of structural features of the '<em>Back Forth Direction</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BACK_FORTH_DIRECTION_FEATURE_COUNT = 2;
-
-  /**
    * The meta object id for the '{@link robotcontrol.roc.impl.FullDirectedActionImpl <em>Full Directed Action</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -428,7 +372,7 @@ public interface RocPackage extends EPackage
    * @see robotcontrol.roc.impl.RocPackageImpl#getFullDirectedAction()
    * @generated
    */
-  int FULL_DIRECTED_ACTION = 11;
+  int FULL_DIRECTED_ACTION = 9;
 
   /**
    * The feature id for the '<em><b>Turn Head</b></em>' attribute.
@@ -465,7 +409,7 @@ public interface RocPackage extends EPackage
    * @see robotcontrol.roc.impl.RocPackageImpl#getDirection()
    * @generated
    */
-  int DIRECTION = 12;
+  int DIRECTION = 10;
 
   /**
    * The feature id for the '<em><b>UP</b></em>' attribute.
@@ -513,6 +457,70 @@ public interface RocPackage extends EPackage
   int DIRECTION_FEATURE_COUNT = 4;
 
   /**
+   * The meta object id for the '{@link robotcontrol.roc.impl.SpeedImpl <em>Speed</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see robotcontrol.roc.impl.SpeedImpl
+   * @see robotcontrol.roc.impl.RocPackageImpl#getSpeed()
+   * @generated
+   */
+  int SPEED = 11;
+
+  /**
+   * The feature id for the '<em><b>SLOWEST</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPEED__SLOWEST = 0;
+
+  /**
+   * The feature id for the '<em><b>SLOW</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPEED__SLOW = 1;
+
+  /**
+   * The feature id for the '<em><b>NORMAL</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPEED__NORMAL = 2;
+
+  /**
+   * The feature id for the '<em><b>FAST</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPEED__FAST = 3;
+
+  /**
+   * The feature id for the '<em><b>FULL</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPEED__FULL = 4;
+
+  /**
+   * The number of structural features of the '<em>Speed</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPEED_FEATURE_COUNT = 5;
+
+  /**
    * The meta object id for the '{@link robotcontrol.roc.Intensity <em>Intensity</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -520,7 +528,7 @@ public interface RocPackage extends EPackage
    * @see robotcontrol.roc.impl.RocPackageImpl#getIntensity()
    * @generated
    */
-  int INTENSITY = 13;
+  int INTENSITY = 12;
 
   /**
    * The meta object id for the '{@link robotcontrol.roc.DurationUnit <em>Duration Unit</em>}' enum.
@@ -530,7 +538,7 @@ public interface RocPackage extends EPackage
    * @see robotcontrol.roc.impl.RocPackageImpl#getDurationUnit()
    * @generated
    */
-  int DURATION_UNIT = 14;
+  int DURATION_UNIT = 13;
 
 
   /**
@@ -617,6 +625,17 @@ public interface RocPackage extends EPackage
    * @generated
    */
   EAttribute getMotion_DurationUnit();
+
+  /**
+   * Returns the meta object for the containment reference '{@link robotcontrol.roc.Motion#getSpeed <em>Speed</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Speed</em>'.
+   * @see robotcontrol.roc.Motion#getSpeed()
+   * @see #getMotion()
+   * @generated
+   */
+  EReference getMotion_Speed();
 
   /**
    * Returns the meta object for class '{@link robotcontrol.roc.Action <em>Action</em>}'.
@@ -778,59 +797,6 @@ public interface RocPackage extends EPackage
   EAttribute getLeftRightDirection_Right();
 
   /**
-   * Returns the meta object for class '{@link robotcontrol.roc.BackForthDirectedAction <em>Back Forth Directed Action</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Back Forth Directed Action</em>'.
-   * @see robotcontrol.roc.BackForthDirectedAction
-   * @generated
-   */
-  EClass getBackForthDirectedAction();
-
-  /**
-   * Returns the meta object for the attribute '{@link robotcontrol.roc.BackForthDirectedAction#getHead <em>Head</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Head</em>'.
-   * @see robotcontrol.roc.BackForthDirectedAction#getHead()
-   * @see #getBackForthDirectedAction()
-   * @generated
-   */
-  EAttribute getBackForthDirectedAction_Head();
-
-  /**
-   * Returns the meta object for class '{@link robotcontrol.roc.BackForthDirection <em>Back Forth Direction</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Back Forth Direction</em>'.
-   * @see robotcontrol.roc.BackForthDirection
-   * @generated
-   */
-  EClass getBackForthDirection();
-
-  /**
-   * Returns the meta object for the attribute '{@link robotcontrol.roc.BackForthDirection#getBack <em>Back</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Back</em>'.
-   * @see robotcontrol.roc.BackForthDirection#getBack()
-   * @see #getBackForthDirection()
-   * @generated
-   */
-  EAttribute getBackForthDirection_Back();
-
-  /**
-   * Returns the meta object for the attribute '{@link robotcontrol.roc.BackForthDirection#getForth <em>Forth</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Forth</em>'.
-   * @see robotcontrol.roc.BackForthDirection#getForth()
-   * @see #getBackForthDirection()
-   * @generated
-   */
-  EAttribute getBackForthDirection_Forth();
-
-  /**
    * Returns the meta object for class '{@link robotcontrol.roc.FullDirectedAction <em>Full Directed Action</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -915,6 +881,71 @@ public interface RocPackage extends EPackage
    * @generated
    */
   EAttribute getDirection_RIGHT();
+
+  /**
+   * Returns the meta object for class '{@link robotcontrol.roc.Speed <em>Speed</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Speed</em>'.
+   * @see robotcontrol.roc.Speed
+   * @generated
+   */
+  EClass getSpeed();
+
+  /**
+   * Returns the meta object for the attribute '{@link robotcontrol.roc.Speed#getSLOWEST <em>SLOWEST</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>SLOWEST</em>'.
+   * @see robotcontrol.roc.Speed#getSLOWEST()
+   * @see #getSpeed()
+   * @generated
+   */
+  EAttribute getSpeed_SLOWEST();
+
+  /**
+   * Returns the meta object for the attribute '{@link robotcontrol.roc.Speed#getSLOW <em>SLOW</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>SLOW</em>'.
+   * @see robotcontrol.roc.Speed#getSLOW()
+   * @see #getSpeed()
+   * @generated
+   */
+  EAttribute getSpeed_SLOW();
+
+  /**
+   * Returns the meta object for the attribute '{@link robotcontrol.roc.Speed#getNORMAL <em>NORMAL</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>NORMAL</em>'.
+   * @see robotcontrol.roc.Speed#getNORMAL()
+   * @see #getSpeed()
+   * @generated
+   */
+  EAttribute getSpeed_NORMAL();
+
+  /**
+   * Returns the meta object for the attribute '{@link robotcontrol.roc.Speed#getFAST <em>FAST</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>FAST</em>'.
+   * @see robotcontrol.roc.Speed#getFAST()
+   * @see #getSpeed()
+   * @generated
+   */
+  EAttribute getSpeed_FAST();
+
+  /**
+   * Returns the meta object for the attribute '{@link robotcontrol.roc.Speed#getFULL <em>FULL</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>FULL</em>'.
+   * @see robotcontrol.roc.Speed#getFULL()
+   * @see #getSpeed()
+   * @generated
+   */
+  EAttribute getSpeed_FULL();
 
   /**
    * Returns the meta object for enum '{@link robotcontrol.roc.Intensity <em>Intensity</em>}'.
@@ -1028,6 +1059,14 @@ public interface RocPackage extends EPackage
      * @generated
      */
     EAttribute MOTION__DURATION_UNIT = eINSTANCE.getMotion_DurationUnit();
+
+    /**
+     * The meta object literal for the '<em><b>Speed</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MOTION__SPEED = eINSTANCE.getMotion_Speed();
 
     /**
      * The meta object literal for the '{@link robotcontrol.roc.impl.ActionImpl <em>Action</em>}' class.
@@ -1162,50 +1201,6 @@ public interface RocPackage extends EPackage
     EAttribute LEFT_RIGHT_DIRECTION__RIGHT = eINSTANCE.getLeftRightDirection_Right();
 
     /**
-     * The meta object literal for the '{@link robotcontrol.roc.impl.BackForthDirectedActionImpl <em>Back Forth Directed Action</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see robotcontrol.roc.impl.BackForthDirectedActionImpl
-     * @see robotcontrol.roc.impl.RocPackageImpl#getBackForthDirectedAction()
-     * @generated
-     */
-    EClass BACK_FORTH_DIRECTED_ACTION = eINSTANCE.getBackForthDirectedAction();
-
-    /**
-     * The meta object literal for the '<em><b>Head</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute BACK_FORTH_DIRECTED_ACTION__HEAD = eINSTANCE.getBackForthDirectedAction_Head();
-
-    /**
-     * The meta object literal for the '{@link robotcontrol.roc.impl.BackForthDirectionImpl <em>Back Forth Direction</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see robotcontrol.roc.impl.BackForthDirectionImpl
-     * @see robotcontrol.roc.impl.RocPackageImpl#getBackForthDirection()
-     * @generated
-     */
-    EClass BACK_FORTH_DIRECTION = eINSTANCE.getBackForthDirection();
-
-    /**
-     * The meta object literal for the '<em><b>Back</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute BACK_FORTH_DIRECTION__BACK = eINSTANCE.getBackForthDirection_Back();
-
-    /**
-     * The meta object literal for the '<em><b>Forth</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute BACK_FORTH_DIRECTION__FORTH = eINSTANCE.getBackForthDirection_Forth();
-
-    /**
      * The meta object literal for the '{@link robotcontrol.roc.impl.FullDirectedActionImpl <em>Full Directed Action</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1272,6 +1267,56 @@ public interface RocPackage extends EPackage
      * @generated
      */
     EAttribute DIRECTION__RIGHT = eINSTANCE.getDirection_RIGHT();
+
+    /**
+     * The meta object literal for the '{@link robotcontrol.roc.impl.SpeedImpl <em>Speed</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see robotcontrol.roc.impl.SpeedImpl
+     * @see robotcontrol.roc.impl.RocPackageImpl#getSpeed()
+     * @generated
+     */
+    EClass SPEED = eINSTANCE.getSpeed();
+
+    /**
+     * The meta object literal for the '<em><b>SLOWEST</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SPEED__SLOWEST = eINSTANCE.getSpeed_SLOWEST();
+
+    /**
+     * The meta object literal for the '<em><b>SLOW</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SPEED__SLOW = eINSTANCE.getSpeed_SLOW();
+
+    /**
+     * The meta object literal for the '<em><b>NORMAL</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SPEED__NORMAL = eINSTANCE.getSpeed_NORMAL();
+
+    /**
+     * The meta object literal for the '<em><b>FAST</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SPEED__FAST = eINSTANCE.getSpeed_FAST();
+
+    /**
+     * The meta object literal for the '<em><b>FULL</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SPEED__FULL = eINSTANCE.getSpeed_FULL();
 
     /**
      * The meta object literal for the '{@link robotcontrol.roc.Intensity <em>Intensity</em>}' enum.

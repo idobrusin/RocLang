@@ -32,6 +32,10 @@ public class RocSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getFORToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getPERIODRule())
 			return getPERIODToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getSPEED_KEYRule())
+			return getSPEED_KEYToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getWITHRule())
+			return getWITHToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
@@ -63,6 +67,26 @@ public class RocSyntacticSequencer extends AbstractSyntacticSequencer {
 		if (node != null)
 			return getTokenText(node);
 		return ".";
+	}
+	
+	/**
+	 * terminal SPEED_KEY:
+	 * 	'speed';
+	 */
+	protected String getSPEED_KEYToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "speed";
+	}
+	
+	/**
+	 * terminal WITH:
+	 * 	'with';
+	 */
+	protected String getWITHToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "with";
 	}
 	
 	@Override

@@ -121,16 +121,6 @@ public class RocAdapterFactory extends AdapterFactoryImpl
         return createLeftRightDirectionAdapter();
       }
       @Override
-      public Adapter caseBackForthDirectedAction(BackForthDirectedAction object)
-      {
-        return createBackForthDirectedActionAdapter();
-      }
-      @Override
-      public Adapter caseBackForthDirection(BackForthDirection object)
-      {
-        return createBackForthDirectionAdapter();
-      }
-      @Override
       public Adapter caseFullDirectedAction(FullDirectedAction object)
       {
         return createFullDirectedActionAdapter();
@@ -139,6 +129,11 @@ public class RocAdapterFactory extends AdapterFactoryImpl
       public Adapter caseDirection(Direction object)
       {
         return createDirectionAdapter();
+      }
+      @Override
+      public Adapter caseSpeed(Speed object)
+      {
+        return createSpeedAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -298,36 +293,6 @@ public class RocAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link robotcontrol.roc.BackForthDirectedAction <em>Back Forth Directed Action</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see robotcontrol.roc.BackForthDirectedAction
-   * @generated
-   */
-  public Adapter createBackForthDirectedActionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link robotcontrol.roc.BackForthDirection <em>Back Forth Direction</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see robotcontrol.roc.BackForthDirection
-   * @generated
-   */
-  public Adapter createBackForthDirectionAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link robotcontrol.roc.FullDirectedAction <em>Full Directed Action</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -353,6 +318,21 @@ public class RocAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDirectionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link robotcontrol.roc.Speed <em>Speed</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see robotcontrol.roc.Speed
+   * @generated
+   */
+  public Adapter createSpeedAdapter()
   {
     return null;
   }

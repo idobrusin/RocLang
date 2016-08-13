@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link robotcontrol.roc.Motion#getAction <em>Action</em>}</li>
  *   <li>{@link robotcontrol.roc.Motion#getDuration <em>Duration</em>}</li>
  *   <li>{@link robotcontrol.roc.Motion#getDurationUnit <em>Duration Unit</em>}</li>
+ *   <li>{@link robotcontrol.roc.Motion#getSpeed <em>Speed</em>}</li>
  * </ul>
  *
  * @see robotcontrol.roc.RocPackage#getMotion()
@@ -105,5 +106,31 @@ public interface Motion extends EObject
    * @generated
    */
   void setDurationUnit(DurationUnit value);
+
+  /**
+   * Returns the value of the '<em><b>Speed</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Speed</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Speed</em>' containment reference.
+   * @see #setSpeed(Speed)
+   * @see robotcontrol.roc.RocPackage#getMotion_Speed()
+   * @model containment="true"
+   * @generated
+   */
+  Speed getSpeed();
+
+  /**
+   * Sets the value of the '{@link robotcontrol.roc.Motion#getSpeed <em>Speed</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Speed</em>' containment reference.
+   * @see #getSpeed()
+   * @generated
+   */
+  void setSpeed(Speed value);
 
 } // Motion

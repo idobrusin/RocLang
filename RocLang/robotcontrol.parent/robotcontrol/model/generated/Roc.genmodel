@@ -28,6 +28,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Roc.ecore#//Motion/action"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Roc.ecore#//Motion/duration"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Roc.ecore#//Motion/durationUnit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Roc.ecore#//Motion/speed"/>
     </genClasses>
     <genClasses ecoreClass="Roc.ecore#//Action">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Roc.ecore#//Action/actionHolder"/>
@@ -50,13 +51,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Roc.ecore#//LeftRightDirection/left"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Roc.ecore#//LeftRightDirection/right"/>
     </genClasses>
-    <genClasses ecoreClass="Roc.ecore#//BackForthDirectedAction">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Roc.ecore#//BackForthDirectedAction/head"/>
-    </genClasses>
-    <genClasses ecoreClass="Roc.ecore#//BackForthDirection">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Roc.ecore#//BackForthDirection/back"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Roc.ecore#//BackForthDirection/forth"/>
-    </genClasses>
     <genClasses ecoreClass="Roc.ecore#//FullDirectedAction">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Roc.ecore#//FullDirectedAction/turnHead"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Roc.ecore#//FullDirectedAction/turnEyes"/>
@@ -66,6 +60,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Roc.ecore#//Direction/DOWN"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Roc.ecore#//Direction/LEFT"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Roc.ecore#//Direction/RIGHT"/>
+    </genClasses>
+    <genClasses ecoreClass="Roc.ecore#//Speed">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Roc.ecore#//Speed/SLOWEST"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Roc.ecore#//Speed/SLOW"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Roc.ecore#//Speed/NORMAL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Roc.ecore#//Speed/FAST"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Roc.ecore#//Speed/FULL"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

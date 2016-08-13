@@ -9,7 +9,9 @@ Movement hidden(WS, ML_COMMENT, SL_COMMENT):
 	motions+=Motion(AND motions+=Motion)* PERIOD;
 
 Motion:
-	action=Action FOR duration=Duration durationUnit=DurationUnit;
+	  action=Action FOR duration=DURATION durationUnit=DurationUnit
+	| action=Action WITH speed=Speed SPEED_KEY
+	;
 
 Action:
     actionHolder=CompleteAction
@@ -18,7 +20,7 @@ Action:
 
 // Intensity------------------------------------------------------------------------
 enum Intensity:
-	  C='pronounced'
+	  C='pronounced'  // First position is used as default value
     | A='trace of'
     | B='slightly'
     | D='severe'
@@ -26,34 +28,26 @@ enum Intensity:
 
 // Actions ------------------------------------------------------------------------
 CompleteAction:
-    actionName='neutral' 'face';
+    actionName='neutral face';
 
 SingleAction:
       actionName='drop jaw'
-    | actionName='nod Head';
+    | actionName='nod head';
 
 DirectedAction:
       actionName=LeftRightDirectedAction direction=LeftRightDirection
-    | actionName=BackForthDirectedAction direction=BackForthDirection
     | actionName=FullDirectedAction direction=Direction;
 
 LeftRightDirectedAction:
-      tiltHead='tilt' 'head';
+      tiltHead='tilt head';
 
 LeftRightDirection:
       left='left'
     | right='right';
 
-BackForthDirectedAction:
-      head='head';
-
-BackForthDirection:
-      back='back'
-    | forth='forth';
-
 FullDirectedAction:
-      turnHead='turn' 'head'
-    | turnEyes='turn' 'eyes';
+      turnHead='turn head'
+    | turnEyes='turn eyes';
 
 Direction:
       UP='up'
@@ -61,9 +55,16 @@ Direction:
     | LEFT='left'
     | RIGHT='right';
 
+Speed:
+	  SLOWEST = 'slowest'
+	| SLOW = 'slow'
+	| NORMAL = 'normal'
+	| FAST = 'fast'
+	| FULL = 'full'  
+;
 
 // Duration ------------------------------------------------------------------------
-terminal Duration:
+terminal DURATION:
 	INT;
 
 enum DurationUnit:
@@ -74,7 +75,13 @@ enum DurationUnit:
 // Keywords ------------------------------------------------------------------------
 terminal FOR:
 	'for';
+	
+terminal WITH:
+	'with';
 
+terminal SPEED_KEY:
+	'speed';
+	
 terminal AND:
 	'and';
 

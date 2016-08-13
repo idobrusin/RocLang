@@ -200,63 +200,114 @@ ruleMotion returns [EObject current=null]
 	(
 		(
 			(
-				{
-					newCompositeNode(grammarAccess.getMotionAccess().getActionActionParserRuleCall_0_0());
-				}
-				lv_action_0_0=ruleAction
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getMotionRule());
+				(
+					{
+						newCompositeNode(grammarAccess.getMotionAccess().getActionActionParserRuleCall_0_0_0());
 					}
-					set(
-						$current,
-						"action",
-						lv_action_0_0,
-						"robotcontrol.Roc.Action");
-					afterParserOrEnumRuleCall();
-				}
+					lv_action_0_0=ruleAction
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getMotionRule());
+						}
+						set(
+							$current,
+							"action",
+							lv_action_0_0,
+							"robotcontrol.Roc.Action");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			this_FOR_1=RULE_FOR
+			{
+				newLeafNode(this_FOR_1, grammarAccess.getMotionAccess().getFORTerminalRuleCall_0_1());
+			}
+			(
+				(
+					lv_duration_2_0=RULE_DURATION
+					{
+						newLeafNode(lv_duration_2_0, grammarAccess.getMotionAccess().getDurationDURATIONTerminalRuleCall_0_2_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getMotionRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"duration",
+							lv_duration_2_0,
+							"robotcontrol.Roc.DURATION");
+					}
+				)
+			)
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getMotionAccess().getDurationUnitDurationUnitEnumRuleCall_0_3_0());
+					}
+					lv_durationUnit_3_0=ruleDurationUnit
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getMotionRule());
+						}
+						set(
+							$current,
+							"durationUnit",
+							lv_durationUnit_3_0,
+							"robotcontrol.Roc.DurationUnit");
+						afterParserOrEnumRuleCall();
+					}
+				)
 			)
 		)
-		this_FOR_1=RULE_FOR
-		{
-			newLeafNode(this_FOR_1, grammarAccess.getMotionAccess().getFORTerminalRuleCall_1());
-		}
+		    |
 		(
 			(
-				lv_duration_2_0=RULE_DURATION
-				{
-					newLeafNode(lv_duration_2_0, grammarAccess.getMotionAccess().getDurationDurationTerminalRuleCall_2_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getMotionRule());
+				(
+					{
+						newCompositeNode(grammarAccess.getMotionAccess().getActionActionParserRuleCall_1_0_0());
 					}
-					setWithLastConsumed(
-						$current,
-						"duration",
-						lv_duration_2_0,
-						"robotcontrol.Roc.Duration");
-				}
+					lv_action_4_0=ruleAction
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getMotionRule());
+						}
+						set(
+							$current,
+							"action",
+							lv_action_4_0,
+							"robotcontrol.Roc.Action");
+						afterParserOrEnumRuleCall();
+					}
+				)
 			)
-		)
-		(
+			this_WITH_5=RULE_WITH
+			{
+				newLeafNode(this_WITH_5, grammarAccess.getMotionAccess().getWITHTerminalRuleCall_1_1());
+			}
 			(
-				{
-					newCompositeNode(grammarAccess.getMotionAccess().getDurationUnitDurationUnitEnumRuleCall_3_0());
-				}
-				lv_durationUnit_3_0=ruleDurationUnit
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getMotionRule());
+				(
+					{
+						newCompositeNode(grammarAccess.getMotionAccess().getSpeedSpeedParserRuleCall_1_2_0());
 					}
-					set(
-						$current,
-						"durationUnit",
-						lv_durationUnit_3_0,
-						"robotcontrol.Roc.DurationUnit");
-					afterParserOrEnumRuleCall();
-				}
+					lv_speed_6_0=ruleSpeed
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getMotionRule());
+						}
+						set(
+							$current,
+							"speed",
+							lv_speed_6_0,
+							"robotcontrol.Roc.Speed");
+						afterParserOrEnumRuleCall();
+					}
+				)
 			)
+			this_SPEED_KEY_7=RULE_SPEED_KEY
+			{
+				newLeafNode(this_SPEED_KEY_7, grammarAccess.getMotionAccess().getSPEED_KEYTerminalRuleCall_1_3());
+			}
 		)
 	)
 ;
@@ -451,7 +502,7 @@ ruleSingleAction returns [EObject current=null]
 		    |
 		(
 			(
-				lv_actionName_1_0='nod Head'
+				lv_actionName_1_0='nod head'
 				{
 					newLeafNode(lv_actionName_1_0, grammarAccess.getSingleActionAccess().getActionNameNodHeadKeyword_1_0());
 				}
@@ -459,7 +510,7 @@ ruleSingleAction returns [EObject current=null]
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getSingleActionRule());
 					}
-					setWithLastConsumed($current, "actionName", lv_actionName_1_0, "nod Head");
+					setWithLastConsumed($current, "actionName", lv_actionName_1_0, "nod head");
 				}
 			)
 		)
@@ -527,9 +578,9 @@ ruleDirectedAction returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getDirectedActionAccess().getActionNameBackForthDirectedActionParserRuleCall_1_0_0());
+						newCompositeNode(grammarAccess.getDirectedActionAccess().getActionNameFullDirectedActionParserRuleCall_1_0_0());
 					}
-					lv_actionName_2_0=ruleBackForthDirectedAction
+					lv_actionName_2_0=ruleFullDirectedAction
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getDirectedActionRule());
@@ -538,47 +589,6 @@ ruleDirectedAction returns [EObject current=null]
 							$current,
 							"actionName",
 							lv_actionName_2_0,
-							"robotcontrol.Roc.BackForthDirectedAction");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getDirectedActionAccess().getDirectionBackForthDirectionParserRuleCall_1_1_0());
-					}
-					lv_direction_3_0=ruleBackForthDirection
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getDirectedActionRule());
-						}
-						set(
-							$current,
-							"direction",
-							lv_direction_3_0,
-							"robotcontrol.Roc.BackForthDirection");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)
-		    |
-		(
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getDirectedActionAccess().getActionNameFullDirectedActionParserRuleCall_2_0_0());
-					}
-					lv_actionName_4_0=ruleFullDirectedAction
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getDirectedActionRule());
-						}
-						set(
-							$current,
-							"actionName",
-							lv_actionName_4_0,
 							"robotcontrol.Roc.FullDirectedAction");
 						afterParserOrEnumRuleCall();
 					}
@@ -587,9 +597,9 @@ ruleDirectedAction returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getDirectedActionAccess().getDirectionDirectionParserRuleCall_2_1_0());
+						newCompositeNode(grammarAccess.getDirectedActionAccess().getDirectionDirectionParserRuleCall_1_1_0());
 					}
-					lv_direction_5_0=ruleDirection
+					lv_direction_3_0=ruleDirection
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getDirectedActionRule());
@@ -597,7 +607,7 @@ ruleDirectedAction returns [EObject current=null]
 						set(
 							$current,
 							"direction",
-							lv_direction_5_0,
+							lv_direction_3_0,
 							"robotcontrol.Roc.Direction");
 						afterParserOrEnumRuleCall();
 					}
@@ -692,85 +702,6 @@ ruleLeftRightDirection returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleBackForthDirectedAction
-entryRuleBackForthDirectedAction returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getBackForthDirectedActionRule()); }
-	iv_ruleBackForthDirectedAction=ruleBackForthDirectedAction
-	{ $current=$iv_ruleBackForthDirectedAction.current; }
-	EOF;
-
-// Rule BackForthDirectedAction
-ruleBackForthDirectedAction returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			lv_head_0_0='head'
-			{
-				newLeafNode(lv_head_0_0, grammarAccess.getBackForthDirectedActionAccess().getHeadHeadKeyword_0());
-			}
-			{
-				if ($current==null) {
-					$current = createModelElement(grammarAccess.getBackForthDirectedActionRule());
-				}
-				setWithLastConsumed($current, "head", lv_head_0_0, "head");
-			}
-		)
-	)
-;
-
-// Entry rule entryRuleBackForthDirection
-entryRuleBackForthDirection returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getBackForthDirectionRule()); }
-	iv_ruleBackForthDirection=ruleBackForthDirection
-	{ $current=$iv_ruleBackForthDirection.current; }
-	EOF;
-
-// Rule BackForthDirection
-ruleBackForthDirection returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			(
-				lv_back_0_0='back'
-				{
-					newLeafNode(lv_back_0_0, grammarAccess.getBackForthDirectionAccess().getBackBackKeyword_0_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getBackForthDirectionRule());
-					}
-					setWithLastConsumed($current, "back", lv_back_0_0, "back");
-				}
-			)
-		)
-		    |
-		(
-			(
-				lv_forth_1_0='forth'
-				{
-					newLeafNode(lv_forth_1_0, grammarAccess.getBackForthDirectionAccess().getForthForthKeyword_1_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getBackForthDirectionRule());
-					}
-					setWithLastConsumed($current, "forth", lv_forth_1_0, "forth");
-				}
-			)
-		)
-	)
-;
-
 // Entry rule entryRuleFullDirectedAction
 entryRuleFullDirectedAction returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getFullDirectedActionRule()); }
@@ -789,44 +720,32 @@ ruleFullDirectedAction returns [EObject current=null]
 	(
 		(
 			(
-				(
-					lv_turnHead_0_0='turn'
-					{
-						newLeafNode(lv_turnHead_0_0, grammarAccess.getFullDirectedActionAccess().getTurnHeadTurnKeyword_0_0_0());
+				lv_turnHead_0_0='turn head'
+				{
+					newLeafNode(lv_turnHead_0_0, grammarAccess.getFullDirectedActionAccess().getTurnHeadTurnHeadKeyword_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getFullDirectedActionRule());
 					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getFullDirectedActionRule());
-						}
-						setWithLastConsumed($current, "turnHead", lv_turnHead_0_0, "turn");
-					}
-				)
+					setWithLastConsumed($current, "turnHead", lv_turnHead_0_0, "turn head");
+				}
 			)
-			otherlv_1='head'
-			{
-				newLeafNode(otherlv_1, grammarAccess.getFullDirectedActionAccess().getHeadKeyword_0_1());
-			}
 		)
 		    |
 		(
 			(
-				(
-					lv_turnEyes_2_0='turn'
-					{
-						newLeafNode(lv_turnEyes_2_0, grammarAccess.getFullDirectedActionAccess().getTurnEyesTurnKeyword_1_0_0());
+				lv_turnEyes_1_0='turn eyes'
+				{
+					newLeafNode(lv_turnEyes_1_0, grammarAccess.getFullDirectedActionAccess().getTurnEyesTurnEyesKeyword_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getFullDirectedActionRule());
 					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getFullDirectedActionRule());
-						}
-						setWithLastConsumed($current, "turnEyes", lv_turnEyes_2_0, "turn");
-					}
-				)
+					setWithLastConsumed($current, "turnEyes", lv_turnEyes_1_0, "turn eyes");
+				}
 			)
-			otherlv_3='eyes'
-			{
-				newLeafNode(otherlv_3, grammarAccess.getFullDirectedActionAccess().getEyesKeyword_1_1());
-			}
 		)
 	)
 ;
@@ -903,6 +822,99 @@ ruleDirection returns [EObject current=null]
 						$current = createModelElement(grammarAccess.getDirectionRule());
 					}
 					setWithLastConsumed($current, "RIGHT", lv_RIGHT_3_0, "right");
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleSpeed
+entryRuleSpeed returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getSpeedRule()); }
+	iv_ruleSpeed=ruleSpeed
+	{ $current=$iv_ruleSpeed.current; }
+	EOF;
+
+// Rule Speed
+ruleSpeed returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_SLOWEST_0_0='slowest'
+				{
+					newLeafNode(lv_SLOWEST_0_0, grammarAccess.getSpeedAccess().getSLOWESTSlowestKeyword_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getSpeedRule());
+					}
+					setWithLastConsumed($current, "SLOWEST", lv_SLOWEST_0_0, "slowest");
+				}
+			)
+		)
+		    |
+		(
+			(
+				lv_SLOW_1_0='slow'
+				{
+					newLeafNode(lv_SLOW_1_0, grammarAccess.getSpeedAccess().getSLOWSlowKeyword_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getSpeedRule());
+					}
+					setWithLastConsumed($current, "SLOW", lv_SLOW_1_0, "slow");
+				}
+			)
+		)
+		    |
+		(
+			(
+				lv_NORMAL_2_0='normal'
+				{
+					newLeafNode(lv_NORMAL_2_0, grammarAccess.getSpeedAccess().getNORMALNormalKeyword_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getSpeedRule());
+					}
+					setWithLastConsumed($current, "NORMAL", lv_NORMAL_2_0, "normal");
+				}
+			)
+		)
+		    |
+		(
+			(
+				lv_FAST_3_0='fast'
+				{
+					newLeafNode(lv_FAST_3_0, grammarAccess.getSpeedAccess().getFASTFastKeyword_3_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getSpeedRule());
+					}
+					setWithLastConsumed($current, "FAST", lv_FAST_3_0, "fast");
+				}
+			)
+		)
+		    |
+		(
+			(
+				lv_FULL_4_0='full'
+				{
+					newLeafNode(lv_FULL_4_0, grammarAccess.getSpeedAccess().getFULLFullKeyword_4_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getSpeedRule());
+					}
+					setWithLastConsumed($current, "FULL", lv_FULL_4_0, "full");
 				}
 			)
 		)
@@ -998,6 +1010,10 @@ ruleDurationUnit returns [Enumerator current=null]
 RULE_DURATION : RULE_INT;
 
 RULE_FOR : 'for';
+
+RULE_WITH : 'with';
+
+RULE_SPEED_KEY : 'speed';
 
 RULE_AND : 'and';
 

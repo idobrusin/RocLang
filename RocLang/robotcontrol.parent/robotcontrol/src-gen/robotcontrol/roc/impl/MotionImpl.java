@@ -16,6 +16,7 @@ import robotcontrol.roc.Action;
 import robotcontrol.roc.DurationUnit;
 import robotcontrol.roc.Motion;
 import robotcontrol.roc.RocPackage;
+import robotcontrol.roc.Speed;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,6 +29,7 @@ import robotcontrol.roc.RocPackage;
  *   <li>{@link robotcontrol.roc.impl.MotionImpl#getAction <em>Action</em>}</li>
  *   <li>{@link robotcontrol.roc.impl.MotionImpl#getDuration <em>Duration</em>}</li>
  *   <li>{@link robotcontrol.roc.impl.MotionImpl#getDurationUnit <em>Duration Unit</em>}</li>
+ *   <li>{@link robotcontrol.roc.impl.MotionImpl#getSpeed <em>Speed</em>}</li>
  * </ul>
  *
  * @generated
@@ -83,6 +85,16 @@ public class MotionImpl extends MinimalEObjectImpl.Container implements Motion
    * @ordered
    */
   protected DurationUnit durationUnit = DURATION_UNIT_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getSpeed() <em>Speed</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSpeed()
+   * @generated
+   * @ordered
+   */
+  protected Speed speed;
 
   /**
    * <!-- begin-user-doc -->
@@ -204,6 +216,54 @@ public class MotionImpl extends MinimalEObjectImpl.Container implements Motion
    * <!-- end-user-doc -->
    * @generated
    */
+  public Speed getSpeed()
+  {
+    return speed;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetSpeed(Speed newSpeed, NotificationChain msgs)
+  {
+    Speed oldSpeed = speed;
+    speed = newSpeed;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RocPackage.MOTION__SPEED, oldSpeed, newSpeed);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSpeed(Speed newSpeed)
+  {
+    if (newSpeed != speed)
+    {
+      NotificationChain msgs = null;
+      if (speed != null)
+        msgs = ((InternalEObject)speed).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RocPackage.MOTION__SPEED, null, msgs);
+      if (newSpeed != null)
+        msgs = ((InternalEObject)newSpeed).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RocPackage.MOTION__SPEED, null, msgs);
+      msgs = basicSetSpeed(newSpeed, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RocPackage.MOTION__SPEED, newSpeed, newSpeed));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -211,6 +271,8 @@ public class MotionImpl extends MinimalEObjectImpl.Container implements Motion
     {
       case RocPackage.MOTION__ACTION:
         return basicSetAction(null, msgs);
+      case RocPackage.MOTION__SPEED:
+        return basicSetSpeed(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -231,6 +293,8 @@ public class MotionImpl extends MinimalEObjectImpl.Container implements Motion
         return getDuration();
       case RocPackage.MOTION__DURATION_UNIT:
         return getDurationUnit();
+      case RocPackage.MOTION__SPEED:
+        return getSpeed();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -253,6 +317,9 @@ public class MotionImpl extends MinimalEObjectImpl.Container implements Motion
         return;
       case RocPackage.MOTION__DURATION_UNIT:
         setDurationUnit((DurationUnit)newValue);
+        return;
+      case RocPackage.MOTION__SPEED:
+        setSpeed((Speed)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -277,6 +344,9 @@ public class MotionImpl extends MinimalEObjectImpl.Container implements Motion
       case RocPackage.MOTION__DURATION_UNIT:
         setDurationUnit(DURATION_UNIT_EDEFAULT);
         return;
+      case RocPackage.MOTION__SPEED:
+        setSpeed((Speed)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -297,6 +367,8 @@ public class MotionImpl extends MinimalEObjectImpl.Container implements Motion
         return DURATION_EDEFAULT == null ? duration != null : !DURATION_EDEFAULT.equals(duration);
       case RocPackage.MOTION__DURATION_UNIT:
         return durationUnit != DURATION_UNIT_EDEFAULT;
+      case RocPackage.MOTION__SPEED:
+        return speed != null;
     }
     return super.eIsSet(featureID);
   }

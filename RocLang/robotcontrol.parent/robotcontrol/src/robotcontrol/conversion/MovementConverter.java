@@ -6,17 +6,17 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import robotcontrol.roc.BackForthDirectedAction;
-import robotcontrol.roc.BackForthDirection;
 import robotcontrol.roc.CompleteAction;
 import robotcontrol.roc.DirectedAction;
 import robotcontrol.roc.Direction;
+import robotcontrol.roc.DurationUnit;
 import robotcontrol.roc.FullDirectedAction;
 import robotcontrol.roc.LeftRightDirectedAction;
 import robotcontrol.roc.LeftRightDirection;
 import robotcontrol.roc.Motion;
 import robotcontrol.roc.Movement;
 import robotcontrol.roc.SingleAction;
+import robotcontrol.roc.Speed;
 
 public class MovementConverter {
 
@@ -47,11 +47,40 @@ public class MovementConverter {
 		JSONObject resultMotion = new JSONObject();
 		resultMotion.put("action_unit", getActionUnit(motion));
 		resultMotion.put("intensity", getIntensity(motion));
-		resultMotion.put("duration", Integer.parseInt(motion.getDuration()));
-		resultMotion.put("duration_unit", motion.getDurationUnit());
+		if (motion.getDuration() != null) {
+			resultMotion.put("duration", getDurationFromUnit(Integer.parseInt(motion.getDuration()), motion.getDurationUnit()));
+		} 
+		else if (motion.getSpeed() != null) {
+			resultMotion.put("duration", getSpeed(motion.getSpeed()));
+		}
 		return resultMotion;
 	}
+	
+	private static int getSpeed(Speed speed) {
+		if (speed.getSLOWEST() != null) {
+			return 1000;
+		} else if (speed.getSLOW() != null) {
+			return 800;
+		} else if (speed.getNORMAL() != null) {
+			return 700;
+		} else if (speed.getFAST() != null) {
+			return 500;
+		} else if (speed.getFULL() != null) {
+			return 400;
+		}
+		return 1000;
+	}
 
+	private static int getDurationFromUnit(int duration, DurationUnit unit) {
+		if (unit.equals(DurationUnit.SECONDS)) {
+			return duration * 1000;
+		} else if (unit.equals(DurationUnit.MINUTES)) {
+			return duration * 1000 * 60;
+		}
+		return duration;
+
+	}
+	
 	private static String getIntensity(Motion motion) {
 		if (motion.getAction().getActionHolder() instanceof CompleteAction) {
 			return "C";
@@ -107,16 +136,7 @@ public class MovementConverter {
 					return "56";
 				}
 			}
-		} else if (actionName instanceof BackForthDirectedAction) {
-			if (((BackForthDirectedAction) actionName).getHead() != null) {
-				BackForthDirection direction = (BackForthDirection) action.getDirection();
-				if (direction.getForth() != null) {
-					return "";
-				} else if (direction.getBack() != null) {
-					return "";
-				}
-			}
-		}
+		} 
 		return "Directed";
 	}
 

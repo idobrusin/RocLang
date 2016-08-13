@@ -75,10 +75,9 @@ public class RocFactoryImpl extends EFactoryImpl implements RocFactory
       case RocPackage.DIRECTED_ACTION: return createDirectedAction();
       case RocPackage.LEFT_RIGHT_DIRECTED_ACTION: return createLeftRightDirectedAction();
       case RocPackage.LEFT_RIGHT_DIRECTION: return createLeftRightDirection();
-      case RocPackage.BACK_FORTH_DIRECTED_ACTION: return createBackForthDirectedAction();
-      case RocPackage.BACK_FORTH_DIRECTION: return createBackForthDirection();
       case RocPackage.FULL_DIRECTED_ACTION: return createFullDirectedAction();
       case RocPackage.DIRECTION: return createDirection();
+      case RocPackage.SPEED: return createSpeed();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -226,28 +225,6 @@ public class RocFactoryImpl extends EFactoryImpl implements RocFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public BackForthDirectedAction createBackForthDirectedAction()
-  {
-    BackForthDirectedActionImpl backForthDirectedAction = new BackForthDirectedActionImpl();
-    return backForthDirectedAction;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public BackForthDirection createBackForthDirection()
-  {
-    BackForthDirectionImpl backForthDirection = new BackForthDirectionImpl();
-    return backForthDirection;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public FullDirectedAction createFullDirectedAction()
   {
     FullDirectedActionImpl fullDirectedAction = new FullDirectedActionImpl();
@@ -263,6 +240,17 @@ public class RocFactoryImpl extends EFactoryImpl implements RocFactory
   {
     DirectionImpl direction = new DirectionImpl();
     return direction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Speed createSpeed()
+  {
+    SpeedImpl speed = new SpeedImpl();
+    return speed;
   }
 
   /**

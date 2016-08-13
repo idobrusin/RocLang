@@ -3,6 +3,22 @@
  */
 package robotcontrol.validation;
 
+import com.google.common.base.Objects;
+import java.util.HashMap;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.xtext.validation.Check;
+import robotcontrol.roc.Action;
+import robotcontrol.roc.CompleteAction;
+import robotcontrol.roc.DirectedAction;
+import robotcontrol.roc.DurationUnit;
+import robotcontrol.roc.FullDirectedAction;
+import robotcontrol.roc.LeftRightDirectedAction;
+import robotcontrol.roc.Motion;
+import robotcontrol.roc.Movement;
+import robotcontrol.roc.RocPackage;
+import robotcontrol.roc.SingleAction;
 import robotcontrol.validation.AbstractRocValidator;
 
 /**
@@ -12,4 +28,97 @@ import robotcontrol.validation.AbstractRocValidator;
  */
 @SuppressWarnings("all")
 public class RocValidator extends AbstractRocValidator {
+  public final static String INVALID_NAME = "invalidName";
+  
+  /**
+   * Checks a movement for physical constraint violations.
+   * A possible violations could be moving the same head feature in different direction in a single motion.
+   */
+  @Check
+  public void checkMovementContraints(final Movement movement) {
+    final HashMap<String, Boolean> actionMap = new HashMap<String, Boolean>();
+    EList<Motion> _motions = movement.getMotions();
+    for (final Motion motion : _motions) {
+      {
+        Action _action = motion.getAction();
+        final EObject actionHolder = _action.getActionHolder();
+        if ((actionHolder instanceof CompleteAction)) {
+          final CompleteAction ac = ((CompleteAction) actionHolder);
+          String _actionName = ac.getActionName();
+          this.checkActionMapForAction(_actionName, actionMap);
+        } else {
+          Action _action_1 = motion.getAction();
+          EObject _actionHolder = _action_1.getActionHolder();
+          if ((_actionHolder instanceof SingleAction)) {
+            final SingleAction ac_1 = ((SingleAction) actionHolder);
+            String _actionName_1 = ac_1.getActionName();
+            this.checkActionMapForAction(_actionName_1, actionMap);
+          } else {
+            Action _action_2 = motion.getAction();
+            EObject _actionHolder_1 = _action_2.getActionHolder();
+            if ((_actionHolder_1 instanceof DirectedAction)) {
+              final DirectedAction ac_2 = ((DirectedAction) actionHolder);
+              EObject _actionName_2 = ac_2.getActionName();
+              if ((_actionName_2 instanceof LeftRightDirectedAction)) {
+                EObject _actionName_3 = ac_2.getActionName();
+                final LeftRightDirectedAction directedAction = ((LeftRightDirectedAction) _actionName_3);
+                String _tiltHead = directedAction.getTiltHead();
+                boolean _notEquals = (!Objects.equal(_tiltHead, null));
+                if (_notEquals) {
+                  String _tiltHead_1 = directedAction.getTiltHead();
+                  this.checkActionMapForAction(_tiltHead_1, actionMap);
+                }
+              } else {
+                EObject _actionName_4 = ac_2.getActionName();
+                if ((_actionName_4 instanceof FullDirectedAction)) {
+                  EObject _actionName_5 = ac_2.getActionName();
+                  final FullDirectedAction directedAction_1 = ((FullDirectedAction) _actionName_5);
+                  String _turnEyes = directedAction_1.getTurnEyes();
+                  boolean _notEquals_1 = (!Objects.equal(_turnEyes, null));
+                  if (_notEquals_1) {
+                    String _turnEyes_1 = directedAction_1.getTurnEyes();
+                    this.checkActionMapForAction(_turnEyes_1, actionMap);
+                  } else {
+                    String _turnHead = directedAction_1.getTurnHead();
+                    boolean _notEquals_2 = (!Objects.equal(_turnHead, null));
+                    if (_notEquals_2) {
+                      String _turnHead_1 = directedAction_1.getTurnHead();
+                      this.checkActionMapForAction(_turnHead_1, actionMap);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  public Object checkActionMapForAction(final String actionName, final HashMap actionMap) {
+    Object _xifexpression = null;
+    boolean _containsKey = actionMap.containsKey(actionName);
+    if (_containsKey) {
+      this.errorMultipleCommands(RocPackage.Literals.MOVEMENT__MOTIONS);
+    } else {
+      _xifexpression = actionMap.put(actionName, Boolean.valueOf(true));
+    }
+    return _xifexpression;
+  }
+  
+  public void errorMultipleCommands(final EStructuralFeature feature) {
+    this.error("Multiple commands for same head feature. Remove duplicate motion", feature);
+  }
+  
+  /**
+   * Checks a movement for physical constraint violations.
+   * A possible violations could be moving the same head feature in different direction in a single motion.
+   */
+  @Check
+  public void checkDurationToLow(final Motion motion) {
+    if ((((!Objects.equal(motion.getDuration(), null)) && (Integer.parseInt(motion.getDuration()) < 100)) && motion.getDurationUnit().equals(DurationUnit.MILLISECONDS))) {
+      this.warning("The duration of an Action should not be below 100 milliseconds", 
+        RocPackage.Literals.MOTION__DURATION);
+    }
+  }
 }

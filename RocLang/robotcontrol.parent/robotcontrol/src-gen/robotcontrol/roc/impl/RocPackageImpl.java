@@ -12,8 +12,6 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import robotcontrol.roc.Action;
-import robotcontrol.roc.BackForthDirectedAction;
-import robotcontrol.roc.BackForthDirection;
 import robotcontrol.roc.CompleteAction;
 import robotcontrol.roc.DirectedAction;
 import robotcontrol.roc.Direction;
@@ -28,6 +26,7 @@ import robotcontrol.roc.Program;
 import robotcontrol.roc.RocFactory;
 import robotcontrol.roc.RocPackage;
 import robotcontrol.roc.SingleAction;
+import robotcontrol.roc.Speed;
 
 /**
  * <!-- begin-user-doc -->
@@ -105,20 +104,6 @@ public class RocPackageImpl extends EPackageImpl implements RocPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass backForthDirectedActionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass backForthDirectionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass fullDirectedActionEClass = null;
 
   /**
@@ -127,6 +112,13 @@ public class RocPackageImpl extends EPackageImpl implements RocPackage
    * @generated
    */
   private EClass directionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass speedEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -290,6 +282,16 @@ public class RocPackageImpl extends EPackageImpl implements RocPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getMotion_Speed()
+  {
+    return (EReference)motionEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getAction()
   {
     return actionEClass;
@@ -440,56 +442,6 @@ public class RocPackageImpl extends EPackageImpl implements RocPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getBackForthDirectedAction()
-  {
-    return backForthDirectedActionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getBackForthDirectedAction_Head()
-  {
-    return (EAttribute)backForthDirectedActionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getBackForthDirection()
-  {
-    return backForthDirectionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getBackForthDirection_Back()
-  {
-    return (EAttribute)backForthDirectionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getBackForthDirection_Forth()
-  {
-    return (EAttribute)backForthDirectionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getFullDirectedAction()
   {
     return fullDirectedActionEClass;
@@ -570,6 +522,66 @@ public class RocPackageImpl extends EPackageImpl implements RocPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getSpeed()
+  {
+    return speedEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSpeed_SLOWEST()
+  {
+    return (EAttribute)speedEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSpeed_SLOW()
+  {
+    return (EAttribute)speedEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSpeed_NORMAL()
+  {
+    return (EAttribute)speedEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSpeed_FAST()
+  {
+    return (EAttribute)speedEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSpeed_FULL()
+  {
+    return (EAttribute)speedEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EEnum getIntensity()
   {
     return intensityEEnum;
@@ -625,6 +637,7 @@ public class RocPackageImpl extends EPackageImpl implements RocPackage
     createEReference(motionEClass, MOTION__ACTION);
     createEAttribute(motionEClass, MOTION__DURATION);
     createEAttribute(motionEClass, MOTION__DURATION_UNIT);
+    createEReference(motionEClass, MOTION__SPEED);
 
     actionEClass = createEClass(ACTION);
     createEReference(actionEClass, ACTION__ACTION_HOLDER);
@@ -647,13 +660,6 @@ public class RocPackageImpl extends EPackageImpl implements RocPackage
     createEAttribute(leftRightDirectionEClass, LEFT_RIGHT_DIRECTION__LEFT);
     createEAttribute(leftRightDirectionEClass, LEFT_RIGHT_DIRECTION__RIGHT);
 
-    backForthDirectedActionEClass = createEClass(BACK_FORTH_DIRECTED_ACTION);
-    createEAttribute(backForthDirectedActionEClass, BACK_FORTH_DIRECTED_ACTION__HEAD);
-
-    backForthDirectionEClass = createEClass(BACK_FORTH_DIRECTION);
-    createEAttribute(backForthDirectionEClass, BACK_FORTH_DIRECTION__BACK);
-    createEAttribute(backForthDirectionEClass, BACK_FORTH_DIRECTION__FORTH);
-
     fullDirectedActionEClass = createEClass(FULL_DIRECTED_ACTION);
     createEAttribute(fullDirectedActionEClass, FULL_DIRECTED_ACTION__TURN_HEAD);
     createEAttribute(fullDirectedActionEClass, FULL_DIRECTED_ACTION__TURN_EYES);
@@ -663,6 +669,13 @@ public class RocPackageImpl extends EPackageImpl implements RocPackage
     createEAttribute(directionEClass, DIRECTION__DOWN);
     createEAttribute(directionEClass, DIRECTION__LEFT);
     createEAttribute(directionEClass, DIRECTION__RIGHT);
+
+    speedEClass = createEClass(SPEED);
+    createEAttribute(speedEClass, SPEED__SLOWEST);
+    createEAttribute(speedEClass, SPEED__SLOW);
+    createEAttribute(speedEClass, SPEED__NORMAL);
+    createEAttribute(speedEClass, SPEED__FAST);
+    createEAttribute(speedEClass, SPEED__FULL);
 
     // Create enums
     intensityEEnum = createEEnum(INTENSITY);
@@ -710,6 +723,7 @@ public class RocPackageImpl extends EPackageImpl implements RocPackage
     initEReference(getMotion_Action(), this.getAction(), null, "action", null, 0, 1, Motion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMotion_Duration(), ecorePackage.getEString(), "duration", null, 0, 1, Motion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMotion_DurationUnit(), this.getDurationUnit(), "durationUnit", null, 0, 1, Motion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMotion_Speed(), this.getSpeed(), null, "speed", null, 0, 1, Motion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(actionEClass, Action.class, "Action", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getAction_ActionHolder(), ecorePackage.getEObject(), null, "actionHolder", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -732,13 +746,6 @@ public class RocPackageImpl extends EPackageImpl implements RocPackage
     initEAttribute(getLeftRightDirection_Left(), ecorePackage.getEString(), "left", null, 0, 1, LeftRightDirection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getLeftRightDirection_Right(), ecorePackage.getEString(), "right", null, 0, 1, LeftRightDirection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(backForthDirectedActionEClass, BackForthDirectedAction.class, "BackForthDirectedAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getBackForthDirectedAction_Head(), ecorePackage.getEString(), "head", null, 0, 1, BackForthDirectedAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(backForthDirectionEClass, BackForthDirection.class, "BackForthDirection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getBackForthDirection_Back(), ecorePackage.getEString(), "back", null, 0, 1, BackForthDirection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getBackForthDirection_Forth(), ecorePackage.getEString(), "forth", null, 0, 1, BackForthDirection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(fullDirectedActionEClass, FullDirectedAction.class, "FullDirectedAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getFullDirectedAction_TurnHead(), ecorePackage.getEString(), "turnHead", null, 0, 1, FullDirectedAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getFullDirectedAction_TurnEyes(), ecorePackage.getEString(), "turnEyes", null, 0, 1, FullDirectedAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -748,6 +755,13 @@ public class RocPackageImpl extends EPackageImpl implements RocPackage
     initEAttribute(getDirection_DOWN(), ecorePackage.getEString(), "DOWN", null, 0, 1, Direction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDirection_LEFT(), ecorePackage.getEString(), "LEFT", null, 0, 1, Direction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDirection_RIGHT(), ecorePackage.getEString(), "RIGHT", null, 0, 1, Direction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(speedEClass, Speed.class, "Speed", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSpeed_SLOWEST(), ecorePackage.getEString(), "SLOWEST", null, 0, 1, Speed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSpeed_SLOW(), ecorePackage.getEString(), "SLOW", null, 0, 1, Speed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSpeed_NORMAL(), ecorePackage.getEString(), "NORMAL", null, 0, 1, Speed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSpeed_FAST(), ecorePackage.getEString(), "FAST", null, 0, 1, Speed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSpeed_FULL(), ecorePackage.getEString(), "FULL", null, 0, 1, Speed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(intensityEEnum, Intensity.class, "Intensity");

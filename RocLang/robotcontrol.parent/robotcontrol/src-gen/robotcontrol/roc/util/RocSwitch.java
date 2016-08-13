@@ -136,20 +136,6 @@ public class RocSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case RocPackage.BACK_FORTH_DIRECTED_ACTION:
-      {
-        BackForthDirectedAction backForthDirectedAction = (BackForthDirectedAction)theEObject;
-        T result = caseBackForthDirectedAction(backForthDirectedAction);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case RocPackage.BACK_FORTH_DIRECTION:
-      {
-        BackForthDirection backForthDirection = (BackForthDirection)theEObject;
-        T result = caseBackForthDirection(backForthDirection);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case RocPackage.FULL_DIRECTED_ACTION:
       {
         FullDirectedAction fullDirectedAction = (FullDirectedAction)theEObject;
@@ -161,6 +147,13 @@ public class RocSwitch<T> extends Switch<T>
       {
         Direction direction = (Direction)theEObject;
         T result = caseDirection(direction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RocPackage.SPEED:
+      {
+        Speed speed = (Speed)theEObject;
+        T result = caseSpeed(speed);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -313,38 +306,6 @@ public class RocSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Back Forth Directed Action</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Back Forth Directed Action</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseBackForthDirectedAction(BackForthDirectedAction object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Back Forth Direction</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Back Forth Direction</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseBackForthDirection(BackForthDirection object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Full Directed Action</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -372,6 +333,22 @@ public class RocSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseDirection(Direction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Speed</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Speed</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSpeed(Speed object)
   {
     return null;
   }

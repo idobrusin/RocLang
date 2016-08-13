@@ -81,42 +81,75 @@ public class RocGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	public class MotionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "robotcontrol.Roc.Motion");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cActionAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cActionActionParserRuleCall_0_0 = (RuleCall)cActionAssignment_0.eContents().get(0);
-		private final RuleCall cFORTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Assignment cDurationAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cDurationDurationTerminalRuleCall_2_0 = (RuleCall)cDurationAssignment_2.eContents().get(0);
-		private final Assignment cDurationUnitAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cDurationUnitDurationUnitEnumRuleCall_3_0 = (RuleCall)cDurationUnitAssignment_3.eContents().get(0);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
+		private final Assignment cActionAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
+		private final RuleCall cActionActionParserRuleCall_0_0_0 = (RuleCall)cActionAssignment_0_0.eContents().get(0);
+		private final RuleCall cFORTerminalRuleCall_0_1 = (RuleCall)cGroup_0.eContents().get(1);
+		private final Assignment cDurationAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
+		private final RuleCall cDurationDURATIONTerminalRuleCall_0_2_0 = (RuleCall)cDurationAssignment_0_2.eContents().get(0);
+		private final Assignment cDurationUnitAssignment_0_3 = (Assignment)cGroup_0.eContents().get(3);
+		private final RuleCall cDurationUnitDurationUnitEnumRuleCall_0_3_0 = (RuleCall)cDurationUnitAssignment_0_3.eContents().get(0);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Assignment cActionAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final RuleCall cActionActionParserRuleCall_1_0_0 = (RuleCall)cActionAssignment_1_0.eContents().get(0);
+		private final RuleCall cWITHTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		private final Assignment cSpeedAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final RuleCall cSpeedSpeedParserRuleCall_1_2_0 = (RuleCall)cSpeedAssignment_1_2.eContents().get(0);
+		private final RuleCall cSPEED_KEYTerminalRuleCall_1_3 = (RuleCall)cGroup_1.eContents().get(3);
 		
 		//Motion:
-		//	action=Action FOR duration=Duration durationUnit=DurationUnit;
+		//	action=Action FOR duration=DURATION durationUnit=DurationUnit
+		//	| action=Action WITH speed=Speed SPEED_KEY;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//action=Action FOR duration=Duration durationUnit=DurationUnit
-		public Group getGroup() { return cGroup; }
+		//action=Action FOR duration=DURATION durationUnit=DurationUnit | action=Action WITH speed=Speed SPEED_KEY
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//action=Action FOR duration=DURATION durationUnit=DurationUnit
+		public Group getGroup_0() { return cGroup_0; }
 		
 		//action=Action
-		public Assignment getActionAssignment_0() { return cActionAssignment_0; }
+		public Assignment getActionAssignment_0_0() { return cActionAssignment_0_0; }
 		
 		//Action
-		public RuleCall getActionActionParserRuleCall_0_0() { return cActionActionParserRuleCall_0_0; }
+		public RuleCall getActionActionParserRuleCall_0_0_0() { return cActionActionParserRuleCall_0_0_0; }
 		
 		//FOR
-		public RuleCall getFORTerminalRuleCall_1() { return cFORTerminalRuleCall_1; }
+		public RuleCall getFORTerminalRuleCall_0_1() { return cFORTerminalRuleCall_0_1; }
 		
-		//duration=Duration
-		public Assignment getDurationAssignment_2() { return cDurationAssignment_2; }
+		//duration=DURATION
+		public Assignment getDurationAssignment_0_2() { return cDurationAssignment_0_2; }
 		
-		//Duration
-		public RuleCall getDurationDurationTerminalRuleCall_2_0() { return cDurationDurationTerminalRuleCall_2_0; }
+		//DURATION
+		public RuleCall getDurationDURATIONTerminalRuleCall_0_2_0() { return cDurationDURATIONTerminalRuleCall_0_2_0; }
 		
 		//durationUnit=DurationUnit
-		public Assignment getDurationUnitAssignment_3() { return cDurationUnitAssignment_3; }
+		public Assignment getDurationUnitAssignment_0_3() { return cDurationUnitAssignment_0_3; }
 		
 		//DurationUnit
-		public RuleCall getDurationUnitDurationUnitEnumRuleCall_3_0() { return cDurationUnitDurationUnitEnumRuleCall_3_0; }
+		public RuleCall getDurationUnitDurationUnitEnumRuleCall_0_3_0() { return cDurationUnitDurationUnitEnumRuleCall_0_3_0; }
+		
+		//action=Action WITH speed=Speed SPEED_KEY
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//action=Action
+		public Assignment getActionAssignment_1_0() { return cActionAssignment_1_0; }
+		
+		//Action
+		public RuleCall getActionActionParserRuleCall_1_0_0() { return cActionActionParserRuleCall_1_0_0; }
+		
+		//WITH
+		public RuleCall getWITHTerminalRuleCall_1_1() { return cWITHTerminalRuleCall_1_1; }
+		
+		//speed=Speed
+		public Assignment getSpeedAssignment_1_2() { return cSpeedAssignment_1_2; }
+		
+		//Speed
+		public RuleCall getSpeedSpeedParserRuleCall_1_2_0() { return cSpeedSpeedParserRuleCall_1_2_0; }
+		
+		//SPEED_KEY
+		public RuleCall getSPEED_KEYTerminalRuleCall_1_3() { return cSPEED_KEYTerminalRuleCall_1_3; }
 	}
 	public class ActionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "robotcontrol.Roc.Action");
@@ -214,10 +247,10 @@ public class RocGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//SingleAction:
 		//	actionName='drop jaw'
-		//	| actionName='nod Head';
+		//	| actionName='nod head';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//actionName='drop jaw' | actionName='nod Head'
+		//actionName='drop jaw' | actionName='nod head'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//actionName='drop jaw'
@@ -226,10 +259,10 @@ public class RocGrammarAccess extends AbstractGrammarElementFinder {
 		//'drop jaw'
 		public Keyword getActionNameDropJawKeyword_0_0() { return cActionNameDropJawKeyword_0_0; }
 		
-		//actionName='nod Head'
+		//actionName='nod head'
 		public Assignment getActionNameAssignment_1() { return cActionNameAssignment_1; }
 		
-		//'nod Head'
+		//'nod head'
 		public Keyword getActionNameNodHeadKeyword_1_0() { return cActionNameNodHeadKeyword_1_0; }
 	}
 	public class DirectedActionElements extends AbstractParserRuleElementFinder {
@@ -242,23 +275,16 @@ public class RocGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDirectionLeftRightDirectionParserRuleCall_0_1_0 = (RuleCall)cDirectionAssignment_0_1.eContents().get(0);
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
 		private final Assignment cActionNameAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
-		private final RuleCall cActionNameBackForthDirectedActionParserRuleCall_1_0_0 = (RuleCall)cActionNameAssignment_1_0.eContents().get(0);
+		private final RuleCall cActionNameFullDirectedActionParserRuleCall_1_0_0 = (RuleCall)cActionNameAssignment_1_0.eContents().get(0);
 		private final Assignment cDirectionAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cDirectionBackForthDirectionParserRuleCall_1_1_0 = (RuleCall)cDirectionAssignment_1_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
-		private final Assignment cActionNameAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
-		private final RuleCall cActionNameFullDirectedActionParserRuleCall_2_0_0 = (RuleCall)cActionNameAssignment_2_0.eContents().get(0);
-		private final Assignment cDirectionAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cDirectionDirectionParserRuleCall_2_1_0 = (RuleCall)cDirectionAssignment_2_1.eContents().get(0);
+		private final RuleCall cDirectionDirectionParserRuleCall_1_1_0 = (RuleCall)cDirectionAssignment_1_1.eContents().get(0);
 		
 		//DirectedAction:
 		//	actionName=LeftRightDirectedAction direction=LeftRightDirection
-		//	| actionName=BackForthDirectedAction direction=BackForthDirection
 		//	| actionName=FullDirectedAction direction=Direction;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//actionName=LeftRightDirectedAction direction=LeftRightDirection | actionName=BackForthDirectedAction
-		//direction=BackForthDirection | actionName=FullDirectedAction direction=Direction
+		//actionName=LeftRightDirectedAction direction=LeftRightDirection | actionName=FullDirectedAction direction=Direction
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//actionName=LeftRightDirectedAction direction=LeftRightDirection
@@ -276,35 +302,20 @@ public class RocGrammarAccess extends AbstractGrammarElementFinder {
 		//LeftRightDirection
 		public RuleCall getDirectionLeftRightDirectionParserRuleCall_0_1_0() { return cDirectionLeftRightDirectionParserRuleCall_0_1_0; }
 		
-		//actionName=BackForthDirectedAction direction=BackForthDirection
+		//actionName=FullDirectedAction direction=Direction
 		public Group getGroup_1() { return cGroup_1; }
 		
-		//actionName=BackForthDirectedAction
+		//actionName=FullDirectedAction
 		public Assignment getActionNameAssignment_1_0() { return cActionNameAssignment_1_0; }
 		
-		//BackForthDirectedAction
-		public RuleCall getActionNameBackForthDirectedActionParserRuleCall_1_0_0() { return cActionNameBackForthDirectedActionParserRuleCall_1_0_0; }
-		
-		//direction=BackForthDirection
-		public Assignment getDirectionAssignment_1_1() { return cDirectionAssignment_1_1; }
-		
-		//BackForthDirection
-		public RuleCall getDirectionBackForthDirectionParserRuleCall_1_1_0() { return cDirectionBackForthDirectionParserRuleCall_1_1_0; }
-		
-		//actionName=FullDirectedAction direction=Direction
-		public Group getGroup_2() { return cGroup_2; }
-		
-		//actionName=FullDirectedAction
-		public Assignment getActionNameAssignment_2_0() { return cActionNameAssignment_2_0; }
-		
 		//FullDirectedAction
-		public RuleCall getActionNameFullDirectedActionParserRuleCall_2_0_0() { return cActionNameFullDirectedActionParserRuleCall_2_0_0; }
+		public RuleCall getActionNameFullDirectedActionParserRuleCall_1_0_0() { return cActionNameFullDirectedActionParserRuleCall_1_0_0; }
 		
 		//direction=Direction
-		public Assignment getDirectionAssignment_2_1() { return cDirectionAssignment_2_1; }
+		public Assignment getDirectionAssignment_1_1() { return cDirectionAssignment_1_1; }
 		
 		//Direction
-		public RuleCall getDirectionDirectionParserRuleCall_2_1_0() { return cDirectionDirectionParserRuleCall_2_1_0; }
+		public RuleCall getDirectionDirectionParserRuleCall_1_1_0() { return cDirectionDirectionParserRuleCall_1_1_0; }
 	}
 	public class LeftRightDirectedActionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "robotcontrol.Roc.LeftRightDirectedAction");
@@ -357,92 +368,33 @@ public class RocGrammarAccess extends AbstractGrammarElementFinder {
 		//'right'
 		public Keyword getRightRightKeyword_1_0() { return cRightRightKeyword_1_0; }
 	}
-	public class BackForthDirectedActionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "robotcontrol.Roc.BackForthDirectedAction");
-		private final Assignment cHeadAssignment = (Assignment)rule.eContents().get(1);
-		private final Keyword cHeadHeadKeyword_0 = (Keyword)cHeadAssignment.eContents().get(0);
-		
-		//BackForthDirectedAction:
-		//	head='head';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//head='head'
-		public Assignment getHeadAssignment() { return cHeadAssignment; }
-		
-		//'head'
-		public Keyword getHeadHeadKeyword_0() { return cHeadHeadKeyword_0; }
-	}
-	public class BackForthDirectionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "robotcontrol.Roc.BackForthDirection");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Assignment cBackAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
-		private final Keyword cBackBackKeyword_0_0 = (Keyword)cBackAssignment_0.eContents().get(0);
-		private final Assignment cForthAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final Keyword cForthForthKeyword_1_0 = (Keyword)cForthAssignment_1.eContents().get(0);
-		
-		//BackForthDirection:
-		//	back='back'
-		//	| forth='forth';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//back='back' | forth='forth'
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//back='back'
-		public Assignment getBackAssignment_0() { return cBackAssignment_0; }
-		
-		//'back'
-		public Keyword getBackBackKeyword_0_0() { return cBackBackKeyword_0_0; }
-		
-		//forth='forth'
-		public Assignment getForthAssignment_1() { return cForthAssignment_1; }
-		
-		//'forth'
-		public Keyword getForthForthKeyword_1_0() { return cForthForthKeyword_1_0; }
-	}
 	public class FullDirectedActionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "robotcontrol.Roc.FullDirectedAction");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final Assignment cTurnHeadAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
-		private final Keyword cTurnHeadTurnKeyword_0_0_0 = (Keyword)cTurnHeadAssignment_0_0.eContents().get(0);
-		private final Keyword cHeadKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
-		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final Assignment cTurnEyesAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
-		private final Keyword cTurnEyesTurnKeyword_1_0_0 = (Keyword)cTurnEyesAssignment_1_0.eContents().get(0);
-		private final Keyword cEyesKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Assignment cTurnHeadAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
+		private final Keyword cTurnHeadTurnHeadKeyword_0_0 = (Keyword)cTurnHeadAssignment_0.eContents().get(0);
+		private final Assignment cTurnEyesAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
+		private final Keyword cTurnEyesTurnEyesKeyword_1_0 = (Keyword)cTurnEyesAssignment_1.eContents().get(0);
 		
 		//FullDirectedAction:
-		//	turnHead='turn' 'head'
-		//	| turnEyes='turn' 'eyes';
+		//	turnHead='turn head'
+		//	| turnEyes='turn eyes';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//turnHead='turn' 'head' | turnEyes='turn' 'eyes'
+		//turnHead='turn head' | turnEyes='turn eyes'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//turnHead='turn' 'head'
-		public Group getGroup_0() { return cGroup_0; }
+		//turnHead='turn head'
+		public Assignment getTurnHeadAssignment_0() { return cTurnHeadAssignment_0; }
 		
-		//turnHead='turn'
-		public Assignment getTurnHeadAssignment_0_0() { return cTurnHeadAssignment_0_0; }
+		//'turn head'
+		public Keyword getTurnHeadTurnHeadKeyword_0_0() { return cTurnHeadTurnHeadKeyword_0_0; }
 		
-		//'turn'
-		public Keyword getTurnHeadTurnKeyword_0_0_0() { return cTurnHeadTurnKeyword_0_0_0; }
+		//turnEyes='turn eyes'
+		public Assignment getTurnEyesAssignment_1() { return cTurnEyesAssignment_1; }
 		
-		//'head'
-		public Keyword getHeadKeyword_0_1() { return cHeadKeyword_0_1; }
-		
-		//turnEyes='turn' 'eyes'
-		public Group getGroup_1() { return cGroup_1; }
-		
-		//turnEyes='turn'
-		public Assignment getTurnEyesAssignment_1_0() { return cTurnEyesAssignment_1_0; }
-		
-		//'turn'
-		public Keyword getTurnEyesTurnKeyword_1_0_0() { return cTurnEyesTurnKeyword_1_0_0; }
-		
-		//'eyes'
-		public Keyword getEyesKeyword_1_1() { return cEyesKeyword_1_1; }
+		//'turn eyes'
+		public Keyword getTurnEyesTurnEyesKeyword_1_0() { return cTurnEyesTurnEyesKeyword_1_0; }
 	}
 	public class DirectionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "robotcontrol.Roc.Direction");
@@ -490,6 +442,61 @@ public class RocGrammarAccess extends AbstractGrammarElementFinder {
 		//'right'
 		public Keyword getRIGHTRightKeyword_3_0() { return cRIGHTRightKeyword_3_0; }
 	}
+	public class SpeedElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "robotcontrol.Roc.Speed");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Assignment cSLOWESTAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
+		private final Keyword cSLOWESTSlowestKeyword_0_0 = (Keyword)cSLOWESTAssignment_0.eContents().get(0);
+		private final Assignment cSLOWAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
+		private final Keyword cSLOWSlowKeyword_1_0 = (Keyword)cSLOWAssignment_1.eContents().get(0);
+		private final Assignment cNORMALAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
+		private final Keyword cNORMALNormalKeyword_2_0 = (Keyword)cNORMALAssignment_2.eContents().get(0);
+		private final Assignment cFASTAssignment_3 = (Assignment)cAlternatives.eContents().get(3);
+		private final Keyword cFASTFastKeyword_3_0 = (Keyword)cFASTAssignment_3.eContents().get(0);
+		private final Assignment cFULLAssignment_4 = (Assignment)cAlternatives.eContents().get(4);
+		private final Keyword cFULLFullKeyword_4_0 = (Keyword)cFULLAssignment_4.eContents().get(0);
+		
+		//Speed:
+		//	SLOWEST='slowest'
+		//	| SLOW='slow'
+		//	| NORMAL='normal'
+		//	| FAST='fast'
+		//	| FULL='full';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//SLOWEST='slowest' | SLOW='slow' | NORMAL='normal' | FAST='fast' | FULL='full'
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//SLOWEST='slowest'
+		public Assignment getSLOWESTAssignment_0() { return cSLOWESTAssignment_0; }
+		
+		//'slowest'
+		public Keyword getSLOWESTSlowestKeyword_0_0() { return cSLOWESTSlowestKeyword_0_0; }
+		
+		//SLOW='slow'
+		public Assignment getSLOWAssignment_1() { return cSLOWAssignment_1; }
+		
+		//'slow'
+		public Keyword getSLOWSlowKeyword_1_0() { return cSLOWSlowKeyword_1_0; }
+		
+		//NORMAL='normal'
+		public Assignment getNORMALAssignment_2() { return cNORMALAssignment_2; }
+		
+		//'normal'
+		public Keyword getNORMALNormalKeyword_2_0() { return cNORMALNormalKeyword_2_0; }
+		
+		//FAST='fast'
+		public Assignment getFASTAssignment_3() { return cFASTAssignment_3; }
+		
+		//'fast'
+		public Keyword getFASTFastKeyword_3_0() { return cFASTFastKeyword_3_0; }
+		
+		//FULL='full'
+		public Assignment getFULLAssignment_4() { return cFULLAssignment_4; }
+		
+		//'full'
+		public Keyword getFULLFullKeyword_4_0() { return cFULLFullKeyword_4_0; }
+	}
 	
 	public class IntensityElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "robotcontrol.Roc.Intensity");
@@ -506,14 +513,15 @@ public class RocGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEMaximumKeyword_4_0 = (Keyword)cEEnumLiteralDeclaration_4.eContents().get(0);
 		
 		//enum Intensity:
-		//	C='pronounced'
+		//	C='pronounced' // First position is used as default value
 		//	| A='trace of'
 		//	| B='slightly'
 		//	| D='severe'
 		//	| E='maximum';
 		public EnumRule getRule() { return rule; }
 		
-		//C='pronounced' | A='trace of' | B='slightly' | D='severe' | E='maximum'
+		//C='pronounced' // First position is used as default value
+		//| A='trace of' | B='slightly' | D='severe' | E='maximum'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//C='pronounced'
@@ -594,13 +602,14 @@ public class RocGrammarAccess extends AbstractGrammarElementFinder {
 	private final DirectedActionElements pDirectedAction;
 	private final LeftRightDirectedActionElements pLeftRightDirectedAction;
 	private final LeftRightDirectionElements pLeftRightDirection;
-	private final BackForthDirectedActionElements pBackForthDirectedAction;
-	private final BackForthDirectionElements pBackForthDirection;
 	private final FullDirectedActionElements pFullDirectedAction;
 	private final DirectionElements pDirection;
-	private final TerminalRule tDuration;
+	private final SpeedElements pSpeed;
+	private final TerminalRule tDURATION;
 	private final DurationUnitElements eDurationUnit;
 	private final TerminalRule tFOR;
+	private final TerminalRule tWITH;
+	private final TerminalRule tSPEED_KEY;
 	private final TerminalRule tAND;
 	private final TerminalRule tPERIOD;
 	
@@ -623,13 +632,14 @@ public class RocGrammarAccess extends AbstractGrammarElementFinder {
 		this.pDirectedAction = new DirectedActionElements();
 		this.pLeftRightDirectedAction = new LeftRightDirectedActionElements();
 		this.pLeftRightDirection = new LeftRightDirectionElements();
-		this.pBackForthDirectedAction = new BackForthDirectedActionElements();
-		this.pBackForthDirection = new BackForthDirectionElements();
 		this.pFullDirectedAction = new FullDirectedActionElements();
 		this.pDirection = new DirectionElements();
-		this.tDuration = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "robotcontrol.Roc.Duration");
+		this.pSpeed = new SpeedElements();
+		this.tDURATION = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "robotcontrol.Roc.DURATION");
 		this.eDurationUnit = new DurationUnitElements();
 		this.tFOR = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "robotcontrol.Roc.FOR");
+		this.tWITH = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "robotcontrol.Roc.WITH");
+		this.tSPEED_KEY = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "robotcontrol.Roc.SPEED_KEY");
 		this.tAND = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "robotcontrol.Roc.AND");
 		this.tPERIOD = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "robotcontrol.Roc.PERIOD");
 	}
@@ -682,7 +692,8 @@ public class RocGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Motion:
-	//	action=Action FOR duration=Duration durationUnit=DurationUnit;
+	//	action=Action FOR duration=DURATION durationUnit=DurationUnit
+	//	| action=Action WITH speed=Speed SPEED_KEY;
 	public MotionElements getMotionAccess() {
 		return pMotion;
 	}
@@ -704,7 +715,7 @@ public class RocGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//enum Intensity:
-	//	C='pronounced'
+	//	C='pronounced' // First position is used as default value
 	//	| A='trace of'
 	//	| B='slightly'
 	//	| D='severe'
@@ -730,7 +741,7 @@ public class RocGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//SingleAction:
 	//	actionName='drop jaw'
-	//	| actionName='nod Head';
+	//	| actionName='nod head';
 	public SingleActionElements getSingleActionAccess() {
 		return pSingleAction;
 	}
@@ -741,7 +752,6 @@ public class RocGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//DirectedAction:
 	//	actionName=LeftRightDirectedAction direction=LeftRightDirection
-	//	| actionName=BackForthDirectedAction direction=BackForthDirection
 	//	| actionName=FullDirectedAction direction=Direction;
 	public DirectedActionElements getDirectedActionAccess() {
 		return pDirectedAction;
@@ -772,30 +782,9 @@ public class RocGrammarAccess extends AbstractGrammarElementFinder {
 		return getLeftRightDirectionAccess().getRule();
 	}
 	
-	//BackForthDirectedAction:
-	//	head='head';
-	public BackForthDirectedActionElements getBackForthDirectedActionAccess() {
-		return pBackForthDirectedAction;
-	}
-	
-	public ParserRule getBackForthDirectedActionRule() {
-		return getBackForthDirectedActionAccess().getRule();
-	}
-	
-	//BackForthDirection:
-	//	back='back'
-	//	| forth='forth';
-	public BackForthDirectionElements getBackForthDirectionAccess() {
-		return pBackForthDirection;
-	}
-	
-	public ParserRule getBackForthDirectionRule() {
-		return getBackForthDirectionAccess().getRule();
-	}
-	
 	//FullDirectedAction:
-	//	turnHead='turn' 'head'
-	//	| turnEyes='turn' 'eyes';
+	//	turnHead='turn head'
+	//	| turnEyes='turn eyes';
 	public FullDirectedActionElements getFullDirectedActionAccess() {
 		return pFullDirectedAction;
 	}
@@ -817,10 +806,24 @@ public class RocGrammarAccess extends AbstractGrammarElementFinder {
 		return getDirectionAccess().getRule();
 	}
 	
-	//terminal Duration:
+	//Speed:
+	//	SLOWEST='slowest'
+	//	| SLOW='slow'
+	//	| NORMAL='normal'
+	//	| FAST='fast'
+	//	| FULL='full';
+	public SpeedElements getSpeedAccess() {
+		return pSpeed;
+	}
+	
+	public ParserRule getSpeedRule() {
+		return getSpeedAccess().getRule();
+	}
+	
+	//terminal DURATION:
 	//	INT;
-	public TerminalRule getDurationRule() {
-		return tDuration;
+	public TerminalRule getDURATIONRule() {
+		return tDURATION;
 	}
 	
 	//enum DurationUnit:
@@ -839,6 +842,18 @@ public class RocGrammarAccess extends AbstractGrammarElementFinder {
 	//	'for';
 	public TerminalRule getFORRule() {
 		return tFOR;
+	}
+	
+	//terminal WITH:
+	//	'with';
+	public TerminalRule getWITHRule() {
+		return tWITH;
+	}
+	
+	//terminal SPEED_KEY:
+	//	'speed';
+	public TerminalRule getSPEED_KEYRule() {
+		return tSPEED_KEY;
 	}
 	
 	//terminal AND:
