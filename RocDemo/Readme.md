@@ -18,22 +18,22 @@ The project requires a ROS installation (tested with ROS indigo).
   * `rospy`
 
 ### Usage
-The controller demonstration has two main python scripts, both of which create a ROS node.
+The Roc controller is a ROS node which listens to file changes.
 
 Before using the demonstration system an instance of ROS has to run. Start ROS with the `roscore` command in a Terminal.
 
-#### Watchdog
-The watchdog script creates a file system watchdog, which should listen to changes in the Roc project `/src-gen` directory.
+#### Roc Controller
+The roc controller node creates a file system watchdog, which should listen to changes in the Roc project `/src-gen` directory.
 
 To start the watchdog run the script with the path of the Eclipse workspace location for `/src-gen`
 ```bash
-python3 Watchdog.py <PATH_TO_SRC-GEN>
+rosrun roc RocController.py <PATH_TO_SRC-GEN>
 ```
 
 When a file change is registered, the watchdogs send a ROS message with the file content to following topic: <TODO>
 
 ###### Command line arguments
-Run `python3 Watchdog.py --help ` to see a complete list of arguments.
+Run `python3 ./roc_node/sripts/RocController.py --help ` to see a complete list of arguments.
 
 ###### Troubleshooting
 Some editors don't save files upon saving, but instead replace the file with a cached file. When using the watchdog without Eclipse, make sure that the editor performs a modification on the file, otherwise changes will not be registered. Known editors with this behaviour: vim and gedit. It is possible to change this behaviour in the editor settings.

@@ -49,7 +49,7 @@ class RocScheduler(object):
         rospy.init_node('Roc_Scheduler')
 
         self.pub = rospy.Publisher('/joint_command', JointState, latch=True, queue_size=10)
-        rospy.Subscriber('/ros_movements', String, self.parse_message)
+        rospy.Subscriber('/roc_command', String, self.parse_message)
         self.action_unit_adapter = ActionUnitJointAdapter('config/config.json')
         self.run()
 
@@ -57,8 +57,7 @@ class RocScheduler(object):
         self.msg_count += 1
         print("Parsing msg number: %s", self.msg_count)
         data = json.loads(msg.data)
-        message_reader = MessageReader()
-        movements = message_reader.read_data(data)
+
         print("Number of movements: %s", len(movements))
         self.add_movements(movements)
 
