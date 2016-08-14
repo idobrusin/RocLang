@@ -6,7 +6,7 @@ The Roc controller is a ROS node which creates a watchdog for a given folder and
 The node publishes on the TODO topic. The message types are located in the `msg` folder.
 
 ## Installation
-1.Copy the contents of the RocDemoController folder to your catkin workspace src directory (typically `~/catkin_ws/src`).
+1.Copy the contents of the /roc_node folder to your catkin workspace src directory (typically `~/catkin_ws/src`).
 2. Generate message classes by running
 ```
 catkin_make install
@@ -20,7 +20,7 @@ source ./devel/setup.bash
 ## Run node
 Run node:
 ```
-rosrun roc RocController.py
+rosrun roc RocController.py <ARGS>
 ```
 Use RocController.py -h to see usage help.
 
