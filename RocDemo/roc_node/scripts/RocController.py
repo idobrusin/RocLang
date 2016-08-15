@@ -174,57 +174,17 @@ class Main:
         :param movement:
         :return:
         """
-        movement_msg = self.init_movement_msg()
+        movement_msg = MovementMsg()
         for motion in movement.motions:
             joints = self.action_unit_adapter.action_unit_to_joints(motion.action_unit.number)
             for joint in joints:
-                position = self.action_unit_adapter.intensity_to_angle(joint, motion.action_unit.intensity)
-                duration = motion.duration.duration
-                print("position: ", position)
-                print("duration: ", duration)
-
-                if joint.name == "head_tilt":
-                    movement_msg.head_tilt.position = position
-                    movement_msg.head_tilt.duration = duration
-                elif joint.name == "head_leftright":
-                    movement_msg.head_leftright.position = position
-                    movement_msg.head_leftright.duration = duration
-                elif joint.name == "head_updown":
-                    movement_msg.head_updown.position = position
-                    movement_msg.head_updown.duration = duration
-                elif joint.name == "eyes_updown":
-                    movement_msg.eyes_updown.position = position
-                    movement_msg.eyes_updown.duration = duration
-                elif joint.name == "eye_leftright":
-                    movement_msg.eyes_leftright.position = position
-                    movement_msg.eyes_leftright.duration = duration
-                elif joint.name == "jaw":
-                    movement_msg.jaw.position = position
-                    movement_msg.jaw.duration = duration
-
+                motion_msg = MotionMsg()
+                motion_msg.duration = motion.duration.duration
+                motion_msg.position = self.action_unit_adapter.intensity_to_angle(joint, motion.action_unit.intensity)
+                motion_msg.name = joint.name
+                movement_msg.motions.append(motion_msg)
         return movement_msg
 
-    def init_movement_msg(self):
-        movement_msg = MovementMsg()
-        movement_msg.head_leftright.position = 0
-        movement_msg.head_leftright.duration = 0
-
-        movement_msg.head_updown.position = 0
-        movement_msg.head_updown.duration = 0
-
-        movement_msg.head_tilt.position = 0
-        movement_msg.head_tilt.duration = 0
-
-        movement_msg.eyes_leftright.position = 0
-        movement_msg.eyes_leftright.duration = 0
-
-        movement_msg.eyes_updown = MotionMsg()
-        movement_msg.eyes_updown.duration = 0
-
-        movement_msg.jaw.position = 0
-        movement_msg.jaw.duration = 0
-
-        return movement_msg
 
 if __name__ == "__main__":
     main = Main(sys.argv[1:])
