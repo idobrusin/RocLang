@@ -93,7 +93,6 @@ class Main:
         self.action_unit_adapter = ActionUnitJointAdapter('/home/iliadobrusin/catkin_ws/src/roc_node/scripts/config/config.json')
         self.message_reader = MessageReader()
 
-
         if args:
             arg_parser = self.init_arg_parser()
             args = arg_parser.parse_args(args)
@@ -105,17 +104,17 @@ class Main:
             path = '.'
             patterns = None
 
-        if file:
-            # Send file directly.
-            logging.info("Sending message from cmd line parameters")
-            self.send_message(file)
-
         # init threads
         self.file_observer_thread = FileObserverThread(path=path, patterns=patterns, callback=self.send_message)
         self.file_observer_thread.start()
 
         self.ros_thread = RosThread()
         self.ros_thread.start()
+
+        if file:
+            # Send file directly.
+            logging.info("Sending message from cmd line parameters")
+            self.send_message(file)
 
     def init_arg_parser(self):
         """

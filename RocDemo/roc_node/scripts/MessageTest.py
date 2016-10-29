@@ -21,13 +21,13 @@ class Main:
         command = CommandMsg()
         # ---------------------
         motion1 = MotionMsg()
-        motion1.name = "head_leftright"
-        motion1.position = -0.187
+        motion1.name = "eye_leftright"
+        motion1.position = -0.44
         motion1.duration = 3000
 
         motion2 = MotionMsg()
-        motion2.name = "head_updown"
-        motion2.position = 0.15
+        motion2.name = "eyes_updown"
+        motion2.position = 0.44
         motion2.duration = 1000
 
         movement1 = MovementMsg()
@@ -37,13 +37,13 @@ class Main:
         # ---------------------
         motion3 = MotionMsg()
         motion3.duration = 3000
-        motion3.position = 0.187
-        motion3.name = "head_leftright"
+        motion3.position = 0.44
+        motion3.name = "eye_leftright"
 
         motion4 = MotionMsg()
         motion4.duration = 1000
-        motion4.position = -0.15
-        motion4.name = "head_updown"
+        motion4.position = -0.44
+        motion4.name = "eyes_updown"
 
         movement2 = MovementMsg()
         movement2.motions.append(motion3)
