@@ -64,7 +64,7 @@ In order to use the demonstration system, ROS has to be installed. Please see [w
 #### 1. Install InMoov simulation
   - git clone https://github.com/alansrobotlab/inmoov_ros.git in the catkin workspace src folder, so in the end, the src folder contains inmoov_description etc.
 ```bash
-    cd <catkin workspace>
+    ~/catkin_ws  # use your workspace location
     catkin_make
     catkin_install
     source ./devel/setup.bash
@@ -73,38 +73,40 @@ Note: source the /devel/setup.bash in your .bashrc, otherwise these steps need t
 
 #### 2. Install Roc node
 ##### Python Prerequisites
-Following packages are needed for operating the robot:
+Following python packages are needed for operating the robot:
   * `yaml`
   * `watchdog`
   * `rospy`
-
+Install them via `pip`/`pip3`.
 
 ##### Create Roc node
-  1. Copy the contents of the /roc_node folder to your catkin workspace `src` directory (typically `~/catkin_ws/src`).
-  2. Generate message classes by running
-    ```
-    cd ~/catkin_ws  # use your workspace location
-    catkin_make install
-    ```
-  3. Source the devel folder
-    ```
-    cd ~/catkin_ws  # use your workspace location
-    source ./devel/setup.bash
-    ```
+Copy the contents of the `/roc_node` folder to your catkin workspace `src` directory (typically `~/catkin_ws/src`).  
+
+Generate message classes by running
+```
+cd ~/catkin_ws  # use your workspace location
+catkin_make install
+```  
+  
+Source the devel folder
+```
+cd ~/catkin_ws  # use your workspace location
+source ./devel/setup.bash
+```
 
 #### 3. (Optional) Install Arduino libraries and flash Arduino
 In order to communicate with the Arduino via ROS rosserial has to be installed.
-###### Install platform.io
+##### Install platform.io
 The Arduino should be flashed by using [platform.io](http://platformio.org/).
 Install the platform.io CLI following these [instructions](http://docs.platformio.org/en/stable/installation.html#super-quick-mac-linux).  
 
 platform.io can also be used in an IDE (see [platform.io integration](http://platformio.org/get-started/integration) for details).
 
-###### Install rosserial
+##### Install rosserial
 To program the Arduino, `rosserial` must be installed and installed in the sketchbook/libraries folder.
 [Installation instructions](http://wiki.ros.org/rosserial_arduino/Tutorials/Arduino%20IDE%20Setup)
 
-###### Flash Arduino using platform.io
+##### Flash Arduino using platform.io
 
 
 ## Usage
@@ -134,7 +136,7 @@ roscore
 Run node:
 ```
 rosrun roc RocController.py -p <path_to_src-gen>
-```bash
+
 # Example: Listen to file changes in the current folder (also default).
 rosrun roc RocController.py -p ./
 ```
