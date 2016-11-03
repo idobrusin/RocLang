@@ -41,7 +41,6 @@ The Roc language can be used by using the provided Eclipse plugin. For controlli
 The language can be used via an Eclipse plugin.
 The are two possible methods to install the plugin: via an update site or as a manual plugin installation. It is recommended to use the first method.  
 
-
 ### Regular installation via Update Site
   * Open Help -> Install new Software.
   * Click add to add a repository
@@ -49,23 +48,18 @@ The are two possible methods to install the plugin: via an update site or as a m
   * Install Roc feature and restart Eclipse.
   * Confirm with yes, when asked to convert project to Xtext project.
 
-### Manual installation
+### Alternative: Manual installation
 Export all projects as zip.
 Place zip file in Eclipse `dropins` folder (platform dependent) and extract (`jar` files should be located in folder dropins/plugins)
 After extraction restart Eclipse with -clean option in order to refresh plugins.
 
-
-Following steps are necessary for using the Roc language plugin:
-1. Install Eclipse 
-2. Add Roc Update site to Eclipse
-3. Install Roc language plugin
-4. Use the language by creating a project
-
+---
 ## Roc demonstration
 The demonstration consists of a simulation of the robot InMoov and a 3D print of the InMoovs' head. 
 
 ### Prerequisites
 In order to use the demonstration system, ROS has to be installed. Please see [www.ros.org](http://www.ros.org/) for a detailed installation instruction. ROS works best under Ubuntu Linux. For Roc, Ubuntu 14.x in combination with ROS indigo is suggested.
+
 ---
 
 ### Installation
@@ -76,6 +70,7 @@ Following packages are needed for operating the robot:
   * `yaml`
   * `watchdog`
   * `rospy`
+
 ----
 
 1.Copy the contents of the /roc_node folder to your catkin workspace `src` directory (typically `~/catkin_ws/src`).
