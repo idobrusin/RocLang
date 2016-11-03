@@ -147,7 +147,7 @@ rosrun roc RocController.py -p ./
 
 Use RocController.py -h to see usage help and arguments.
 
-#### Start Arduino ROS node
+### Start Arduino ROS node
 Start rosserial in order to forward messages to Arduino
 ```bash
 rosrun rosserial_python serial_node.py <DEVICE_LOCATION>
@@ -161,7 +161,7 @@ Mac OS X: `/dev/tty.usbmodemFD121`
 
 Ubunutu : `/dev/ttyACM0`
 
-#### Control robot
+### Control robot
 After all previous programs are running (Eclipse, simulation, Roc control node and optionally the Arduino node), it is possible to write a Roc program in Eclipse. After saving the `.roc` file the robot should move accordingly.
 
 ## Troubleshooting
@@ -169,7 +169,7 @@ After all previous programs are running (Eclipse, simulation, Roc control node a
 Some editors don't save files upon saving, but instead replace the file with a cached file. When using the watchdog without Eclipse, make sure that the editor performs a modification on the file, otherwise changes will not be registered. Known editors with this behaviour: vim and gedit. It is possible to change this behavior in the editor settings.
 
 ### Arduino
-##### Permission denied for USB device (Ubuntu Linux)
+#### Permission denied for USB device (Ubuntu Linux)
 http://arduino-er.blogspot.de/2014/08/arduino-ide-error-avrdude-seropen-cant.html
 
 ```bash
