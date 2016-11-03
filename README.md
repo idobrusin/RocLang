@@ -134,8 +134,8 @@ roscore
 Run node:
 ```
 rosrun roc RocController.py -p <path_to_src-gen>
-```
-# Example: Listen to file changes in the current folder (also default)a.
+```bash
+# Example: Listen to file changes in the current folder (also default).
 rosrun roc RocController.py -p ./
 ```
 #### Arguments 
