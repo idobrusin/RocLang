@@ -37,7 +37,7 @@ In order to control a robot head, a [demonstration system](./RocDemo) is created
 # Installation
 The Roc language can be used by using the provided Eclipse plugin. For controlling the head of the robot InMoov (simulated and real-life) the [Roc demonstration project](./RocDemo) needs to be installed. 
 
-## Roc language 
+## 1. Roc language installation
 The language can be used via an Eclipse plugin.
 The are two possible methods to install the plugin: via an update site or as a manual plugin installation. It is recommended to use the first method.  
 
@@ -49,21 +49,28 @@ The are two possible methods to install the plugin: via an update site or as a m
   * Confirm with yes, when asked to convert project to Xtext project.
 
 ### Alternative: Manual installation
-Export all projects as zip.
-Place zip file in Eclipse `dropins` folder (platform dependent) and extract (`jar` files should be located in folder dropins/plugins)
-After extraction restart Eclipse with -clean option in order to refresh plugins.
+Export all projects as zip. Place zip file in Eclipse `dropins` folder (platform dependent) and extract (`jar` files should be located in folder dropins/plugins). After extraction restart Eclipse with -clean option in order to refresh plugins.
 
----
-## Roc demonstration
+
+## 2. Roc demonstration installation
 The demonstration consists of a simulation of the robot InMoov and a 3D print of the InMoovs' head. 
 
 ### Prerequisites
 In order to use the demonstration system, ROS has to be installed. Please see [www.ros.org](http://www.ros.org/) for a detailed installation instruction. ROS works best under Ubuntu Linux. For Roc, Ubuntu 14.x in combination with ROS indigo is suggested.
 
----
+
 
 ### Installation
 #### 1. Install InMoov simulation
+  - git clone https://github.com/alansrobotlab/inmoov_ros.git in the catkin workspace src folder, so in the end, the src folder contains inmoov_description etc.
+```bash
+    cd <catkin workspace>
+    catkin_make
+    catkin_install
+    source ./devel/setup.bash
+```
+Note: source the /devel/setup.bash in your .bashrc, otherwise these steps need to performed each time you want to run the simulation.
+
 #### 2. Install Roc node
 ##### Python Prerequisites
 Following packages are needed for operating the robot:
@@ -72,46 +79,63 @@ Following packages are needed for operating the robot:
   * `rospy`
 
 
-
+##### Create Roc node
   1. Copy the contents of the /roc_node folder to your catkin workspace `src` directory (typically `~/catkin_ws/src`).
   2. Generate message classes by running
-```
-cd ~/catkin_ws
-catkin_make install
-```
+    ```
+    cd ~/catkin_ws  # use your workspace location
+    catkin_make install
+    ```
   3. Source the devel folder
-```
-cd ~/catkin_ws
-source ./devel/setup.bash
-```
+    ```
+    cd ~/catkin_ws  # use your workspace location
+    source ./devel/setup.bash
+    ```
 
 #### 3. (Optional) Install Arduino libraries and flash Arduino
-The Arduino should be flashed by using platform.io
 In order to communicate with the Arduino via ROS rosserial has to be installed.
+###### Install platform.io
+The Arduino should be flashed by using [platform.io](http://platformio.org/).
+Install the platform.io CLI following these [instructions](http://docs.platformio.org/en/stable/installation.html#super-quick-mac-linux).  
 
-##### Rosserial
+platform.io can also be used in an IDE (see [platform.io integration](http://platformio.org/get-started/integration) for details).
+
+###### Install rosserial
+To program the Arduino, `rosserial` must be installed and installed in the sketchbook/libraries folder.
+[Installation instructions](http://wiki.ros.org/rosserial_arduino/Tutorials/Arduino%20IDE%20Setup)
+
+###### Flash Arduino using platform.io
 
 
 ## Usage
+### Create a Roc project in Eclipse
 Important note: When using the plugin, Eclipse asks if the project should be converted to a Xtext project. Press Yes, otherwise the code generation will not work properly.
 
-### Create a Roc project in Eclipse
-
-### Run the simulation
 ##### Options
 It is possible to change the output folder of the language (default src-gen in the project folder).
 
+### Run the simulation
+Make sure ROS is running:
+```bash
+roscore
+```
+
+```bash
+    cd ~/catkin_ws/src/inmoov_description  # use your workspace location
+    roslaunch inmoov_description display.launch model:=robots/inmoov.urdf gui:=True
+```
+
 ### Run Roc control node
-Start ROS  via Terminal:
+Make sure ROS is running:
 ```
 roscore
 ```
 
 Run node:
 ```
-rosrun roc RocController.py -p <path_to_src/gen>
+rosrun roc RocController.py -p <path_to_src-gen>
 ```
-# Listen to file changes in the current folder.
+# Example: Listen to file changes in the current folder (also default)a.
 rosrun roc RocController.py -p ./
 ```
 #### Arguments 
@@ -121,7 +145,22 @@ rosrun roc RocController.py -p ./
 
 Use RocController.py -h to see usage help and arguments.
 
-###
+#### Start Arduino ROS node
+Start rosserial in order to forward messages to Arduino
+```bash
+rosrun rosserial_python serial_node.py <DEVICE_LOCATION>
+
+# Linux example
+rosrun rosserial_python serial_node.py /dev/ttyACM0 # Linux
+```
+Some possible device locations:
+
+Mac OS X: `/dev/tty.usbmodemFD121`
+
+Ubunutu : `/dev/ttyACM0`
+
+#### Control robot
+After all previous programs are running (Eclipse, simulation, Roc control node and optionally the Arduino node), it is possible to write a Roc program in Eclipse. After saving the `.roc` file the robot should move accordingly.
 
 ## Support and Contribution
 Contributions to the Roc languages are welcome. Changing the language and its features is described under [Language Development](./RocLang).
