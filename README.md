@@ -34,22 +34,22 @@ The main language project consists of the language definition created with the X
 
 In order to control a robot head, a [demonstration system](./RocDemo) is created based on the head of the robot [InMoov](http://inmoov.fr), an anthropomorphic life-size robot which can be printed with an off-the-shelf 3D printer. The demonstration system uses the output of the language which a serialized representation of the movement instructions encoded with JSON for moving the different parts of the head. The system consists of the robot head and a simulation, which is an integral part of the working system. 
 
-## Installation
+# Installation
 The Roc language can be used by using the provided Eclipse plugin. For controlling the head of the robot InMoov (simulated and real-life) the [Roc demonstration project](./RocDemo) needs to be installed. 
 
-### Roc language 
+## Roc language 
 The language can be used via an Eclipse plugin.
 The are two possible methods to install the plugin: via an update site or as a manual plugin installation. It is recommended to use the first method.  
 
 
-#### Install via update site
+### Regular installation via Update Site
   * Open Help -> Install new Software.
   * Click add to add a repository
   * Use the following URL: https://github.com/idobrusin/RocLang/raw/master/RocLang/robotcontrol.parent/robotcontrol.update-site
   * Install Roc feature and restart Eclipse.
   * Confirm with yes, when asked to convert project to Xtext project.
 
-#### Manual install
+### Manual installation
 Export all projects as zip.
 Place zip file in Eclipse `dropins` folder (platform dependent) and extract (`jar` files should be located in folder dropins/plugins)
 After extraction restart Eclipse with -clean option in order to refresh plugins.
@@ -61,30 +61,72 @@ Following steps are necessary for using the Roc language plugin:
 3. Install Roc language plugin
 4. Use the language by creating a project
 
-### Roc demonstration
+## Roc demonstration
 The demonstration consists of a simulation of the robot InMoov and a 3D print of the InMoovs' head. 
 
-#### Prerequisites
+### Prerequisites
 In order to use the demonstration system, ROS has to be installed. Please see [www.ros.org](http://www.ros.org/) for a detailed installation instruction. ROS works best under Ubuntu Linux. For Roc, Ubuntu 14.x in combination with ROS indigo is suggested.
-_____
+---
 
-#### Installation
-##### 1. Install InMoov simulation
-##### 2. Install Roc node
-##### 3. (Optional) Install Arduino libraries and flash Arduino
-###### Rosserial
-`rosserial` is used for the communication between the Arduino and the controlling computer.
-###### python packages:
+### Installation
+#### 1. Install InMoov simulation
+#### 2. Install Roc node
+##### Python Prerequisites
+Following packages are needed for operating the robot:
   * `yaml`
   * `watchdog`
   * `rospy`
+----
+
+1.Copy the contents of the /roc_node folder to your catkin workspace `src` directory (typically `~/catkin_ws/src`).
+2. Generate message classes by running
+```
+cd ~/catkin_ws
+catkin_make install
+```
+3. Source the devel folder
+```
+cd ~/catkin_ws
+source ./devel/setup.bash
+```
+
+#### 3. (Optional) Install Arduino libraries and flash Arduino
+The Arduino should be flashed by using platform.io
+In order to communicate with the Arduino via ROS rosserial has to be installed.
+
+##### Rosserial
 
 
 ## Usage
 Important note: When using the plugin, Eclipse asks if the project should be converted to a Xtext project. Press Yes, otherwise the code generation will not work properly.
 
+### Create a Roc project in Eclipse
 
-Start ROS with the `roscore` command in a Terminal.
+### Run the simulation
+##### Options
+It is possible to change the output folder of the language (default src-gen in the project folder).
+
+### Run Roc control node
+Start ROS  via Terminal:
+```
+roscore
+```
+
+Run node:
+```
+rosrun roc RocController.py -p <path_to_src/gen>
+```
+# Listen to file changes in the current folder.
+rosrun roc RocController.py -p ./
+```
+#### Arguments 
+1. `-f` or `--file`: Reads in Roc output file (JSON) and sends it immediately via  ROS.
+2. `-p` or `--path`: Path which points to the output folder of the Roc IDE. Default: `.`
+3. `-P` or `--pattern`: File pattern to be monitored (one or more). Default: `*.json`
+
+Use RocController.py -h to see usage help and arguments.
+
+###
 
 ## Support and Contribution
 Contributions to the Roc languages are welcome. Changing the language and its features is described under [Language Development](./RocLang).
