@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalRocParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_PERIOD", "RULE_AND", "RULE_FOR", "RULE_WITH", "RULE_SPEED_KEY", "RULE_DURATION", "RULE_INT", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'pronounced'", "'trace of'", "'slightly'", "'severe'", "'maximum'", "'milliseconds'", "'seconds'", "'minutes'", "'face'", "'head'", "'neutral'", "'drop jaw'", "'nod head'", "'tilt'", "'left'", "'right'", "'turn head'", "'turn eyes'", "'up'", "'down'", "'slowest'", "'slow'", "'normal'", "'fast'", "'full'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_PERIOD", "RULE_AND", "RULE_FOR", "RULE_WITH", "RULE_SPEED_KEY", "RULE_DURATION", "RULE_INT", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'pronounced'", "'trace of'", "'slightly'", "'severe'", "'maximum'", "'milliseconds'", "'seconds'", "'minutes'", "'neutral face'", "'drop jaw'", "'nod head'", "'tilt head'", "'left'", "'right'", "'turn head'", "'turn eyes'", "'up'", "'down'", "'slowest'", "'slow'", "'normal'", "'fast'", "'full'"
     };
     public static final int RULE_WITH=7;
     public static final int RULE_DURATION=9;
@@ -59,8 +59,6 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
     public static final int T__23=23;
     public static final int T__24=24;
     public static final int T__25=25;
-    public static final int T__40=40;
-    public static final int T__41=41;
     public static final int T__20=20;
     public static final int T__21=21;
 
@@ -156,7 +154,7 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( ((LA1_0>=17 && LA1_0<=21)||(LA1_0>=27 && LA1_0<=30)||(LA1_0>=33 && LA1_0<=34)) ) {
+                if ( ((LA1_0>=17 && LA1_0<=21)||(LA1_0>=25 && LA1_0<=28)||(LA1_0>=31 && LA1_0<=32)) ) {
                     alt1=1;
                 }
 
@@ -472,31 +470,31 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleCompleteAction"
-    // InternalRoc.g:178:1: ruleCompleteAction : ( ( rule__CompleteAction__Group__0 ) ) ;
+    // InternalRoc.g:178:1: ruleCompleteAction : ( ( rule__CompleteAction__ActionNameAssignment ) ) ;
     public final void ruleCompleteAction() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:182:2: ( ( ( rule__CompleteAction__Group__0 ) ) )
-            // InternalRoc.g:183:2: ( ( rule__CompleteAction__Group__0 ) )
+            // InternalRoc.g:182:2: ( ( ( rule__CompleteAction__ActionNameAssignment ) ) )
+            // InternalRoc.g:183:2: ( ( rule__CompleteAction__ActionNameAssignment ) )
             {
-            // InternalRoc.g:183:2: ( ( rule__CompleteAction__Group__0 ) )
-            // InternalRoc.g:184:3: ( rule__CompleteAction__Group__0 )
+            // InternalRoc.g:183:2: ( ( rule__CompleteAction__ActionNameAssignment ) )
+            // InternalRoc.g:184:3: ( rule__CompleteAction__ActionNameAssignment )
             {
-             before(grammarAccess.getCompleteActionAccess().getGroup()); 
-            // InternalRoc.g:185:3: ( rule__CompleteAction__Group__0 )
-            // InternalRoc.g:185:4: rule__CompleteAction__Group__0
+             before(grammarAccess.getCompleteActionAccess().getActionNameAssignment()); 
+            // InternalRoc.g:185:3: ( rule__CompleteAction__ActionNameAssignment )
+            // InternalRoc.g:185:4: rule__CompleteAction__ActionNameAssignment
             {
             pushFollow(FOLLOW_2);
-            rule__CompleteAction__Group__0();
+            rule__CompleteAction__ActionNameAssignment();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getCompleteActionAccess().getGroup()); 
+             after(grammarAccess.getCompleteActionAccess().getActionNameAssignment()); 
 
             }
 
@@ -703,31 +701,31 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleLeftRightDirectedAction"
-    // InternalRoc.g:253:1: ruleLeftRightDirectedAction : ( ( rule__LeftRightDirectedAction__Group__0 ) ) ;
+    // InternalRoc.g:253:1: ruleLeftRightDirectedAction : ( ( rule__LeftRightDirectedAction__TiltHeadAssignment ) ) ;
     public final void ruleLeftRightDirectedAction() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:257:2: ( ( ( rule__LeftRightDirectedAction__Group__0 ) ) )
-            // InternalRoc.g:258:2: ( ( rule__LeftRightDirectedAction__Group__0 ) )
+            // InternalRoc.g:257:2: ( ( ( rule__LeftRightDirectedAction__TiltHeadAssignment ) ) )
+            // InternalRoc.g:258:2: ( ( rule__LeftRightDirectedAction__TiltHeadAssignment ) )
             {
-            // InternalRoc.g:258:2: ( ( rule__LeftRightDirectedAction__Group__0 ) )
-            // InternalRoc.g:259:3: ( rule__LeftRightDirectedAction__Group__0 )
+            // InternalRoc.g:258:2: ( ( rule__LeftRightDirectedAction__TiltHeadAssignment ) )
+            // InternalRoc.g:259:3: ( rule__LeftRightDirectedAction__TiltHeadAssignment )
             {
-             before(grammarAccess.getLeftRightDirectedActionAccess().getGroup()); 
-            // InternalRoc.g:260:3: ( rule__LeftRightDirectedAction__Group__0 )
-            // InternalRoc.g:260:4: rule__LeftRightDirectedAction__Group__0
+             before(grammarAccess.getLeftRightDirectedActionAccess().getTiltHeadAssignment()); 
+            // InternalRoc.g:260:3: ( rule__LeftRightDirectedAction__TiltHeadAssignment )
+            // InternalRoc.g:260:4: rule__LeftRightDirectedAction__TiltHeadAssignment
             {
             pushFollow(FOLLOW_2);
-            rule__LeftRightDirectedAction__Group__0();
+            rule__LeftRightDirectedAction__TiltHeadAssignment();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getLeftRightDirectedActionAccess().getGroup()); 
+             after(grammarAccess.getLeftRightDirectedActionAccess().getTiltHeadAssignment()); 
 
             }
 
@@ -1152,14 +1150,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Motion__Alternatives"
-    // InternalRoc.g:400:1: rule__Motion__Alternatives : ( ( ( rule__Motion__Group_0__0 ) ) | ( ( rule__Motion__Group_1__0 ) ) );
+    // InternalRoc.g:400:1: rule__Motion__Alternatives : ( ( ( rule__Motion__Group_0__0 ) ) | ( ( rule__Motion__Group_1__0 ) ) | ( ( rule__Motion__ActionAssignment_2 ) ) );
     public final void rule__Motion__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:404:1: ( ( ( rule__Motion__Group_0__0 ) ) | ( ( rule__Motion__Group_1__0 ) ) )
-            int alt2=2;
+            // InternalRoc.g:404:1: ( ( ( rule__Motion__Group_0__0 ) ) | ( ( rule__Motion__Group_1__0 ) ) | ( ( rule__Motion__ActionAssignment_2 ) ) )
+            int alt2=3;
             alt2 = dfa2.predict(input);
             switch (alt2) {
                 case 1 :
@@ -1212,6 +1210,31 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
                     }
                     break;
+                case 3 :
+                    // InternalRoc.g:417:2: ( ( rule__Motion__ActionAssignment_2 ) )
+                    {
+                    // InternalRoc.g:417:2: ( ( rule__Motion__ActionAssignment_2 ) )
+                    // InternalRoc.g:418:3: ( rule__Motion__ActionAssignment_2 )
+                    {
+                     before(grammarAccess.getMotionAccess().getActionAssignment_2()); 
+                    // InternalRoc.g:419:3: ( rule__Motion__ActionAssignment_2 )
+                    // InternalRoc.g:419:4: rule__Motion__ActionAssignment_2
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__Motion__ActionAssignment_2();
+
+                    state._fsp--;
+
+
+                    }
+
+                     after(grammarAccess.getMotionAccess().getActionAssignment_2()); 
+
+                    }
+
+
+                    }
+                    break;
 
             }
         }
@@ -1230,16 +1253,16 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Action__Alternatives"
-    // InternalRoc.g:421:1: rule__Action__Alternatives : ( ( ( rule__Action__ActionHolderAssignment_0 ) ) | ( ( rule__Action__Group_1__0 ) ) | ( ( rule__Action__Group_2__0 ) ) );
+    // InternalRoc.g:427:1: rule__Action__Alternatives : ( ( ( rule__Action__ActionHolderAssignment_0 ) ) | ( ( rule__Action__Group_1__0 ) ) | ( ( rule__Action__Group_2__0 ) ) );
     public final void rule__Action__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:425:1: ( ( ( rule__Action__ActionHolderAssignment_0 ) ) | ( ( rule__Action__Group_1__0 ) ) | ( ( rule__Action__Group_2__0 ) ) )
+            // InternalRoc.g:431:1: ( ( ( rule__Action__ActionHolderAssignment_0 ) ) | ( ( rule__Action__Group_1__0 ) ) | ( ( rule__Action__Group_2__0 ) ) )
             int alt3=3;
             switch ( input.LA(1) ) {
-            case 27:
+            case 25:
                 {
                 alt3=1;
                 }
@@ -1248,10 +1271,10 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
                 {
                 int LA3_2 = input.LA(2);
 
-                if ( ((LA3_2>=28 && LA3_2<=29)) ) {
+                if ( ((LA3_2>=26 && LA3_2<=27)) ) {
                     alt3=2;
                 }
-                else if ( (LA3_2==30||(LA3_2>=33 && LA3_2<=34)) ) {
+                else if ( (LA3_2==28||(LA3_2>=31 && LA3_2<=32)) ) {
                     alt3=3;
                 }
                 else {
@@ -1266,10 +1289,10 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
                 {
                 int LA3_3 = input.LA(2);
 
-                if ( ((LA3_3>=28 && LA3_3<=29)) ) {
+                if ( ((LA3_3>=26 && LA3_3<=27)) ) {
                     alt3=2;
                 }
-                else if ( (LA3_3==30||(LA3_3>=33 && LA3_3<=34)) ) {
+                else if ( (LA3_3==28||(LA3_3>=31 && LA3_3<=32)) ) {
                     alt3=3;
                 }
                 else {
@@ -1284,10 +1307,10 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
                 {
                 int LA3_4 = input.LA(2);
 
-                if ( ((LA3_4>=28 && LA3_4<=29)) ) {
+                if ( ((LA3_4>=26 && LA3_4<=27)) ) {
                     alt3=2;
                 }
-                else if ( (LA3_4==30||(LA3_4>=33 && LA3_4<=34)) ) {
+                else if ( (LA3_4==28||(LA3_4>=31 && LA3_4<=32)) ) {
                     alt3=3;
                 }
                 else {
@@ -1302,10 +1325,10 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
                 {
                 int LA3_5 = input.LA(2);
 
-                if ( ((LA3_5>=28 && LA3_5<=29)) ) {
+                if ( ((LA3_5>=26 && LA3_5<=27)) ) {
                     alt3=2;
                 }
-                else if ( (LA3_5==30||(LA3_5>=33 && LA3_5<=34)) ) {
+                else if ( (LA3_5==28||(LA3_5>=31 && LA3_5<=32)) ) {
                     alt3=3;
                 }
                 else {
@@ -1320,10 +1343,10 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
                 {
                 int LA3_6 = input.LA(2);
 
-                if ( ((LA3_6>=28 && LA3_6<=29)) ) {
+                if ( ((LA3_6>=26 && LA3_6<=27)) ) {
                     alt3=2;
                 }
-                else if ( (LA3_6==30||(LA3_6>=33 && LA3_6<=34)) ) {
+                else if ( (LA3_6==28||(LA3_6>=31 && LA3_6<=32)) ) {
                     alt3=3;
                 }
                 else {
@@ -1334,15 +1357,15 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
                 }
                 }
                 break;
-            case 28:
-            case 29:
+            case 26:
+            case 27:
                 {
                 alt3=2;
                 }
                 break;
-            case 30:
-            case 33:
-            case 34:
+            case 28:
+            case 31:
+            case 32:
                 {
                 alt3=3;
                 }
@@ -1356,14 +1379,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
             switch (alt3) {
                 case 1 :
-                    // InternalRoc.g:426:2: ( ( rule__Action__ActionHolderAssignment_0 ) )
+                    // InternalRoc.g:432:2: ( ( rule__Action__ActionHolderAssignment_0 ) )
                     {
-                    // InternalRoc.g:426:2: ( ( rule__Action__ActionHolderAssignment_0 ) )
-                    // InternalRoc.g:427:3: ( rule__Action__ActionHolderAssignment_0 )
+                    // InternalRoc.g:432:2: ( ( rule__Action__ActionHolderAssignment_0 ) )
+                    // InternalRoc.g:433:3: ( rule__Action__ActionHolderAssignment_0 )
                     {
                      before(grammarAccess.getActionAccess().getActionHolderAssignment_0()); 
-                    // InternalRoc.g:428:3: ( rule__Action__ActionHolderAssignment_0 )
-                    // InternalRoc.g:428:4: rule__Action__ActionHolderAssignment_0
+                    // InternalRoc.g:434:3: ( rule__Action__ActionHolderAssignment_0 )
+                    // InternalRoc.g:434:4: rule__Action__ActionHolderAssignment_0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Action__ActionHolderAssignment_0();
@@ -1381,14 +1404,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalRoc.g:432:2: ( ( rule__Action__Group_1__0 ) )
+                    // InternalRoc.g:438:2: ( ( rule__Action__Group_1__0 ) )
                     {
-                    // InternalRoc.g:432:2: ( ( rule__Action__Group_1__0 ) )
-                    // InternalRoc.g:433:3: ( rule__Action__Group_1__0 )
+                    // InternalRoc.g:438:2: ( ( rule__Action__Group_1__0 ) )
+                    // InternalRoc.g:439:3: ( rule__Action__Group_1__0 )
                     {
                      before(grammarAccess.getActionAccess().getGroup_1()); 
-                    // InternalRoc.g:434:3: ( rule__Action__Group_1__0 )
-                    // InternalRoc.g:434:4: rule__Action__Group_1__0
+                    // InternalRoc.g:440:3: ( rule__Action__Group_1__0 )
+                    // InternalRoc.g:440:4: rule__Action__Group_1__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Action__Group_1__0();
@@ -1406,14 +1429,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalRoc.g:438:2: ( ( rule__Action__Group_2__0 ) )
+                    // InternalRoc.g:444:2: ( ( rule__Action__Group_2__0 ) )
                     {
-                    // InternalRoc.g:438:2: ( ( rule__Action__Group_2__0 ) )
-                    // InternalRoc.g:439:3: ( rule__Action__Group_2__0 )
+                    // InternalRoc.g:444:2: ( ( rule__Action__Group_2__0 ) )
+                    // InternalRoc.g:445:3: ( rule__Action__Group_2__0 )
                     {
                      before(grammarAccess.getActionAccess().getGroup_2()); 
-                    // InternalRoc.g:440:3: ( rule__Action__Group_2__0 )
-                    // InternalRoc.g:440:4: rule__Action__Group_2__0
+                    // InternalRoc.g:446:3: ( rule__Action__Group_2__0 )
+                    // InternalRoc.g:446:4: rule__Action__Group_2__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Action__Group_2__0();
@@ -1448,20 +1471,20 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SingleAction__Alternatives"
-    // InternalRoc.g:448:1: rule__SingleAction__Alternatives : ( ( ( rule__SingleAction__ActionNameAssignment_0 ) ) | ( ( rule__SingleAction__ActionNameAssignment_1 ) ) );
+    // InternalRoc.g:454:1: rule__SingleAction__Alternatives : ( ( ( rule__SingleAction__ActionNameAssignment_0 ) ) | ( ( rule__SingleAction__ActionNameAssignment_1 ) ) );
     public final void rule__SingleAction__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:452:1: ( ( ( rule__SingleAction__ActionNameAssignment_0 ) ) | ( ( rule__SingleAction__ActionNameAssignment_1 ) ) )
+            // InternalRoc.g:458:1: ( ( ( rule__SingleAction__ActionNameAssignment_0 ) ) | ( ( rule__SingleAction__ActionNameAssignment_1 ) ) )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==28) ) {
+            if ( (LA4_0==26) ) {
                 alt4=1;
             }
-            else if ( (LA4_0==29) ) {
+            else if ( (LA4_0==27) ) {
                 alt4=2;
             }
             else {
@@ -1472,14 +1495,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
             }
             switch (alt4) {
                 case 1 :
-                    // InternalRoc.g:453:2: ( ( rule__SingleAction__ActionNameAssignment_0 ) )
+                    // InternalRoc.g:459:2: ( ( rule__SingleAction__ActionNameAssignment_0 ) )
                     {
-                    // InternalRoc.g:453:2: ( ( rule__SingleAction__ActionNameAssignment_0 ) )
-                    // InternalRoc.g:454:3: ( rule__SingleAction__ActionNameAssignment_0 )
+                    // InternalRoc.g:459:2: ( ( rule__SingleAction__ActionNameAssignment_0 ) )
+                    // InternalRoc.g:460:3: ( rule__SingleAction__ActionNameAssignment_0 )
                     {
                      before(grammarAccess.getSingleActionAccess().getActionNameAssignment_0()); 
-                    // InternalRoc.g:455:3: ( rule__SingleAction__ActionNameAssignment_0 )
-                    // InternalRoc.g:455:4: rule__SingleAction__ActionNameAssignment_0
+                    // InternalRoc.g:461:3: ( rule__SingleAction__ActionNameAssignment_0 )
+                    // InternalRoc.g:461:4: rule__SingleAction__ActionNameAssignment_0
                     {
                     pushFollow(FOLLOW_2);
                     rule__SingleAction__ActionNameAssignment_0();
@@ -1497,14 +1520,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalRoc.g:459:2: ( ( rule__SingleAction__ActionNameAssignment_1 ) )
+                    // InternalRoc.g:465:2: ( ( rule__SingleAction__ActionNameAssignment_1 ) )
                     {
-                    // InternalRoc.g:459:2: ( ( rule__SingleAction__ActionNameAssignment_1 ) )
-                    // InternalRoc.g:460:3: ( rule__SingleAction__ActionNameAssignment_1 )
+                    // InternalRoc.g:465:2: ( ( rule__SingleAction__ActionNameAssignment_1 ) )
+                    // InternalRoc.g:466:3: ( rule__SingleAction__ActionNameAssignment_1 )
                     {
                      before(grammarAccess.getSingleActionAccess().getActionNameAssignment_1()); 
-                    // InternalRoc.g:461:3: ( rule__SingleAction__ActionNameAssignment_1 )
-                    // InternalRoc.g:461:4: rule__SingleAction__ActionNameAssignment_1
+                    // InternalRoc.g:467:3: ( rule__SingleAction__ActionNameAssignment_1 )
+                    // InternalRoc.g:467:4: rule__SingleAction__ActionNameAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__SingleAction__ActionNameAssignment_1();
@@ -1539,20 +1562,20 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DirectedAction__Alternatives"
-    // InternalRoc.g:469:1: rule__DirectedAction__Alternatives : ( ( ( rule__DirectedAction__Group_0__0 ) ) | ( ( rule__DirectedAction__Group_1__0 ) ) );
+    // InternalRoc.g:475:1: rule__DirectedAction__Alternatives : ( ( ( rule__DirectedAction__Group_0__0 ) ) | ( ( rule__DirectedAction__Group_1__0 ) ) );
     public final void rule__DirectedAction__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:473:1: ( ( ( rule__DirectedAction__Group_0__0 ) ) | ( ( rule__DirectedAction__Group_1__0 ) ) )
+            // InternalRoc.g:479:1: ( ( ( rule__DirectedAction__Group_0__0 ) ) | ( ( rule__DirectedAction__Group_1__0 ) ) )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
-            if ( (LA5_0==30) ) {
+            if ( (LA5_0==28) ) {
                 alt5=1;
             }
-            else if ( ((LA5_0>=33 && LA5_0<=34)) ) {
+            else if ( ((LA5_0>=31 && LA5_0<=32)) ) {
                 alt5=2;
             }
             else {
@@ -1563,14 +1586,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
             }
             switch (alt5) {
                 case 1 :
-                    // InternalRoc.g:474:2: ( ( rule__DirectedAction__Group_0__0 ) )
+                    // InternalRoc.g:480:2: ( ( rule__DirectedAction__Group_0__0 ) )
                     {
-                    // InternalRoc.g:474:2: ( ( rule__DirectedAction__Group_0__0 ) )
-                    // InternalRoc.g:475:3: ( rule__DirectedAction__Group_0__0 )
+                    // InternalRoc.g:480:2: ( ( rule__DirectedAction__Group_0__0 ) )
+                    // InternalRoc.g:481:3: ( rule__DirectedAction__Group_0__0 )
                     {
                      before(grammarAccess.getDirectedActionAccess().getGroup_0()); 
-                    // InternalRoc.g:476:3: ( rule__DirectedAction__Group_0__0 )
-                    // InternalRoc.g:476:4: rule__DirectedAction__Group_0__0
+                    // InternalRoc.g:482:3: ( rule__DirectedAction__Group_0__0 )
+                    // InternalRoc.g:482:4: rule__DirectedAction__Group_0__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__DirectedAction__Group_0__0();
@@ -1588,14 +1611,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalRoc.g:480:2: ( ( rule__DirectedAction__Group_1__0 ) )
+                    // InternalRoc.g:486:2: ( ( rule__DirectedAction__Group_1__0 ) )
                     {
-                    // InternalRoc.g:480:2: ( ( rule__DirectedAction__Group_1__0 ) )
-                    // InternalRoc.g:481:3: ( rule__DirectedAction__Group_1__0 )
+                    // InternalRoc.g:486:2: ( ( rule__DirectedAction__Group_1__0 ) )
+                    // InternalRoc.g:487:3: ( rule__DirectedAction__Group_1__0 )
                     {
                      before(grammarAccess.getDirectedActionAccess().getGroup_1()); 
-                    // InternalRoc.g:482:3: ( rule__DirectedAction__Group_1__0 )
-                    // InternalRoc.g:482:4: rule__DirectedAction__Group_1__0
+                    // InternalRoc.g:488:3: ( rule__DirectedAction__Group_1__0 )
+                    // InternalRoc.g:488:4: rule__DirectedAction__Group_1__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__DirectedAction__Group_1__0();
@@ -1630,20 +1653,20 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LeftRightDirection__Alternatives"
-    // InternalRoc.g:490:1: rule__LeftRightDirection__Alternatives : ( ( ( rule__LeftRightDirection__LeftAssignment_0 ) ) | ( ( rule__LeftRightDirection__RightAssignment_1 ) ) );
+    // InternalRoc.g:496:1: rule__LeftRightDirection__Alternatives : ( ( ( rule__LeftRightDirection__LeftAssignment_0 ) ) | ( ( rule__LeftRightDirection__RightAssignment_1 ) ) );
     public final void rule__LeftRightDirection__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:494:1: ( ( ( rule__LeftRightDirection__LeftAssignment_0 ) ) | ( ( rule__LeftRightDirection__RightAssignment_1 ) ) )
+            // InternalRoc.g:500:1: ( ( ( rule__LeftRightDirection__LeftAssignment_0 ) ) | ( ( rule__LeftRightDirection__RightAssignment_1 ) ) )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
-            if ( (LA6_0==31) ) {
+            if ( (LA6_0==29) ) {
                 alt6=1;
             }
-            else if ( (LA6_0==32) ) {
+            else if ( (LA6_0==30) ) {
                 alt6=2;
             }
             else {
@@ -1654,14 +1677,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalRoc.g:495:2: ( ( rule__LeftRightDirection__LeftAssignment_0 ) )
+                    // InternalRoc.g:501:2: ( ( rule__LeftRightDirection__LeftAssignment_0 ) )
                     {
-                    // InternalRoc.g:495:2: ( ( rule__LeftRightDirection__LeftAssignment_0 ) )
-                    // InternalRoc.g:496:3: ( rule__LeftRightDirection__LeftAssignment_0 )
+                    // InternalRoc.g:501:2: ( ( rule__LeftRightDirection__LeftAssignment_0 ) )
+                    // InternalRoc.g:502:3: ( rule__LeftRightDirection__LeftAssignment_0 )
                     {
                      before(grammarAccess.getLeftRightDirectionAccess().getLeftAssignment_0()); 
-                    // InternalRoc.g:497:3: ( rule__LeftRightDirection__LeftAssignment_0 )
-                    // InternalRoc.g:497:4: rule__LeftRightDirection__LeftAssignment_0
+                    // InternalRoc.g:503:3: ( rule__LeftRightDirection__LeftAssignment_0 )
+                    // InternalRoc.g:503:4: rule__LeftRightDirection__LeftAssignment_0
                     {
                     pushFollow(FOLLOW_2);
                     rule__LeftRightDirection__LeftAssignment_0();
@@ -1679,14 +1702,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalRoc.g:501:2: ( ( rule__LeftRightDirection__RightAssignment_1 ) )
+                    // InternalRoc.g:507:2: ( ( rule__LeftRightDirection__RightAssignment_1 ) )
                     {
-                    // InternalRoc.g:501:2: ( ( rule__LeftRightDirection__RightAssignment_1 ) )
-                    // InternalRoc.g:502:3: ( rule__LeftRightDirection__RightAssignment_1 )
+                    // InternalRoc.g:507:2: ( ( rule__LeftRightDirection__RightAssignment_1 ) )
+                    // InternalRoc.g:508:3: ( rule__LeftRightDirection__RightAssignment_1 )
                     {
                      before(grammarAccess.getLeftRightDirectionAccess().getRightAssignment_1()); 
-                    // InternalRoc.g:503:3: ( rule__LeftRightDirection__RightAssignment_1 )
-                    // InternalRoc.g:503:4: rule__LeftRightDirection__RightAssignment_1
+                    // InternalRoc.g:509:3: ( rule__LeftRightDirection__RightAssignment_1 )
+                    // InternalRoc.g:509:4: rule__LeftRightDirection__RightAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__LeftRightDirection__RightAssignment_1();
@@ -1721,20 +1744,20 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FullDirectedAction__Alternatives"
-    // InternalRoc.g:511:1: rule__FullDirectedAction__Alternatives : ( ( ( rule__FullDirectedAction__TurnHeadAssignment_0 ) ) | ( ( rule__FullDirectedAction__TurnEyesAssignment_1 ) ) );
+    // InternalRoc.g:517:1: rule__FullDirectedAction__Alternatives : ( ( ( rule__FullDirectedAction__TurnHeadAssignment_0 ) ) | ( ( rule__FullDirectedAction__TurnEyesAssignment_1 ) ) );
     public final void rule__FullDirectedAction__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:515:1: ( ( ( rule__FullDirectedAction__TurnHeadAssignment_0 ) ) | ( ( rule__FullDirectedAction__TurnEyesAssignment_1 ) ) )
+            // InternalRoc.g:521:1: ( ( ( rule__FullDirectedAction__TurnHeadAssignment_0 ) ) | ( ( rule__FullDirectedAction__TurnEyesAssignment_1 ) ) )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
-            if ( (LA7_0==33) ) {
+            if ( (LA7_0==31) ) {
                 alt7=1;
             }
-            else if ( (LA7_0==34) ) {
+            else if ( (LA7_0==32) ) {
                 alt7=2;
             }
             else {
@@ -1745,14 +1768,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
             }
             switch (alt7) {
                 case 1 :
-                    // InternalRoc.g:516:2: ( ( rule__FullDirectedAction__TurnHeadAssignment_0 ) )
+                    // InternalRoc.g:522:2: ( ( rule__FullDirectedAction__TurnHeadAssignment_0 ) )
                     {
-                    // InternalRoc.g:516:2: ( ( rule__FullDirectedAction__TurnHeadAssignment_0 ) )
-                    // InternalRoc.g:517:3: ( rule__FullDirectedAction__TurnHeadAssignment_0 )
+                    // InternalRoc.g:522:2: ( ( rule__FullDirectedAction__TurnHeadAssignment_0 ) )
+                    // InternalRoc.g:523:3: ( rule__FullDirectedAction__TurnHeadAssignment_0 )
                     {
                      before(grammarAccess.getFullDirectedActionAccess().getTurnHeadAssignment_0()); 
-                    // InternalRoc.g:518:3: ( rule__FullDirectedAction__TurnHeadAssignment_0 )
-                    // InternalRoc.g:518:4: rule__FullDirectedAction__TurnHeadAssignment_0
+                    // InternalRoc.g:524:3: ( rule__FullDirectedAction__TurnHeadAssignment_0 )
+                    // InternalRoc.g:524:4: rule__FullDirectedAction__TurnHeadAssignment_0
                     {
                     pushFollow(FOLLOW_2);
                     rule__FullDirectedAction__TurnHeadAssignment_0();
@@ -1770,14 +1793,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalRoc.g:522:2: ( ( rule__FullDirectedAction__TurnEyesAssignment_1 ) )
+                    // InternalRoc.g:528:2: ( ( rule__FullDirectedAction__TurnEyesAssignment_1 ) )
                     {
-                    // InternalRoc.g:522:2: ( ( rule__FullDirectedAction__TurnEyesAssignment_1 ) )
-                    // InternalRoc.g:523:3: ( rule__FullDirectedAction__TurnEyesAssignment_1 )
+                    // InternalRoc.g:528:2: ( ( rule__FullDirectedAction__TurnEyesAssignment_1 ) )
+                    // InternalRoc.g:529:3: ( rule__FullDirectedAction__TurnEyesAssignment_1 )
                     {
                      before(grammarAccess.getFullDirectedActionAccess().getTurnEyesAssignment_1()); 
-                    // InternalRoc.g:524:3: ( rule__FullDirectedAction__TurnEyesAssignment_1 )
-                    // InternalRoc.g:524:4: rule__FullDirectedAction__TurnEyesAssignment_1
+                    // InternalRoc.g:530:3: ( rule__FullDirectedAction__TurnEyesAssignment_1 )
+                    // InternalRoc.g:530:4: rule__FullDirectedAction__TurnEyesAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__FullDirectedAction__TurnEyesAssignment_1();
@@ -1812,31 +1835,31 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Direction__Alternatives"
-    // InternalRoc.g:532:1: rule__Direction__Alternatives : ( ( ( rule__Direction__UPAssignment_0 ) ) | ( ( rule__Direction__DOWNAssignment_1 ) ) | ( ( rule__Direction__LEFTAssignment_2 ) ) | ( ( rule__Direction__RIGHTAssignment_3 ) ) );
+    // InternalRoc.g:538:1: rule__Direction__Alternatives : ( ( ( rule__Direction__UPAssignment_0 ) ) | ( ( rule__Direction__DOWNAssignment_1 ) ) | ( ( rule__Direction__LEFTAssignment_2 ) ) | ( ( rule__Direction__RIGHTAssignment_3 ) ) );
     public final void rule__Direction__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:536:1: ( ( ( rule__Direction__UPAssignment_0 ) ) | ( ( rule__Direction__DOWNAssignment_1 ) ) | ( ( rule__Direction__LEFTAssignment_2 ) ) | ( ( rule__Direction__RIGHTAssignment_3 ) ) )
+            // InternalRoc.g:542:1: ( ( ( rule__Direction__UPAssignment_0 ) ) | ( ( rule__Direction__DOWNAssignment_1 ) ) | ( ( rule__Direction__LEFTAssignment_2 ) ) | ( ( rule__Direction__RIGHTAssignment_3 ) ) )
             int alt8=4;
             switch ( input.LA(1) ) {
-            case 35:
+            case 33:
                 {
                 alt8=1;
                 }
                 break;
-            case 36:
+            case 34:
                 {
                 alt8=2;
                 }
                 break;
-            case 31:
+            case 29:
                 {
                 alt8=3;
                 }
                 break;
-            case 32:
+            case 30:
                 {
                 alt8=4;
                 }
@@ -1850,14 +1873,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
             switch (alt8) {
                 case 1 :
-                    // InternalRoc.g:537:2: ( ( rule__Direction__UPAssignment_0 ) )
+                    // InternalRoc.g:543:2: ( ( rule__Direction__UPAssignment_0 ) )
                     {
-                    // InternalRoc.g:537:2: ( ( rule__Direction__UPAssignment_0 ) )
-                    // InternalRoc.g:538:3: ( rule__Direction__UPAssignment_0 )
+                    // InternalRoc.g:543:2: ( ( rule__Direction__UPAssignment_0 ) )
+                    // InternalRoc.g:544:3: ( rule__Direction__UPAssignment_0 )
                     {
                      before(grammarAccess.getDirectionAccess().getUPAssignment_0()); 
-                    // InternalRoc.g:539:3: ( rule__Direction__UPAssignment_0 )
-                    // InternalRoc.g:539:4: rule__Direction__UPAssignment_0
+                    // InternalRoc.g:545:3: ( rule__Direction__UPAssignment_0 )
+                    // InternalRoc.g:545:4: rule__Direction__UPAssignment_0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Direction__UPAssignment_0();
@@ -1875,14 +1898,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalRoc.g:543:2: ( ( rule__Direction__DOWNAssignment_1 ) )
+                    // InternalRoc.g:549:2: ( ( rule__Direction__DOWNAssignment_1 ) )
                     {
-                    // InternalRoc.g:543:2: ( ( rule__Direction__DOWNAssignment_1 ) )
-                    // InternalRoc.g:544:3: ( rule__Direction__DOWNAssignment_1 )
+                    // InternalRoc.g:549:2: ( ( rule__Direction__DOWNAssignment_1 ) )
+                    // InternalRoc.g:550:3: ( rule__Direction__DOWNAssignment_1 )
                     {
                      before(grammarAccess.getDirectionAccess().getDOWNAssignment_1()); 
-                    // InternalRoc.g:545:3: ( rule__Direction__DOWNAssignment_1 )
-                    // InternalRoc.g:545:4: rule__Direction__DOWNAssignment_1
+                    // InternalRoc.g:551:3: ( rule__Direction__DOWNAssignment_1 )
+                    // InternalRoc.g:551:4: rule__Direction__DOWNAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__Direction__DOWNAssignment_1();
@@ -1900,14 +1923,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalRoc.g:549:2: ( ( rule__Direction__LEFTAssignment_2 ) )
+                    // InternalRoc.g:555:2: ( ( rule__Direction__LEFTAssignment_2 ) )
                     {
-                    // InternalRoc.g:549:2: ( ( rule__Direction__LEFTAssignment_2 ) )
-                    // InternalRoc.g:550:3: ( rule__Direction__LEFTAssignment_2 )
+                    // InternalRoc.g:555:2: ( ( rule__Direction__LEFTAssignment_2 ) )
+                    // InternalRoc.g:556:3: ( rule__Direction__LEFTAssignment_2 )
                     {
                      before(grammarAccess.getDirectionAccess().getLEFTAssignment_2()); 
-                    // InternalRoc.g:551:3: ( rule__Direction__LEFTAssignment_2 )
-                    // InternalRoc.g:551:4: rule__Direction__LEFTAssignment_2
+                    // InternalRoc.g:557:3: ( rule__Direction__LEFTAssignment_2 )
+                    // InternalRoc.g:557:4: rule__Direction__LEFTAssignment_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__Direction__LEFTAssignment_2();
@@ -1925,14 +1948,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalRoc.g:555:2: ( ( rule__Direction__RIGHTAssignment_3 ) )
+                    // InternalRoc.g:561:2: ( ( rule__Direction__RIGHTAssignment_3 ) )
                     {
-                    // InternalRoc.g:555:2: ( ( rule__Direction__RIGHTAssignment_3 ) )
-                    // InternalRoc.g:556:3: ( rule__Direction__RIGHTAssignment_3 )
+                    // InternalRoc.g:561:2: ( ( rule__Direction__RIGHTAssignment_3 ) )
+                    // InternalRoc.g:562:3: ( rule__Direction__RIGHTAssignment_3 )
                     {
                      before(grammarAccess.getDirectionAccess().getRIGHTAssignment_3()); 
-                    // InternalRoc.g:557:3: ( rule__Direction__RIGHTAssignment_3 )
-                    // InternalRoc.g:557:4: rule__Direction__RIGHTAssignment_3
+                    // InternalRoc.g:563:3: ( rule__Direction__RIGHTAssignment_3 )
+                    // InternalRoc.g:563:4: rule__Direction__RIGHTAssignment_3
                     {
                     pushFollow(FOLLOW_2);
                     rule__Direction__RIGHTAssignment_3();
@@ -1967,36 +1990,36 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Speed__Alternatives"
-    // InternalRoc.g:565:1: rule__Speed__Alternatives : ( ( ( rule__Speed__SLOWESTAssignment_0 ) ) | ( ( rule__Speed__SLOWAssignment_1 ) ) | ( ( rule__Speed__NORMALAssignment_2 ) ) | ( ( rule__Speed__FASTAssignment_3 ) ) | ( ( rule__Speed__FULLAssignment_4 ) ) );
+    // InternalRoc.g:571:1: rule__Speed__Alternatives : ( ( ( rule__Speed__SLOWESTAssignment_0 ) ) | ( ( rule__Speed__SLOWAssignment_1 ) ) | ( ( rule__Speed__NORMALAssignment_2 ) ) | ( ( rule__Speed__FASTAssignment_3 ) ) | ( ( rule__Speed__FULLAssignment_4 ) ) );
     public final void rule__Speed__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:569:1: ( ( ( rule__Speed__SLOWESTAssignment_0 ) ) | ( ( rule__Speed__SLOWAssignment_1 ) ) | ( ( rule__Speed__NORMALAssignment_2 ) ) | ( ( rule__Speed__FASTAssignment_3 ) ) | ( ( rule__Speed__FULLAssignment_4 ) ) )
+            // InternalRoc.g:575:1: ( ( ( rule__Speed__SLOWESTAssignment_0 ) ) | ( ( rule__Speed__SLOWAssignment_1 ) ) | ( ( rule__Speed__NORMALAssignment_2 ) ) | ( ( rule__Speed__FASTAssignment_3 ) ) | ( ( rule__Speed__FULLAssignment_4 ) ) )
             int alt9=5;
             switch ( input.LA(1) ) {
-            case 37:
+            case 35:
                 {
                 alt9=1;
                 }
                 break;
-            case 38:
+            case 36:
                 {
                 alt9=2;
                 }
                 break;
-            case 39:
+            case 37:
                 {
                 alt9=3;
                 }
                 break;
-            case 40:
+            case 38:
                 {
                 alt9=4;
                 }
                 break;
-            case 41:
+            case 39:
                 {
                 alt9=5;
                 }
@@ -2010,14 +2033,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
             switch (alt9) {
                 case 1 :
-                    // InternalRoc.g:570:2: ( ( rule__Speed__SLOWESTAssignment_0 ) )
+                    // InternalRoc.g:576:2: ( ( rule__Speed__SLOWESTAssignment_0 ) )
                     {
-                    // InternalRoc.g:570:2: ( ( rule__Speed__SLOWESTAssignment_0 ) )
-                    // InternalRoc.g:571:3: ( rule__Speed__SLOWESTAssignment_0 )
+                    // InternalRoc.g:576:2: ( ( rule__Speed__SLOWESTAssignment_0 ) )
+                    // InternalRoc.g:577:3: ( rule__Speed__SLOWESTAssignment_0 )
                     {
                      before(grammarAccess.getSpeedAccess().getSLOWESTAssignment_0()); 
-                    // InternalRoc.g:572:3: ( rule__Speed__SLOWESTAssignment_0 )
-                    // InternalRoc.g:572:4: rule__Speed__SLOWESTAssignment_0
+                    // InternalRoc.g:578:3: ( rule__Speed__SLOWESTAssignment_0 )
+                    // InternalRoc.g:578:4: rule__Speed__SLOWESTAssignment_0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Speed__SLOWESTAssignment_0();
@@ -2035,14 +2058,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalRoc.g:576:2: ( ( rule__Speed__SLOWAssignment_1 ) )
+                    // InternalRoc.g:582:2: ( ( rule__Speed__SLOWAssignment_1 ) )
                     {
-                    // InternalRoc.g:576:2: ( ( rule__Speed__SLOWAssignment_1 ) )
-                    // InternalRoc.g:577:3: ( rule__Speed__SLOWAssignment_1 )
+                    // InternalRoc.g:582:2: ( ( rule__Speed__SLOWAssignment_1 ) )
+                    // InternalRoc.g:583:3: ( rule__Speed__SLOWAssignment_1 )
                     {
                      before(grammarAccess.getSpeedAccess().getSLOWAssignment_1()); 
-                    // InternalRoc.g:578:3: ( rule__Speed__SLOWAssignment_1 )
-                    // InternalRoc.g:578:4: rule__Speed__SLOWAssignment_1
+                    // InternalRoc.g:584:3: ( rule__Speed__SLOWAssignment_1 )
+                    // InternalRoc.g:584:4: rule__Speed__SLOWAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__Speed__SLOWAssignment_1();
@@ -2060,14 +2083,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalRoc.g:582:2: ( ( rule__Speed__NORMALAssignment_2 ) )
+                    // InternalRoc.g:588:2: ( ( rule__Speed__NORMALAssignment_2 ) )
                     {
-                    // InternalRoc.g:582:2: ( ( rule__Speed__NORMALAssignment_2 ) )
-                    // InternalRoc.g:583:3: ( rule__Speed__NORMALAssignment_2 )
+                    // InternalRoc.g:588:2: ( ( rule__Speed__NORMALAssignment_2 ) )
+                    // InternalRoc.g:589:3: ( rule__Speed__NORMALAssignment_2 )
                     {
                      before(grammarAccess.getSpeedAccess().getNORMALAssignment_2()); 
-                    // InternalRoc.g:584:3: ( rule__Speed__NORMALAssignment_2 )
-                    // InternalRoc.g:584:4: rule__Speed__NORMALAssignment_2
+                    // InternalRoc.g:590:3: ( rule__Speed__NORMALAssignment_2 )
+                    // InternalRoc.g:590:4: rule__Speed__NORMALAssignment_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__Speed__NORMALAssignment_2();
@@ -2085,14 +2108,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalRoc.g:588:2: ( ( rule__Speed__FASTAssignment_3 ) )
+                    // InternalRoc.g:594:2: ( ( rule__Speed__FASTAssignment_3 ) )
                     {
-                    // InternalRoc.g:588:2: ( ( rule__Speed__FASTAssignment_3 ) )
-                    // InternalRoc.g:589:3: ( rule__Speed__FASTAssignment_3 )
+                    // InternalRoc.g:594:2: ( ( rule__Speed__FASTAssignment_3 ) )
+                    // InternalRoc.g:595:3: ( rule__Speed__FASTAssignment_3 )
                     {
                      before(grammarAccess.getSpeedAccess().getFASTAssignment_3()); 
-                    // InternalRoc.g:590:3: ( rule__Speed__FASTAssignment_3 )
-                    // InternalRoc.g:590:4: rule__Speed__FASTAssignment_3
+                    // InternalRoc.g:596:3: ( rule__Speed__FASTAssignment_3 )
+                    // InternalRoc.g:596:4: rule__Speed__FASTAssignment_3
                     {
                     pushFollow(FOLLOW_2);
                     rule__Speed__FASTAssignment_3();
@@ -2110,14 +2133,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // InternalRoc.g:594:2: ( ( rule__Speed__FULLAssignment_4 ) )
+                    // InternalRoc.g:600:2: ( ( rule__Speed__FULLAssignment_4 ) )
                     {
-                    // InternalRoc.g:594:2: ( ( rule__Speed__FULLAssignment_4 ) )
-                    // InternalRoc.g:595:3: ( rule__Speed__FULLAssignment_4 )
+                    // InternalRoc.g:600:2: ( ( rule__Speed__FULLAssignment_4 ) )
+                    // InternalRoc.g:601:3: ( rule__Speed__FULLAssignment_4 )
                     {
                      before(grammarAccess.getSpeedAccess().getFULLAssignment_4()); 
-                    // InternalRoc.g:596:3: ( rule__Speed__FULLAssignment_4 )
-                    // InternalRoc.g:596:4: rule__Speed__FULLAssignment_4
+                    // InternalRoc.g:602:3: ( rule__Speed__FULLAssignment_4 )
+                    // InternalRoc.g:602:4: rule__Speed__FULLAssignment_4
                     {
                     pushFollow(FOLLOW_2);
                     rule__Speed__FULLAssignment_4();
@@ -2152,13 +2175,13 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Intensity__Alternatives"
-    // InternalRoc.g:604:1: rule__Intensity__Alternatives : ( ( ( 'pronounced' ) ) | ( ( 'trace of' ) ) | ( ( 'slightly' ) ) | ( ( 'severe' ) ) | ( ( 'maximum' ) ) );
+    // InternalRoc.g:610:1: rule__Intensity__Alternatives : ( ( ( 'pronounced' ) ) | ( ( 'trace of' ) ) | ( ( 'slightly' ) ) | ( ( 'severe' ) ) | ( ( 'maximum' ) ) );
     public final void rule__Intensity__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:608:1: ( ( ( 'pronounced' ) ) | ( ( 'trace of' ) ) | ( ( 'slightly' ) ) | ( ( 'severe' ) ) | ( ( 'maximum' ) ) )
+            // InternalRoc.g:614:1: ( ( ( 'pronounced' ) ) | ( ( 'trace of' ) ) | ( ( 'slightly' ) ) | ( ( 'severe' ) ) | ( ( 'maximum' ) ) )
             int alt10=5;
             switch ( input.LA(1) ) {
             case 17:
@@ -2195,14 +2218,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
             switch (alt10) {
                 case 1 :
-                    // InternalRoc.g:609:2: ( ( 'pronounced' ) )
+                    // InternalRoc.g:615:2: ( ( 'pronounced' ) )
                     {
-                    // InternalRoc.g:609:2: ( ( 'pronounced' ) )
-                    // InternalRoc.g:610:3: ( 'pronounced' )
+                    // InternalRoc.g:615:2: ( ( 'pronounced' ) )
+                    // InternalRoc.g:616:3: ( 'pronounced' )
                     {
                      before(grammarAccess.getIntensityAccess().getCEnumLiteralDeclaration_0()); 
-                    // InternalRoc.g:611:3: ( 'pronounced' )
-                    // InternalRoc.g:611:4: 'pronounced'
+                    // InternalRoc.g:617:3: ( 'pronounced' )
+                    // InternalRoc.g:617:4: 'pronounced'
                     {
                     match(input,17,FOLLOW_2); 
 
@@ -2216,14 +2239,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalRoc.g:615:2: ( ( 'trace of' ) )
+                    // InternalRoc.g:621:2: ( ( 'trace of' ) )
                     {
-                    // InternalRoc.g:615:2: ( ( 'trace of' ) )
-                    // InternalRoc.g:616:3: ( 'trace of' )
+                    // InternalRoc.g:621:2: ( ( 'trace of' ) )
+                    // InternalRoc.g:622:3: ( 'trace of' )
                     {
                      before(grammarAccess.getIntensityAccess().getAEnumLiteralDeclaration_1()); 
-                    // InternalRoc.g:617:3: ( 'trace of' )
-                    // InternalRoc.g:617:4: 'trace of'
+                    // InternalRoc.g:623:3: ( 'trace of' )
+                    // InternalRoc.g:623:4: 'trace of'
                     {
                     match(input,18,FOLLOW_2); 
 
@@ -2237,14 +2260,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalRoc.g:621:2: ( ( 'slightly' ) )
+                    // InternalRoc.g:627:2: ( ( 'slightly' ) )
                     {
-                    // InternalRoc.g:621:2: ( ( 'slightly' ) )
-                    // InternalRoc.g:622:3: ( 'slightly' )
+                    // InternalRoc.g:627:2: ( ( 'slightly' ) )
+                    // InternalRoc.g:628:3: ( 'slightly' )
                     {
                      before(grammarAccess.getIntensityAccess().getBEnumLiteralDeclaration_2()); 
-                    // InternalRoc.g:623:3: ( 'slightly' )
-                    // InternalRoc.g:623:4: 'slightly'
+                    // InternalRoc.g:629:3: ( 'slightly' )
+                    // InternalRoc.g:629:4: 'slightly'
                     {
                     match(input,19,FOLLOW_2); 
 
@@ -2258,14 +2281,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalRoc.g:627:2: ( ( 'severe' ) )
+                    // InternalRoc.g:633:2: ( ( 'severe' ) )
                     {
-                    // InternalRoc.g:627:2: ( ( 'severe' ) )
-                    // InternalRoc.g:628:3: ( 'severe' )
+                    // InternalRoc.g:633:2: ( ( 'severe' ) )
+                    // InternalRoc.g:634:3: ( 'severe' )
                     {
                      before(grammarAccess.getIntensityAccess().getDEnumLiteralDeclaration_3()); 
-                    // InternalRoc.g:629:3: ( 'severe' )
-                    // InternalRoc.g:629:4: 'severe'
+                    // InternalRoc.g:635:3: ( 'severe' )
+                    // InternalRoc.g:635:4: 'severe'
                     {
                     match(input,20,FOLLOW_2); 
 
@@ -2279,14 +2302,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // InternalRoc.g:633:2: ( ( 'maximum' ) )
+                    // InternalRoc.g:639:2: ( ( 'maximum' ) )
                     {
-                    // InternalRoc.g:633:2: ( ( 'maximum' ) )
-                    // InternalRoc.g:634:3: ( 'maximum' )
+                    // InternalRoc.g:639:2: ( ( 'maximum' ) )
+                    // InternalRoc.g:640:3: ( 'maximum' )
                     {
                      before(grammarAccess.getIntensityAccess().getEEnumLiteralDeclaration_4()); 
-                    // InternalRoc.g:635:3: ( 'maximum' )
-                    // InternalRoc.g:635:4: 'maximum'
+                    // InternalRoc.g:641:3: ( 'maximum' )
+                    // InternalRoc.g:641:4: 'maximum'
                     {
                     match(input,21,FOLLOW_2); 
 
@@ -2317,13 +2340,13 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DurationUnit__Alternatives"
-    // InternalRoc.g:643:1: rule__DurationUnit__Alternatives : ( ( ( 'milliseconds' ) ) | ( ( 'seconds' ) ) | ( ( 'minutes' ) ) );
+    // InternalRoc.g:649:1: rule__DurationUnit__Alternatives : ( ( ( 'milliseconds' ) ) | ( ( 'seconds' ) ) | ( ( 'minutes' ) ) );
     public final void rule__DurationUnit__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:647:1: ( ( ( 'milliseconds' ) ) | ( ( 'seconds' ) ) | ( ( 'minutes' ) ) )
+            // InternalRoc.g:653:1: ( ( ( 'milliseconds' ) ) | ( ( 'seconds' ) ) | ( ( 'minutes' ) ) )
             int alt11=3;
             switch ( input.LA(1) ) {
             case 22:
@@ -2350,14 +2373,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
             switch (alt11) {
                 case 1 :
-                    // InternalRoc.g:648:2: ( ( 'milliseconds' ) )
+                    // InternalRoc.g:654:2: ( ( 'milliseconds' ) )
                     {
-                    // InternalRoc.g:648:2: ( ( 'milliseconds' ) )
-                    // InternalRoc.g:649:3: ( 'milliseconds' )
+                    // InternalRoc.g:654:2: ( ( 'milliseconds' ) )
+                    // InternalRoc.g:655:3: ( 'milliseconds' )
                     {
                      before(grammarAccess.getDurationUnitAccess().getMILLISECONDSEnumLiteralDeclaration_0()); 
-                    // InternalRoc.g:650:3: ( 'milliseconds' )
-                    // InternalRoc.g:650:4: 'milliseconds'
+                    // InternalRoc.g:656:3: ( 'milliseconds' )
+                    // InternalRoc.g:656:4: 'milliseconds'
                     {
                     match(input,22,FOLLOW_2); 
 
@@ -2371,14 +2394,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalRoc.g:654:2: ( ( 'seconds' ) )
+                    // InternalRoc.g:660:2: ( ( 'seconds' ) )
                     {
-                    // InternalRoc.g:654:2: ( ( 'seconds' ) )
-                    // InternalRoc.g:655:3: ( 'seconds' )
+                    // InternalRoc.g:660:2: ( ( 'seconds' ) )
+                    // InternalRoc.g:661:3: ( 'seconds' )
                     {
                      before(grammarAccess.getDurationUnitAccess().getSECONDSEnumLiteralDeclaration_1()); 
-                    // InternalRoc.g:656:3: ( 'seconds' )
-                    // InternalRoc.g:656:4: 'seconds'
+                    // InternalRoc.g:662:3: ( 'seconds' )
+                    // InternalRoc.g:662:4: 'seconds'
                     {
                     match(input,23,FOLLOW_2); 
 
@@ -2392,14 +2415,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalRoc.g:660:2: ( ( 'minutes' ) )
+                    // InternalRoc.g:666:2: ( ( 'minutes' ) )
                     {
-                    // InternalRoc.g:660:2: ( ( 'minutes' ) )
-                    // InternalRoc.g:661:3: ( 'minutes' )
+                    // InternalRoc.g:666:2: ( ( 'minutes' ) )
+                    // InternalRoc.g:667:3: ( 'minutes' )
                     {
                      before(grammarAccess.getDurationUnitAccess().getMINUTESEnumLiteralDeclaration_2()); 
-                    // InternalRoc.g:662:3: ( 'minutes' )
-                    // InternalRoc.g:662:4: 'minutes'
+                    // InternalRoc.g:668:3: ( 'minutes' )
+                    // InternalRoc.g:668:4: 'minutes'
                     {
                     match(input,24,FOLLOW_2); 
 
@@ -2430,14 +2453,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Movement__Group__0"
-    // InternalRoc.g:670:1: rule__Movement__Group__0 : rule__Movement__Group__0__Impl rule__Movement__Group__1 ;
+    // InternalRoc.g:676:1: rule__Movement__Group__0 : rule__Movement__Group__0__Impl rule__Movement__Group__1 ;
     public final void rule__Movement__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:674:1: ( rule__Movement__Group__0__Impl rule__Movement__Group__1 )
-            // InternalRoc.g:675:2: rule__Movement__Group__0__Impl rule__Movement__Group__1
+            // InternalRoc.g:680:1: ( rule__Movement__Group__0__Impl rule__Movement__Group__1 )
+            // InternalRoc.g:681:2: rule__Movement__Group__0__Impl rule__Movement__Group__1
             {
             pushFollow(FOLLOW_4);
             rule__Movement__Group__0__Impl();
@@ -2468,21 +2491,21 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Movement__Group__0__Impl"
-    // InternalRoc.g:682:1: rule__Movement__Group__0__Impl : ( ( rule__Movement__MotionsAssignment_0 ) ) ;
+    // InternalRoc.g:688:1: rule__Movement__Group__0__Impl : ( ( rule__Movement__MotionsAssignment_0 ) ) ;
     public final void rule__Movement__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:686:1: ( ( ( rule__Movement__MotionsAssignment_0 ) ) )
-            // InternalRoc.g:687:1: ( ( rule__Movement__MotionsAssignment_0 ) )
+            // InternalRoc.g:692:1: ( ( ( rule__Movement__MotionsAssignment_0 ) ) )
+            // InternalRoc.g:693:1: ( ( rule__Movement__MotionsAssignment_0 ) )
             {
-            // InternalRoc.g:687:1: ( ( rule__Movement__MotionsAssignment_0 ) )
-            // InternalRoc.g:688:2: ( rule__Movement__MotionsAssignment_0 )
+            // InternalRoc.g:693:1: ( ( rule__Movement__MotionsAssignment_0 ) )
+            // InternalRoc.g:694:2: ( rule__Movement__MotionsAssignment_0 )
             {
              before(grammarAccess.getMovementAccess().getMotionsAssignment_0()); 
-            // InternalRoc.g:689:2: ( rule__Movement__MotionsAssignment_0 )
-            // InternalRoc.g:689:3: rule__Movement__MotionsAssignment_0
+            // InternalRoc.g:695:2: ( rule__Movement__MotionsAssignment_0 )
+            // InternalRoc.g:695:3: rule__Movement__MotionsAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Movement__MotionsAssignment_0();
@@ -2515,14 +2538,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Movement__Group__1"
-    // InternalRoc.g:697:1: rule__Movement__Group__1 : rule__Movement__Group__1__Impl rule__Movement__Group__2 ;
+    // InternalRoc.g:703:1: rule__Movement__Group__1 : rule__Movement__Group__1__Impl rule__Movement__Group__2 ;
     public final void rule__Movement__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:701:1: ( rule__Movement__Group__1__Impl rule__Movement__Group__2 )
-            // InternalRoc.g:702:2: rule__Movement__Group__1__Impl rule__Movement__Group__2
+            // InternalRoc.g:707:1: ( rule__Movement__Group__1__Impl rule__Movement__Group__2 )
+            // InternalRoc.g:708:2: rule__Movement__Group__1__Impl rule__Movement__Group__2
             {
             pushFollow(FOLLOW_4);
             rule__Movement__Group__1__Impl();
@@ -2553,20 +2576,20 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Movement__Group__1__Impl"
-    // InternalRoc.g:709:1: rule__Movement__Group__1__Impl : ( ( rule__Movement__Group_1__0 )* ) ;
+    // InternalRoc.g:715:1: rule__Movement__Group__1__Impl : ( ( rule__Movement__Group_1__0 )* ) ;
     public final void rule__Movement__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:713:1: ( ( ( rule__Movement__Group_1__0 )* ) )
-            // InternalRoc.g:714:1: ( ( rule__Movement__Group_1__0 )* )
+            // InternalRoc.g:719:1: ( ( ( rule__Movement__Group_1__0 )* ) )
+            // InternalRoc.g:720:1: ( ( rule__Movement__Group_1__0 )* )
             {
-            // InternalRoc.g:714:1: ( ( rule__Movement__Group_1__0 )* )
-            // InternalRoc.g:715:2: ( rule__Movement__Group_1__0 )*
+            // InternalRoc.g:720:1: ( ( rule__Movement__Group_1__0 )* )
+            // InternalRoc.g:721:2: ( rule__Movement__Group_1__0 )*
             {
              before(grammarAccess.getMovementAccess().getGroup_1()); 
-            // InternalRoc.g:716:2: ( rule__Movement__Group_1__0 )*
+            // InternalRoc.g:722:2: ( rule__Movement__Group_1__0 )*
             loop12:
             do {
                 int alt12=2;
@@ -2579,7 +2602,7 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
                 switch (alt12) {
             	case 1 :
-            	    // InternalRoc.g:716:3: rule__Movement__Group_1__0
+            	    // InternalRoc.g:722:3: rule__Movement__Group_1__0
             	    {
             	    pushFollow(FOLLOW_5);
             	    rule__Movement__Group_1__0();
@@ -2618,14 +2641,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Movement__Group__2"
-    // InternalRoc.g:724:1: rule__Movement__Group__2 : rule__Movement__Group__2__Impl ;
+    // InternalRoc.g:730:1: rule__Movement__Group__2 : rule__Movement__Group__2__Impl ;
     public final void rule__Movement__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:728:1: ( rule__Movement__Group__2__Impl )
-            // InternalRoc.g:729:2: rule__Movement__Group__2__Impl
+            // InternalRoc.g:734:1: ( rule__Movement__Group__2__Impl )
+            // InternalRoc.g:735:2: rule__Movement__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Movement__Group__2__Impl();
@@ -2651,17 +2674,17 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Movement__Group__2__Impl"
-    // InternalRoc.g:735:1: rule__Movement__Group__2__Impl : ( RULE_PERIOD ) ;
+    // InternalRoc.g:741:1: rule__Movement__Group__2__Impl : ( RULE_PERIOD ) ;
     public final void rule__Movement__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:739:1: ( ( RULE_PERIOD ) )
-            // InternalRoc.g:740:1: ( RULE_PERIOD )
+            // InternalRoc.g:745:1: ( ( RULE_PERIOD ) )
+            // InternalRoc.g:746:1: ( RULE_PERIOD )
             {
-            // InternalRoc.g:740:1: ( RULE_PERIOD )
-            // InternalRoc.g:741:2: RULE_PERIOD
+            // InternalRoc.g:746:1: ( RULE_PERIOD )
+            // InternalRoc.g:747:2: RULE_PERIOD
             {
              before(grammarAccess.getMovementAccess().getPERIODTerminalRuleCall_2()); 
             match(input,RULE_PERIOD,FOLLOW_2); 
@@ -2688,14 +2711,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Movement__Group_1__0"
-    // InternalRoc.g:751:1: rule__Movement__Group_1__0 : rule__Movement__Group_1__0__Impl rule__Movement__Group_1__1 ;
+    // InternalRoc.g:757:1: rule__Movement__Group_1__0 : rule__Movement__Group_1__0__Impl rule__Movement__Group_1__1 ;
     public final void rule__Movement__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:755:1: ( rule__Movement__Group_1__0__Impl rule__Movement__Group_1__1 )
-            // InternalRoc.g:756:2: rule__Movement__Group_1__0__Impl rule__Movement__Group_1__1
+            // InternalRoc.g:761:1: ( rule__Movement__Group_1__0__Impl rule__Movement__Group_1__1 )
+            // InternalRoc.g:762:2: rule__Movement__Group_1__0__Impl rule__Movement__Group_1__1
             {
             pushFollow(FOLLOW_6);
             rule__Movement__Group_1__0__Impl();
@@ -2726,17 +2749,17 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Movement__Group_1__0__Impl"
-    // InternalRoc.g:763:1: rule__Movement__Group_1__0__Impl : ( RULE_AND ) ;
+    // InternalRoc.g:769:1: rule__Movement__Group_1__0__Impl : ( RULE_AND ) ;
     public final void rule__Movement__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:767:1: ( ( RULE_AND ) )
-            // InternalRoc.g:768:1: ( RULE_AND )
+            // InternalRoc.g:773:1: ( ( RULE_AND ) )
+            // InternalRoc.g:774:1: ( RULE_AND )
             {
-            // InternalRoc.g:768:1: ( RULE_AND )
-            // InternalRoc.g:769:2: RULE_AND
+            // InternalRoc.g:774:1: ( RULE_AND )
+            // InternalRoc.g:775:2: RULE_AND
             {
              before(grammarAccess.getMovementAccess().getANDTerminalRuleCall_1_0()); 
             match(input,RULE_AND,FOLLOW_2); 
@@ -2763,14 +2786,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Movement__Group_1__1"
-    // InternalRoc.g:778:1: rule__Movement__Group_1__1 : rule__Movement__Group_1__1__Impl ;
+    // InternalRoc.g:784:1: rule__Movement__Group_1__1 : rule__Movement__Group_1__1__Impl ;
     public final void rule__Movement__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:782:1: ( rule__Movement__Group_1__1__Impl )
-            // InternalRoc.g:783:2: rule__Movement__Group_1__1__Impl
+            // InternalRoc.g:788:1: ( rule__Movement__Group_1__1__Impl )
+            // InternalRoc.g:789:2: rule__Movement__Group_1__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Movement__Group_1__1__Impl();
@@ -2796,21 +2819,21 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Movement__Group_1__1__Impl"
-    // InternalRoc.g:789:1: rule__Movement__Group_1__1__Impl : ( ( rule__Movement__MotionsAssignment_1_1 ) ) ;
+    // InternalRoc.g:795:1: rule__Movement__Group_1__1__Impl : ( ( rule__Movement__MotionsAssignment_1_1 ) ) ;
     public final void rule__Movement__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:793:1: ( ( ( rule__Movement__MotionsAssignment_1_1 ) ) )
-            // InternalRoc.g:794:1: ( ( rule__Movement__MotionsAssignment_1_1 ) )
+            // InternalRoc.g:799:1: ( ( ( rule__Movement__MotionsAssignment_1_1 ) ) )
+            // InternalRoc.g:800:1: ( ( rule__Movement__MotionsAssignment_1_1 ) )
             {
-            // InternalRoc.g:794:1: ( ( rule__Movement__MotionsAssignment_1_1 ) )
-            // InternalRoc.g:795:2: ( rule__Movement__MotionsAssignment_1_1 )
+            // InternalRoc.g:800:1: ( ( rule__Movement__MotionsAssignment_1_1 ) )
+            // InternalRoc.g:801:2: ( rule__Movement__MotionsAssignment_1_1 )
             {
              before(grammarAccess.getMovementAccess().getMotionsAssignment_1_1()); 
-            // InternalRoc.g:796:2: ( rule__Movement__MotionsAssignment_1_1 )
-            // InternalRoc.g:796:3: rule__Movement__MotionsAssignment_1_1
+            // InternalRoc.g:802:2: ( rule__Movement__MotionsAssignment_1_1 )
+            // InternalRoc.g:802:3: rule__Movement__MotionsAssignment_1_1
             {
             pushFollow(FOLLOW_2);
             rule__Movement__MotionsAssignment_1_1();
@@ -2843,14 +2866,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Motion__Group_0__0"
-    // InternalRoc.g:805:1: rule__Motion__Group_0__0 : rule__Motion__Group_0__0__Impl rule__Motion__Group_0__1 ;
+    // InternalRoc.g:811:1: rule__Motion__Group_0__0 : rule__Motion__Group_0__0__Impl rule__Motion__Group_0__1 ;
     public final void rule__Motion__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:809:1: ( rule__Motion__Group_0__0__Impl rule__Motion__Group_0__1 )
-            // InternalRoc.g:810:2: rule__Motion__Group_0__0__Impl rule__Motion__Group_0__1
+            // InternalRoc.g:815:1: ( rule__Motion__Group_0__0__Impl rule__Motion__Group_0__1 )
+            // InternalRoc.g:816:2: rule__Motion__Group_0__0__Impl rule__Motion__Group_0__1
             {
             pushFollow(FOLLOW_7);
             rule__Motion__Group_0__0__Impl();
@@ -2881,21 +2904,21 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Motion__Group_0__0__Impl"
-    // InternalRoc.g:817:1: rule__Motion__Group_0__0__Impl : ( ( rule__Motion__ActionAssignment_0_0 ) ) ;
+    // InternalRoc.g:823:1: rule__Motion__Group_0__0__Impl : ( ( rule__Motion__ActionAssignment_0_0 ) ) ;
     public final void rule__Motion__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:821:1: ( ( ( rule__Motion__ActionAssignment_0_0 ) ) )
-            // InternalRoc.g:822:1: ( ( rule__Motion__ActionAssignment_0_0 ) )
+            // InternalRoc.g:827:1: ( ( ( rule__Motion__ActionAssignment_0_0 ) ) )
+            // InternalRoc.g:828:1: ( ( rule__Motion__ActionAssignment_0_0 ) )
             {
-            // InternalRoc.g:822:1: ( ( rule__Motion__ActionAssignment_0_0 ) )
-            // InternalRoc.g:823:2: ( rule__Motion__ActionAssignment_0_0 )
+            // InternalRoc.g:828:1: ( ( rule__Motion__ActionAssignment_0_0 ) )
+            // InternalRoc.g:829:2: ( rule__Motion__ActionAssignment_0_0 )
             {
              before(grammarAccess.getMotionAccess().getActionAssignment_0_0()); 
-            // InternalRoc.g:824:2: ( rule__Motion__ActionAssignment_0_0 )
-            // InternalRoc.g:824:3: rule__Motion__ActionAssignment_0_0
+            // InternalRoc.g:830:2: ( rule__Motion__ActionAssignment_0_0 )
+            // InternalRoc.g:830:3: rule__Motion__ActionAssignment_0_0
             {
             pushFollow(FOLLOW_2);
             rule__Motion__ActionAssignment_0_0();
@@ -2928,14 +2951,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Motion__Group_0__1"
-    // InternalRoc.g:832:1: rule__Motion__Group_0__1 : rule__Motion__Group_0__1__Impl rule__Motion__Group_0__2 ;
+    // InternalRoc.g:838:1: rule__Motion__Group_0__1 : rule__Motion__Group_0__1__Impl rule__Motion__Group_0__2 ;
     public final void rule__Motion__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:836:1: ( rule__Motion__Group_0__1__Impl rule__Motion__Group_0__2 )
-            // InternalRoc.g:837:2: rule__Motion__Group_0__1__Impl rule__Motion__Group_0__2
+            // InternalRoc.g:842:1: ( rule__Motion__Group_0__1__Impl rule__Motion__Group_0__2 )
+            // InternalRoc.g:843:2: rule__Motion__Group_0__1__Impl rule__Motion__Group_0__2
             {
             pushFollow(FOLLOW_8);
             rule__Motion__Group_0__1__Impl();
@@ -2966,17 +2989,17 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Motion__Group_0__1__Impl"
-    // InternalRoc.g:844:1: rule__Motion__Group_0__1__Impl : ( RULE_FOR ) ;
+    // InternalRoc.g:850:1: rule__Motion__Group_0__1__Impl : ( RULE_FOR ) ;
     public final void rule__Motion__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:848:1: ( ( RULE_FOR ) )
-            // InternalRoc.g:849:1: ( RULE_FOR )
+            // InternalRoc.g:854:1: ( ( RULE_FOR ) )
+            // InternalRoc.g:855:1: ( RULE_FOR )
             {
-            // InternalRoc.g:849:1: ( RULE_FOR )
-            // InternalRoc.g:850:2: RULE_FOR
+            // InternalRoc.g:855:1: ( RULE_FOR )
+            // InternalRoc.g:856:2: RULE_FOR
             {
              before(grammarAccess.getMotionAccess().getFORTerminalRuleCall_0_1()); 
             match(input,RULE_FOR,FOLLOW_2); 
@@ -3003,14 +3026,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Motion__Group_0__2"
-    // InternalRoc.g:859:1: rule__Motion__Group_0__2 : rule__Motion__Group_0__2__Impl rule__Motion__Group_0__3 ;
+    // InternalRoc.g:865:1: rule__Motion__Group_0__2 : rule__Motion__Group_0__2__Impl rule__Motion__Group_0__3 ;
     public final void rule__Motion__Group_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:863:1: ( rule__Motion__Group_0__2__Impl rule__Motion__Group_0__3 )
-            // InternalRoc.g:864:2: rule__Motion__Group_0__2__Impl rule__Motion__Group_0__3
+            // InternalRoc.g:869:1: ( rule__Motion__Group_0__2__Impl rule__Motion__Group_0__3 )
+            // InternalRoc.g:870:2: rule__Motion__Group_0__2__Impl rule__Motion__Group_0__3
             {
             pushFollow(FOLLOW_9);
             rule__Motion__Group_0__2__Impl();
@@ -3041,21 +3064,21 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Motion__Group_0__2__Impl"
-    // InternalRoc.g:871:1: rule__Motion__Group_0__2__Impl : ( ( rule__Motion__DurationAssignment_0_2 ) ) ;
+    // InternalRoc.g:877:1: rule__Motion__Group_0__2__Impl : ( ( rule__Motion__DurationAssignment_0_2 ) ) ;
     public final void rule__Motion__Group_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:875:1: ( ( ( rule__Motion__DurationAssignment_0_2 ) ) )
-            // InternalRoc.g:876:1: ( ( rule__Motion__DurationAssignment_0_2 ) )
+            // InternalRoc.g:881:1: ( ( ( rule__Motion__DurationAssignment_0_2 ) ) )
+            // InternalRoc.g:882:1: ( ( rule__Motion__DurationAssignment_0_2 ) )
             {
-            // InternalRoc.g:876:1: ( ( rule__Motion__DurationAssignment_0_2 ) )
-            // InternalRoc.g:877:2: ( rule__Motion__DurationAssignment_0_2 )
+            // InternalRoc.g:882:1: ( ( rule__Motion__DurationAssignment_0_2 ) )
+            // InternalRoc.g:883:2: ( rule__Motion__DurationAssignment_0_2 )
             {
              before(grammarAccess.getMotionAccess().getDurationAssignment_0_2()); 
-            // InternalRoc.g:878:2: ( rule__Motion__DurationAssignment_0_2 )
-            // InternalRoc.g:878:3: rule__Motion__DurationAssignment_0_2
+            // InternalRoc.g:884:2: ( rule__Motion__DurationAssignment_0_2 )
+            // InternalRoc.g:884:3: rule__Motion__DurationAssignment_0_2
             {
             pushFollow(FOLLOW_2);
             rule__Motion__DurationAssignment_0_2();
@@ -3088,14 +3111,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Motion__Group_0__3"
-    // InternalRoc.g:886:1: rule__Motion__Group_0__3 : rule__Motion__Group_0__3__Impl ;
+    // InternalRoc.g:892:1: rule__Motion__Group_0__3 : rule__Motion__Group_0__3__Impl ;
     public final void rule__Motion__Group_0__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:890:1: ( rule__Motion__Group_0__3__Impl )
-            // InternalRoc.g:891:2: rule__Motion__Group_0__3__Impl
+            // InternalRoc.g:896:1: ( rule__Motion__Group_0__3__Impl )
+            // InternalRoc.g:897:2: rule__Motion__Group_0__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Motion__Group_0__3__Impl();
@@ -3121,21 +3144,21 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Motion__Group_0__3__Impl"
-    // InternalRoc.g:897:1: rule__Motion__Group_0__3__Impl : ( ( rule__Motion__DurationUnitAssignment_0_3 ) ) ;
+    // InternalRoc.g:903:1: rule__Motion__Group_0__3__Impl : ( ( rule__Motion__DurationUnitAssignment_0_3 ) ) ;
     public final void rule__Motion__Group_0__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:901:1: ( ( ( rule__Motion__DurationUnitAssignment_0_3 ) ) )
-            // InternalRoc.g:902:1: ( ( rule__Motion__DurationUnitAssignment_0_3 ) )
+            // InternalRoc.g:907:1: ( ( ( rule__Motion__DurationUnitAssignment_0_3 ) ) )
+            // InternalRoc.g:908:1: ( ( rule__Motion__DurationUnitAssignment_0_3 ) )
             {
-            // InternalRoc.g:902:1: ( ( rule__Motion__DurationUnitAssignment_0_3 ) )
-            // InternalRoc.g:903:2: ( rule__Motion__DurationUnitAssignment_0_3 )
+            // InternalRoc.g:908:1: ( ( rule__Motion__DurationUnitAssignment_0_3 ) )
+            // InternalRoc.g:909:2: ( rule__Motion__DurationUnitAssignment_0_3 )
             {
              before(grammarAccess.getMotionAccess().getDurationUnitAssignment_0_3()); 
-            // InternalRoc.g:904:2: ( rule__Motion__DurationUnitAssignment_0_3 )
-            // InternalRoc.g:904:3: rule__Motion__DurationUnitAssignment_0_3
+            // InternalRoc.g:910:2: ( rule__Motion__DurationUnitAssignment_0_3 )
+            // InternalRoc.g:910:3: rule__Motion__DurationUnitAssignment_0_3
             {
             pushFollow(FOLLOW_2);
             rule__Motion__DurationUnitAssignment_0_3();
@@ -3168,14 +3191,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Motion__Group_1__0"
-    // InternalRoc.g:913:1: rule__Motion__Group_1__0 : rule__Motion__Group_1__0__Impl rule__Motion__Group_1__1 ;
+    // InternalRoc.g:919:1: rule__Motion__Group_1__0 : rule__Motion__Group_1__0__Impl rule__Motion__Group_1__1 ;
     public final void rule__Motion__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:917:1: ( rule__Motion__Group_1__0__Impl rule__Motion__Group_1__1 )
-            // InternalRoc.g:918:2: rule__Motion__Group_1__0__Impl rule__Motion__Group_1__1
+            // InternalRoc.g:923:1: ( rule__Motion__Group_1__0__Impl rule__Motion__Group_1__1 )
+            // InternalRoc.g:924:2: rule__Motion__Group_1__0__Impl rule__Motion__Group_1__1
             {
             pushFollow(FOLLOW_10);
             rule__Motion__Group_1__0__Impl();
@@ -3206,21 +3229,21 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Motion__Group_1__0__Impl"
-    // InternalRoc.g:925:1: rule__Motion__Group_1__0__Impl : ( ( rule__Motion__ActionAssignment_1_0 ) ) ;
+    // InternalRoc.g:931:1: rule__Motion__Group_1__0__Impl : ( ( rule__Motion__ActionAssignment_1_0 ) ) ;
     public final void rule__Motion__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:929:1: ( ( ( rule__Motion__ActionAssignment_1_0 ) ) )
-            // InternalRoc.g:930:1: ( ( rule__Motion__ActionAssignment_1_0 ) )
+            // InternalRoc.g:935:1: ( ( ( rule__Motion__ActionAssignment_1_0 ) ) )
+            // InternalRoc.g:936:1: ( ( rule__Motion__ActionAssignment_1_0 ) )
             {
-            // InternalRoc.g:930:1: ( ( rule__Motion__ActionAssignment_1_0 ) )
-            // InternalRoc.g:931:2: ( rule__Motion__ActionAssignment_1_0 )
+            // InternalRoc.g:936:1: ( ( rule__Motion__ActionAssignment_1_0 ) )
+            // InternalRoc.g:937:2: ( rule__Motion__ActionAssignment_1_0 )
             {
              before(grammarAccess.getMotionAccess().getActionAssignment_1_0()); 
-            // InternalRoc.g:932:2: ( rule__Motion__ActionAssignment_1_0 )
-            // InternalRoc.g:932:3: rule__Motion__ActionAssignment_1_0
+            // InternalRoc.g:938:2: ( rule__Motion__ActionAssignment_1_0 )
+            // InternalRoc.g:938:3: rule__Motion__ActionAssignment_1_0
             {
             pushFollow(FOLLOW_2);
             rule__Motion__ActionAssignment_1_0();
@@ -3253,14 +3276,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Motion__Group_1__1"
-    // InternalRoc.g:940:1: rule__Motion__Group_1__1 : rule__Motion__Group_1__1__Impl rule__Motion__Group_1__2 ;
+    // InternalRoc.g:946:1: rule__Motion__Group_1__1 : rule__Motion__Group_1__1__Impl rule__Motion__Group_1__2 ;
     public final void rule__Motion__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:944:1: ( rule__Motion__Group_1__1__Impl rule__Motion__Group_1__2 )
-            // InternalRoc.g:945:2: rule__Motion__Group_1__1__Impl rule__Motion__Group_1__2
+            // InternalRoc.g:950:1: ( rule__Motion__Group_1__1__Impl rule__Motion__Group_1__2 )
+            // InternalRoc.g:951:2: rule__Motion__Group_1__1__Impl rule__Motion__Group_1__2
             {
             pushFollow(FOLLOW_11);
             rule__Motion__Group_1__1__Impl();
@@ -3291,17 +3314,17 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Motion__Group_1__1__Impl"
-    // InternalRoc.g:952:1: rule__Motion__Group_1__1__Impl : ( RULE_WITH ) ;
+    // InternalRoc.g:958:1: rule__Motion__Group_1__1__Impl : ( RULE_WITH ) ;
     public final void rule__Motion__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:956:1: ( ( RULE_WITH ) )
-            // InternalRoc.g:957:1: ( RULE_WITH )
+            // InternalRoc.g:962:1: ( ( RULE_WITH ) )
+            // InternalRoc.g:963:1: ( RULE_WITH )
             {
-            // InternalRoc.g:957:1: ( RULE_WITH )
-            // InternalRoc.g:958:2: RULE_WITH
+            // InternalRoc.g:963:1: ( RULE_WITH )
+            // InternalRoc.g:964:2: RULE_WITH
             {
              before(grammarAccess.getMotionAccess().getWITHTerminalRuleCall_1_1()); 
             match(input,RULE_WITH,FOLLOW_2); 
@@ -3328,14 +3351,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Motion__Group_1__2"
-    // InternalRoc.g:967:1: rule__Motion__Group_1__2 : rule__Motion__Group_1__2__Impl rule__Motion__Group_1__3 ;
+    // InternalRoc.g:973:1: rule__Motion__Group_1__2 : rule__Motion__Group_1__2__Impl rule__Motion__Group_1__3 ;
     public final void rule__Motion__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:971:1: ( rule__Motion__Group_1__2__Impl rule__Motion__Group_1__3 )
-            // InternalRoc.g:972:2: rule__Motion__Group_1__2__Impl rule__Motion__Group_1__3
+            // InternalRoc.g:977:1: ( rule__Motion__Group_1__2__Impl rule__Motion__Group_1__3 )
+            // InternalRoc.g:978:2: rule__Motion__Group_1__2__Impl rule__Motion__Group_1__3
             {
             pushFollow(FOLLOW_12);
             rule__Motion__Group_1__2__Impl();
@@ -3366,21 +3389,21 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Motion__Group_1__2__Impl"
-    // InternalRoc.g:979:1: rule__Motion__Group_1__2__Impl : ( ( rule__Motion__SpeedAssignment_1_2 ) ) ;
+    // InternalRoc.g:985:1: rule__Motion__Group_1__2__Impl : ( ( rule__Motion__SpeedAssignment_1_2 ) ) ;
     public final void rule__Motion__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:983:1: ( ( ( rule__Motion__SpeedAssignment_1_2 ) ) )
-            // InternalRoc.g:984:1: ( ( rule__Motion__SpeedAssignment_1_2 ) )
+            // InternalRoc.g:989:1: ( ( ( rule__Motion__SpeedAssignment_1_2 ) ) )
+            // InternalRoc.g:990:1: ( ( rule__Motion__SpeedAssignment_1_2 ) )
             {
-            // InternalRoc.g:984:1: ( ( rule__Motion__SpeedAssignment_1_2 ) )
-            // InternalRoc.g:985:2: ( rule__Motion__SpeedAssignment_1_2 )
+            // InternalRoc.g:990:1: ( ( rule__Motion__SpeedAssignment_1_2 ) )
+            // InternalRoc.g:991:2: ( rule__Motion__SpeedAssignment_1_2 )
             {
              before(grammarAccess.getMotionAccess().getSpeedAssignment_1_2()); 
-            // InternalRoc.g:986:2: ( rule__Motion__SpeedAssignment_1_2 )
-            // InternalRoc.g:986:3: rule__Motion__SpeedAssignment_1_2
+            // InternalRoc.g:992:2: ( rule__Motion__SpeedAssignment_1_2 )
+            // InternalRoc.g:992:3: rule__Motion__SpeedAssignment_1_2
             {
             pushFollow(FOLLOW_2);
             rule__Motion__SpeedAssignment_1_2();
@@ -3413,14 +3436,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Motion__Group_1__3"
-    // InternalRoc.g:994:1: rule__Motion__Group_1__3 : rule__Motion__Group_1__3__Impl ;
+    // InternalRoc.g:1000:1: rule__Motion__Group_1__3 : rule__Motion__Group_1__3__Impl ;
     public final void rule__Motion__Group_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:998:1: ( rule__Motion__Group_1__3__Impl )
-            // InternalRoc.g:999:2: rule__Motion__Group_1__3__Impl
+            // InternalRoc.g:1004:1: ( rule__Motion__Group_1__3__Impl )
+            // InternalRoc.g:1005:2: rule__Motion__Group_1__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Motion__Group_1__3__Impl();
@@ -3446,17 +3469,17 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Motion__Group_1__3__Impl"
-    // InternalRoc.g:1005:1: rule__Motion__Group_1__3__Impl : ( RULE_SPEED_KEY ) ;
+    // InternalRoc.g:1011:1: rule__Motion__Group_1__3__Impl : ( RULE_SPEED_KEY ) ;
     public final void rule__Motion__Group_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1009:1: ( ( RULE_SPEED_KEY ) )
-            // InternalRoc.g:1010:1: ( RULE_SPEED_KEY )
+            // InternalRoc.g:1015:1: ( ( RULE_SPEED_KEY ) )
+            // InternalRoc.g:1016:1: ( RULE_SPEED_KEY )
             {
-            // InternalRoc.g:1010:1: ( RULE_SPEED_KEY )
-            // InternalRoc.g:1011:2: RULE_SPEED_KEY
+            // InternalRoc.g:1016:1: ( RULE_SPEED_KEY )
+            // InternalRoc.g:1017:2: RULE_SPEED_KEY
             {
              before(grammarAccess.getMotionAccess().getSPEED_KEYTerminalRuleCall_1_3()); 
             match(input,RULE_SPEED_KEY,FOLLOW_2); 
@@ -3483,14 +3506,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Action__Group_1__0"
-    // InternalRoc.g:1021:1: rule__Action__Group_1__0 : rule__Action__Group_1__0__Impl rule__Action__Group_1__1 ;
+    // InternalRoc.g:1027:1: rule__Action__Group_1__0 : rule__Action__Group_1__0__Impl rule__Action__Group_1__1 ;
     public final void rule__Action__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1025:1: ( rule__Action__Group_1__0__Impl rule__Action__Group_1__1 )
-            // InternalRoc.g:1026:2: rule__Action__Group_1__0__Impl rule__Action__Group_1__1
+            // InternalRoc.g:1031:1: ( rule__Action__Group_1__0__Impl rule__Action__Group_1__1 )
+            // InternalRoc.g:1032:2: rule__Action__Group_1__0__Impl rule__Action__Group_1__1
             {
             pushFollow(FOLLOW_13);
             rule__Action__Group_1__0__Impl();
@@ -3521,20 +3544,20 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Action__Group_1__0__Impl"
-    // InternalRoc.g:1033:1: rule__Action__Group_1__0__Impl : ( ( rule__Action__IntensityAssignment_1_0 )? ) ;
+    // InternalRoc.g:1039:1: rule__Action__Group_1__0__Impl : ( ( rule__Action__IntensityAssignment_1_0 )? ) ;
     public final void rule__Action__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1037:1: ( ( ( rule__Action__IntensityAssignment_1_0 )? ) )
-            // InternalRoc.g:1038:1: ( ( rule__Action__IntensityAssignment_1_0 )? )
+            // InternalRoc.g:1043:1: ( ( ( rule__Action__IntensityAssignment_1_0 )? ) )
+            // InternalRoc.g:1044:1: ( ( rule__Action__IntensityAssignment_1_0 )? )
             {
-            // InternalRoc.g:1038:1: ( ( rule__Action__IntensityAssignment_1_0 )? )
-            // InternalRoc.g:1039:2: ( rule__Action__IntensityAssignment_1_0 )?
+            // InternalRoc.g:1044:1: ( ( rule__Action__IntensityAssignment_1_0 )? )
+            // InternalRoc.g:1045:2: ( rule__Action__IntensityAssignment_1_0 )?
             {
              before(grammarAccess.getActionAccess().getIntensityAssignment_1_0()); 
-            // InternalRoc.g:1040:2: ( rule__Action__IntensityAssignment_1_0 )?
+            // InternalRoc.g:1046:2: ( rule__Action__IntensityAssignment_1_0 )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -3543,7 +3566,7 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
             }
             switch (alt13) {
                 case 1 :
-                    // InternalRoc.g:1040:3: rule__Action__IntensityAssignment_1_0
+                    // InternalRoc.g:1046:3: rule__Action__IntensityAssignment_1_0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Action__IntensityAssignment_1_0();
@@ -3579,14 +3602,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Action__Group_1__1"
-    // InternalRoc.g:1048:1: rule__Action__Group_1__1 : rule__Action__Group_1__1__Impl ;
+    // InternalRoc.g:1054:1: rule__Action__Group_1__1 : rule__Action__Group_1__1__Impl ;
     public final void rule__Action__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1052:1: ( rule__Action__Group_1__1__Impl )
-            // InternalRoc.g:1053:2: rule__Action__Group_1__1__Impl
+            // InternalRoc.g:1058:1: ( rule__Action__Group_1__1__Impl )
+            // InternalRoc.g:1059:2: rule__Action__Group_1__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Action__Group_1__1__Impl();
@@ -3612,21 +3635,21 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Action__Group_1__1__Impl"
-    // InternalRoc.g:1059:1: rule__Action__Group_1__1__Impl : ( ( rule__Action__ActionHolderAssignment_1_1 ) ) ;
+    // InternalRoc.g:1065:1: rule__Action__Group_1__1__Impl : ( ( rule__Action__ActionHolderAssignment_1_1 ) ) ;
     public final void rule__Action__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1063:1: ( ( ( rule__Action__ActionHolderAssignment_1_1 ) ) )
-            // InternalRoc.g:1064:1: ( ( rule__Action__ActionHolderAssignment_1_1 ) )
+            // InternalRoc.g:1069:1: ( ( ( rule__Action__ActionHolderAssignment_1_1 ) ) )
+            // InternalRoc.g:1070:1: ( ( rule__Action__ActionHolderAssignment_1_1 ) )
             {
-            // InternalRoc.g:1064:1: ( ( rule__Action__ActionHolderAssignment_1_1 ) )
-            // InternalRoc.g:1065:2: ( rule__Action__ActionHolderAssignment_1_1 )
+            // InternalRoc.g:1070:1: ( ( rule__Action__ActionHolderAssignment_1_1 ) )
+            // InternalRoc.g:1071:2: ( rule__Action__ActionHolderAssignment_1_1 )
             {
              before(grammarAccess.getActionAccess().getActionHolderAssignment_1_1()); 
-            // InternalRoc.g:1066:2: ( rule__Action__ActionHolderAssignment_1_1 )
-            // InternalRoc.g:1066:3: rule__Action__ActionHolderAssignment_1_1
+            // InternalRoc.g:1072:2: ( rule__Action__ActionHolderAssignment_1_1 )
+            // InternalRoc.g:1072:3: rule__Action__ActionHolderAssignment_1_1
             {
             pushFollow(FOLLOW_2);
             rule__Action__ActionHolderAssignment_1_1();
@@ -3659,14 +3682,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Action__Group_2__0"
-    // InternalRoc.g:1075:1: rule__Action__Group_2__0 : rule__Action__Group_2__0__Impl rule__Action__Group_2__1 ;
+    // InternalRoc.g:1081:1: rule__Action__Group_2__0 : rule__Action__Group_2__0__Impl rule__Action__Group_2__1 ;
     public final void rule__Action__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1079:1: ( rule__Action__Group_2__0__Impl rule__Action__Group_2__1 )
-            // InternalRoc.g:1080:2: rule__Action__Group_2__0__Impl rule__Action__Group_2__1
+            // InternalRoc.g:1085:1: ( rule__Action__Group_2__0__Impl rule__Action__Group_2__1 )
+            // InternalRoc.g:1086:2: rule__Action__Group_2__0__Impl rule__Action__Group_2__1
             {
             pushFollow(FOLLOW_6);
             rule__Action__Group_2__0__Impl();
@@ -3697,20 +3720,20 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Action__Group_2__0__Impl"
-    // InternalRoc.g:1087:1: rule__Action__Group_2__0__Impl : ( ( rule__Action__IntensityAssignment_2_0 )? ) ;
+    // InternalRoc.g:1093:1: rule__Action__Group_2__0__Impl : ( ( rule__Action__IntensityAssignment_2_0 )? ) ;
     public final void rule__Action__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1091:1: ( ( ( rule__Action__IntensityAssignment_2_0 )? ) )
-            // InternalRoc.g:1092:1: ( ( rule__Action__IntensityAssignment_2_0 )? )
+            // InternalRoc.g:1097:1: ( ( ( rule__Action__IntensityAssignment_2_0 )? ) )
+            // InternalRoc.g:1098:1: ( ( rule__Action__IntensityAssignment_2_0 )? )
             {
-            // InternalRoc.g:1092:1: ( ( rule__Action__IntensityAssignment_2_0 )? )
-            // InternalRoc.g:1093:2: ( rule__Action__IntensityAssignment_2_0 )?
+            // InternalRoc.g:1098:1: ( ( rule__Action__IntensityAssignment_2_0 )? )
+            // InternalRoc.g:1099:2: ( rule__Action__IntensityAssignment_2_0 )?
             {
              before(grammarAccess.getActionAccess().getIntensityAssignment_2_0()); 
-            // InternalRoc.g:1094:2: ( rule__Action__IntensityAssignment_2_0 )?
+            // InternalRoc.g:1100:2: ( rule__Action__IntensityAssignment_2_0 )?
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -3719,7 +3742,7 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
             }
             switch (alt14) {
                 case 1 :
-                    // InternalRoc.g:1094:3: rule__Action__IntensityAssignment_2_0
+                    // InternalRoc.g:1100:3: rule__Action__IntensityAssignment_2_0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Action__IntensityAssignment_2_0();
@@ -3755,14 +3778,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Action__Group_2__1"
-    // InternalRoc.g:1102:1: rule__Action__Group_2__1 : rule__Action__Group_2__1__Impl ;
+    // InternalRoc.g:1108:1: rule__Action__Group_2__1 : rule__Action__Group_2__1__Impl ;
     public final void rule__Action__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1106:1: ( rule__Action__Group_2__1__Impl )
-            // InternalRoc.g:1107:2: rule__Action__Group_2__1__Impl
+            // InternalRoc.g:1112:1: ( rule__Action__Group_2__1__Impl )
+            // InternalRoc.g:1113:2: rule__Action__Group_2__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Action__Group_2__1__Impl();
@@ -3788,21 +3811,21 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Action__Group_2__1__Impl"
-    // InternalRoc.g:1113:1: rule__Action__Group_2__1__Impl : ( ( rule__Action__ActionHolderAssignment_2_1 ) ) ;
+    // InternalRoc.g:1119:1: rule__Action__Group_2__1__Impl : ( ( rule__Action__ActionHolderAssignment_2_1 ) ) ;
     public final void rule__Action__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1117:1: ( ( ( rule__Action__ActionHolderAssignment_2_1 ) ) )
-            // InternalRoc.g:1118:1: ( ( rule__Action__ActionHolderAssignment_2_1 ) )
+            // InternalRoc.g:1123:1: ( ( ( rule__Action__ActionHolderAssignment_2_1 ) ) )
+            // InternalRoc.g:1124:1: ( ( rule__Action__ActionHolderAssignment_2_1 ) )
             {
-            // InternalRoc.g:1118:1: ( ( rule__Action__ActionHolderAssignment_2_1 ) )
-            // InternalRoc.g:1119:2: ( rule__Action__ActionHolderAssignment_2_1 )
+            // InternalRoc.g:1124:1: ( ( rule__Action__ActionHolderAssignment_2_1 ) )
+            // InternalRoc.g:1125:2: ( rule__Action__ActionHolderAssignment_2_1 )
             {
              before(grammarAccess.getActionAccess().getActionHolderAssignment_2_1()); 
-            // InternalRoc.g:1120:2: ( rule__Action__ActionHolderAssignment_2_1 )
-            // InternalRoc.g:1120:3: rule__Action__ActionHolderAssignment_2_1
+            // InternalRoc.g:1126:2: ( rule__Action__ActionHolderAssignment_2_1 )
+            // InternalRoc.g:1126:3: rule__Action__ActionHolderAssignment_2_1
             {
             pushFollow(FOLLOW_2);
             rule__Action__ActionHolderAssignment_2_1();
@@ -3834,172 +3857,17 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Action__Group_2__1__Impl"
 
 
-    // $ANTLR start "rule__CompleteAction__Group__0"
-    // InternalRoc.g:1129:1: rule__CompleteAction__Group__0 : rule__CompleteAction__Group__0__Impl rule__CompleteAction__Group__1 ;
-    public final void rule__CompleteAction__Group__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalRoc.g:1133:1: ( rule__CompleteAction__Group__0__Impl rule__CompleteAction__Group__1 )
-            // InternalRoc.g:1134:2: rule__CompleteAction__Group__0__Impl rule__CompleteAction__Group__1
-            {
-            pushFollow(FOLLOW_14);
-            rule__CompleteAction__Group__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__CompleteAction__Group__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__CompleteAction__Group__0"
-
-
-    // $ANTLR start "rule__CompleteAction__Group__0__Impl"
-    // InternalRoc.g:1141:1: rule__CompleteAction__Group__0__Impl : ( ( rule__CompleteAction__ActionNameAssignment_0 ) ) ;
-    public final void rule__CompleteAction__Group__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalRoc.g:1145:1: ( ( ( rule__CompleteAction__ActionNameAssignment_0 ) ) )
-            // InternalRoc.g:1146:1: ( ( rule__CompleteAction__ActionNameAssignment_0 ) )
-            {
-            // InternalRoc.g:1146:1: ( ( rule__CompleteAction__ActionNameAssignment_0 ) )
-            // InternalRoc.g:1147:2: ( rule__CompleteAction__ActionNameAssignment_0 )
-            {
-             before(grammarAccess.getCompleteActionAccess().getActionNameAssignment_0()); 
-            // InternalRoc.g:1148:2: ( rule__CompleteAction__ActionNameAssignment_0 )
-            // InternalRoc.g:1148:3: rule__CompleteAction__ActionNameAssignment_0
-            {
-            pushFollow(FOLLOW_2);
-            rule__CompleteAction__ActionNameAssignment_0();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getCompleteActionAccess().getActionNameAssignment_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__CompleteAction__Group__0__Impl"
-
-
-    // $ANTLR start "rule__CompleteAction__Group__1"
-    // InternalRoc.g:1156:1: rule__CompleteAction__Group__1 : rule__CompleteAction__Group__1__Impl ;
-    public final void rule__CompleteAction__Group__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalRoc.g:1160:1: ( rule__CompleteAction__Group__1__Impl )
-            // InternalRoc.g:1161:2: rule__CompleteAction__Group__1__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__CompleteAction__Group__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__CompleteAction__Group__1"
-
-
-    // $ANTLR start "rule__CompleteAction__Group__1__Impl"
-    // InternalRoc.g:1167:1: rule__CompleteAction__Group__1__Impl : ( 'face' ) ;
-    public final void rule__CompleteAction__Group__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalRoc.g:1171:1: ( ( 'face' ) )
-            // InternalRoc.g:1172:1: ( 'face' )
-            {
-            // InternalRoc.g:1172:1: ( 'face' )
-            // InternalRoc.g:1173:2: 'face'
-            {
-             before(grammarAccess.getCompleteActionAccess().getFaceKeyword_1()); 
-            match(input,25,FOLLOW_2); 
-             after(grammarAccess.getCompleteActionAccess().getFaceKeyword_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__CompleteAction__Group__1__Impl"
-
-
     // $ANTLR start "rule__DirectedAction__Group_0__0"
-    // InternalRoc.g:1183:1: rule__DirectedAction__Group_0__0 : rule__DirectedAction__Group_0__0__Impl rule__DirectedAction__Group_0__1 ;
+    // InternalRoc.g:1135:1: rule__DirectedAction__Group_0__0 : rule__DirectedAction__Group_0__0__Impl rule__DirectedAction__Group_0__1 ;
     public final void rule__DirectedAction__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1187:1: ( rule__DirectedAction__Group_0__0__Impl rule__DirectedAction__Group_0__1 )
-            // InternalRoc.g:1188:2: rule__DirectedAction__Group_0__0__Impl rule__DirectedAction__Group_0__1
+            // InternalRoc.g:1139:1: ( rule__DirectedAction__Group_0__0__Impl rule__DirectedAction__Group_0__1 )
+            // InternalRoc.g:1140:2: rule__DirectedAction__Group_0__0__Impl rule__DirectedAction__Group_0__1
             {
-            pushFollow(FOLLOW_15);
+            pushFollow(FOLLOW_14);
             rule__DirectedAction__Group_0__0__Impl();
 
             state._fsp--;
@@ -4028,21 +3896,21 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DirectedAction__Group_0__0__Impl"
-    // InternalRoc.g:1195:1: rule__DirectedAction__Group_0__0__Impl : ( ( rule__DirectedAction__ActionNameAssignment_0_0 ) ) ;
+    // InternalRoc.g:1147:1: rule__DirectedAction__Group_0__0__Impl : ( ( rule__DirectedAction__ActionNameAssignment_0_0 ) ) ;
     public final void rule__DirectedAction__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1199:1: ( ( ( rule__DirectedAction__ActionNameAssignment_0_0 ) ) )
-            // InternalRoc.g:1200:1: ( ( rule__DirectedAction__ActionNameAssignment_0_0 ) )
+            // InternalRoc.g:1151:1: ( ( ( rule__DirectedAction__ActionNameAssignment_0_0 ) ) )
+            // InternalRoc.g:1152:1: ( ( rule__DirectedAction__ActionNameAssignment_0_0 ) )
             {
-            // InternalRoc.g:1200:1: ( ( rule__DirectedAction__ActionNameAssignment_0_0 ) )
-            // InternalRoc.g:1201:2: ( rule__DirectedAction__ActionNameAssignment_0_0 )
+            // InternalRoc.g:1152:1: ( ( rule__DirectedAction__ActionNameAssignment_0_0 ) )
+            // InternalRoc.g:1153:2: ( rule__DirectedAction__ActionNameAssignment_0_0 )
             {
              before(grammarAccess.getDirectedActionAccess().getActionNameAssignment_0_0()); 
-            // InternalRoc.g:1202:2: ( rule__DirectedAction__ActionNameAssignment_0_0 )
-            // InternalRoc.g:1202:3: rule__DirectedAction__ActionNameAssignment_0_0
+            // InternalRoc.g:1154:2: ( rule__DirectedAction__ActionNameAssignment_0_0 )
+            // InternalRoc.g:1154:3: rule__DirectedAction__ActionNameAssignment_0_0
             {
             pushFollow(FOLLOW_2);
             rule__DirectedAction__ActionNameAssignment_0_0();
@@ -4075,14 +3943,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DirectedAction__Group_0__1"
-    // InternalRoc.g:1210:1: rule__DirectedAction__Group_0__1 : rule__DirectedAction__Group_0__1__Impl ;
+    // InternalRoc.g:1162:1: rule__DirectedAction__Group_0__1 : rule__DirectedAction__Group_0__1__Impl ;
     public final void rule__DirectedAction__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1214:1: ( rule__DirectedAction__Group_0__1__Impl )
-            // InternalRoc.g:1215:2: rule__DirectedAction__Group_0__1__Impl
+            // InternalRoc.g:1166:1: ( rule__DirectedAction__Group_0__1__Impl )
+            // InternalRoc.g:1167:2: rule__DirectedAction__Group_0__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__DirectedAction__Group_0__1__Impl();
@@ -4108,21 +3976,21 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DirectedAction__Group_0__1__Impl"
-    // InternalRoc.g:1221:1: rule__DirectedAction__Group_0__1__Impl : ( ( rule__DirectedAction__DirectionAssignment_0_1 ) ) ;
+    // InternalRoc.g:1173:1: rule__DirectedAction__Group_0__1__Impl : ( ( rule__DirectedAction__DirectionAssignment_0_1 ) ) ;
     public final void rule__DirectedAction__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1225:1: ( ( ( rule__DirectedAction__DirectionAssignment_0_1 ) ) )
-            // InternalRoc.g:1226:1: ( ( rule__DirectedAction__DirectionAssignment_0_1 ) )
+            // InternalRoc.g:1177:1: ( ( ( rule__DirectedAction__DirectionAssignment_0_1 ) ) )
+            // InternalRoc.g:1178:1: ( ( rule__DirectedAction__DirectionAssignment_0_1 ) )
             {
-            // InternalRoc.g:1226:1: ( ( rule__DirectedAction__DirectionAssignment_0_1 ) )
-            // InternalRoc.g:1227:2: ( rule__DirectedAction__DirectionAssignment_0_1 )
+            // InternalRoc.g:1178:1: ( ( rule__DirectedAction__DirectionAssignment_0_1 ) )
+            // InternalRoc.g:1179:2: ( rule__DirectedAction__DirectionAssignment_0_1 )
             {
              before(grammarAccess.getDirectedActionAccess().getDirectionAssignment_0_1()); 
-            // InternalRoc.g:1228:2: ( rule__DirectedAction__DirectionAssignment_0_1 )
-            // InternalRoc.g:1228:3: rule__DirectedAction__DirectionAssignment_0_1
+            // InternalRoc.g:1180:2: ( rule__DirectedAction__DirectionAssignment_0_1 )
+            // InternalRoc.g:1180:3: rule__DirectedAction__DirectionAssignment_0_1
             {
             pushFollow(FOLLOW_2);
             rule__DirectedAction__DirectionAssignment_0_1();
@@ -4155,16 +4023,16 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DirectedAction__Group_1__0"
-    // InternalRoc.g:1237:1: rule__DirectedAction__Group_1__0 : rule__DirectedAction__Group_1__0__Impl rule__DirectedAction__Group_1__1 ;
+    // InternalRoc.g:1189:1: rule__DirectedAction__Group_1__0 : rule__DirectedAction__Group_1__0__Impl rule__DirectedAction__Group_1__1 ;
     public final void rule__DirectedAction__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1241:1: ( rule__DirectedAction__Group_1__0__Impl rule__DirectedAction__Group_1__1 )
-            // InternalRoc.g:1242:2: rule__DirectedAction__Group_1__0__Impl rule__DirectedAction__Group_1__1
+            // InternalRoc.g:1193:1: ( rule__DirectedAction__Group_1__0__Impl rule__DirectedAction__Group_1__1 )
+            // InternalRoc.g:1194:2: rule__DirectedAction__Group_1__0__Impl rule__DirectedAction__Group_1__1
             {
-            pushFollow(FOLLOW_16);
+            pushFollow(FOLLOW_15);
             rule__DirectedAction__Group_1__0__Impl();
 
             state._fsp--;
@@ -4193,21 +4061,21 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DirectedAction__Group_1__0__Impl"
-    // InternalRoc.g:1249:1: rule__DirectedAction__Group_1__0__Impl : ( ( rule__DirectedAction__ActionNameAssignment_1_0 ) ) ;
+    // InternalRoc.g:1201:1: rule__DirectedAction__Group_1__0__Impl : ( ( rule__DirectedAction__ActionNameAssignment_1_0 ) ) ;
     public final void rule__DirectedAction__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1253:1: ( ( ( rule__DirectedAction__ActionNameAssignment_1_0 ) ) )
-            // InternalRoc.g:1254:1: ( ( rule__DirectedAction__ActionNameAssignment_1_0 ) )
+            // InternalRoc.g:1205:1: ( ( ( rule__DirectedAction__ActionNameAssignment_1_0 ) ) )
+            // InternalRoc.g:1206:1: ( ( rule__DirectedAction__ActionNameAssignment_1_0 ) )
             {
-            // InternalRoc.g:1254:1: ( ( rule__DirectedAction__ActionNameAssignment_1_0 ) )
-            // InternalRoc.g:1255:2: ( rule__DirectedAction__ActionNameAssignment_1_0 )
+            // InternalRoc.g:1206:1: ( ( rule__DirectedAction__ActionNameAssignment_1_0 ) )
+            // InternalRoc.g:1207:2: ( rule__DirectedAction__ActionNameAssignment_1_0 )
             {
              before(grammarAccess.getDirectedActionAccess().getActionNameAssignment_1_0()); 
-            // InternalRoc.g:1256:2: ( rule__DirectedAction__ActionNameAssignment_1_0 )
-            // InternalRoc.g:1256:3: rule__DirectedAction__ActionNameAssignment_1_0
+            // InternalRoc.g:1208:2: ( rule__DirectedAction__ActionNameAssignment_1_0 )
+            // InternalRoc.g:1208:3: rule__DirectedAction__ActionNameAssignment_1_0
             {
             pushFollow(FOLLOW_2);
             rule__DirectedAction__ActionNameAssignment_1_0();
@@ -4240,14 +4108,14 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DirectedAction__Group_1__1"
-    // InternalRoc.g:1264:1: rule__DirectedAction__Group_1__1 : rule__DirectedAction__Group_1__1__Impl ;
+    // InternalRoc.g:1216:1: rule__DirectedAction__Group_1__1 : rule__DirectedAction__Group_1__1__Impl ;
     public final void rule__DirectedAction__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1268:1: ( rule__DirectedAction__Group_1__1__Impl )
-            // InternalRoc.g:1269:2: rule__DirectedAction__Group_1__1__Impl
+            // InternalRoc.g:1220:1: ( rule__DirectedAction__Group_1__1__Impl )
+            // InternalRoc.g:1221:2: rule__DirectedAction__Group_1__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__DirectedAction__Group_1__1__Impl();
@@ -4273,21 +4141,21 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DirectedAction__Group_1__1__Impl"
-    // InternalRoc.g:1275:1: rule__DirectedAction__Group_1__1__Impl : ( ( rule__DirectedAction__DirectionAssignment_1_1 ) ) ;
+    // InternalRoc.g:1227:1: rule__DirectedAction__Group_1__1__Impl : ( ( rule__DirectedAction__DirectionAssignment_1_1 ) ) ;
     public final void rule__DirectedAction__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1279:1: ( ( ( rule__DirectedAction__DirectionAssignment_1_1 ) ) )
-            // InternalRoc.g:1280:1: ( ( rule__DirectedAction__DirectionAssignment_1_1 ) )
+            // InternalRoc.g:1231:1: ( ( ( rule__DirectedAction__DirectionAssignment_1_1 ) ) )
+            // InternalRoc.g:1232:1: ( ( rule__DirectedAction__DirectionAssignment_1_1 ) )
             {
-            // InternalRoc.g:1280:1: ( ( rule__DirectedAction__DirectionAssignment_1_1 ) )
-            // InternalRoc.g:1281:2: ( rule__DirectedAction__DirectionAssignment_1_1 )
+            // InternalRoc.g:1232:1: ( ( rule__DirectedAction__DirectionAssignment_1_1 ) )
+            // InternalRoc.g:1233:2: ( rule__DirectedAction__DirectionAssignment_1_1 )
             {
              before(grammarAccess.getDirectedActionAccess().getDirectionAssignment_1_1()); 
-            // InternalRoc.g:1282:2: ( rule__DirectedAction__DirectionAssignment_1_1 )
-            // InternalRoc.g:1282:3: rule__DirectedAction__DirectionAssignment_1_1
+            // InternalRoc.g:1234:2: ( rule__DirectedAction__DirectionAssignment_1_1 )
+            // InternalRoc.g:1234:3: rule__DirectedAction__DirectionAssignment_1_1
             {
             pushFollow(FOLLOW_2);
             rule__DirectedAction__DirectionAssignment_1_1();
@@ -4319,173 +4187,18 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__DirectedAction__Group_1__1__Impl"
 
 
-    // $ANTLR start "rule__LeftRightDirectedAction__Group__0"
-    // InternalRoc.g:1291:1: rule__LeftRightDirectedAction__Group__0 : rule__LeftRightDirectedAction__Group__0__Impl rule__LeftRightDirectedAction__Group__1 ;
-    public final void rule__LeftRightDirectedAction__Group__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalRoc.g:1295:1: ( rule__LeftRightDirectedAction__Group__0__Impl rule__LeftRightDirectedAction__Group__1 )
-            // InternalRoc.g:1296:2: rule__LeftRightDirectedAction__Group__0__Impl rule__LeftRightDirectedAction__Group__1
-            {
-            pushFollow(FOLLOW_17);
-            rule__LeftRightDirectedAction__Group__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__LeftRightDirectedAction__Group__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__LeftRightDirectedAction__Group__0"
-
-
-    // $ANTLR start "rule__LeftRightDirectedAction__Group__0__Impl"
-    // InternalRoc.g:1303:1: rule__LeftRightDirectedAction__Group__0__Impl : ( ( rule__LeftRightDirectedAction__TiltHeadAssignment_0 ) ) ;
-    public final void rule__LeftRightDirectedAction__Group__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalRoc.g:1307:1: ( ( ( rule__LeftRightDirectedAction__TiltHeadAssignment_0 ) ) )
-            // InternalRoc.g:1308:1: ( ( rule__LeftRightDirectedAction__TiltHeadAssignment_0 ) )
-            {
-            // InternalRoc.g:1308:1: ( ( rule__LeftRightDirectedAction__TiltHeadAssignment_0 ) )
-            // InternalRoc.g:1309:2: ( rule__LeftRightDirectedAction__TiltHeadAssignment_0 )
-            {
-             before(grammarAccess.getLeftRightDirectedActionAccess().getTiltHeadAssignment_0()); 
-            // InternalRoc.g:1310:2: ( rule__LeftRightDirectedAction__TiltHeadAssignment_0 )
-            // InternalRoc.g:1310:3: rule__LeftRightDirectedAction__TiltHeadAssignment_0
-            {
-            pushFollow(FOLLOW_2);
-            rule__LeftRightDirectedAction__TiltHeadAssignment_0();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getLeftRightDirectedActionAccess().getTiltHeadAssignment_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__LeftRightDirectedAction__Group__0__Impl"
-
-
-    // $ANTLR start "rule__LeftRightDirectedAction__Group__1"
-    // InternalRoc.g:1318:1: rule__LeftRightDirectedAction__Group__1 : rule__LeftRightDirectedAction__Group__1__Impl ;
-    public final void rule__LeftRightDirectedAction__Group__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalRoc.g:1322:1: ( rule__LeftRightDirectedAction__Group__1__Impl )
-            // InternalRoc.g:1323:2: rule__LeftRightDirectedAction__Group__1__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__LeftRightDirectedAction__Group__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__LeftRightDirectedAction__Group__1"
-
-
-    // $ANTLR start "rule__LeftRightDirectedAction__Group__1__Impl"
-    // InternalRoc.g:1329:1: rule__LeftRightDirectedAction__Group__1__Impl : ( 'head' ) ;
-    public final void rule__LeftRightDirectedAction__Group__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalRoc.g:1333:1: ( ( 'head' ) )
-            // InternalRoc.g:1334:1: ( 'head' )
-            {
-            // InternalRoc.g:1334:1: ( 'head' )
-            // InternalRoc.g:1335:2: 'head'
-            {
-             before(grammarAccess.getLeftRightDirectedActionAccess().getHeadKeyword_1()); 
-            match(input,26,FOLLOW_2); 
-             after(grammarAccess.getLeftRightDirectedActionAccess().getHeadKeyword_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__LeftRightDirectedAction__Group__1__Impl"
-
-
     // $ANTLR start "rule__Program__MovementsAssignment"
-    // InternalRoc.g:1345:1: rule__Program__MovementsAssignment : ( ruleMovement ) ;
+    // InternalRoc.g:1243:1: rule__Program__MovementsAssignment : ( ruleMovement ) ;
     public final void rule__Program__MovementsAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1349:1: ( ( ruleMovement ) )
-            // InternalRoc.g:1350:2: ( ruleMovement )
+            // InternalRoc.g:1247:1: ( ( ruleMovement ) )
+            // InternalRoc.g:1248:2: ( ruleMovement )
             {
-            // InternalRoc.g:1350:2: ( ruleMovement )
-            // InternalRoc.g:1351:3: ruleMovement
+            // InternalRoc.g:1248:2: ( ruleMovement )
+            // InternalRoc.g:1249:3: ruleMovement
             {
              before(grammarAccess.getProgramAccess().getMovementsMovementParserRuleCall_0()); 
             pushFollow(FOLLOW_2);
@@ -4516,17 +4229,17 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Movement__MotionsAssignment_0"
-    // InternalRoc.g:1360:1: rule__Movement__MotionsAssignment_0 : ( ruleMotion ) ;
+    // InternalRoc.g:1258:1: rule__Movement__MotionsAssignment_0 : ( ruleMotion ) ;
     public final void rule__Movement__MotionsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1364:1: ( ( ruleMotion ) )
-            // InternalRoc.g:1365:2: ( ruleMotion )
+            // InternalRoc.g:1262:1: ( ( ruleMotion ) )
+            // InternalRoc.g:1263:2: ( ruleMotion )
             {
-            // InternalRoc.g:1365:2: ( ruleMotion )
-            // InternalRoc.g:1366:3: ruleMotion
+            // InternalRoc.g:1263:2: ( ruleMotion )
+            // InternalRoc.g:1264:3: ruleMotion
             {
              before(grammarAccess.getMovementAccess().getMotionsMotionParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -4557,17 +4270,17 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Movement__MotionsAssignment_1_1"
-    // InternalRoc.g:1375:1: rule__Movement__MotionsAssignment_1_1 : ( ruleMotion ) ;
+    // InternalRoc.g:1273:1: rule__Movement__MotionsAssignment_1_1 : ( ruleMotion ) ;
     public final void rule__Movement__MotionsAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1379:1: ( ( ruleMotion ) )
-            // InternalRoc.g:1380:2: ( ruleMotion )
+            // InternalRoc.g:1277:1: ( ( ruleMotion ) )
+            // InternalRoc.g:1278:2: ( ruleMotion )
             {
-            // InternalRoc.g:1380:2: ( ruleMotion )
-            // InternalRoc.g:1381:3: ruleMotion
+            // InternalRoc.g:1278:2: ( ruleMotion )
+            // InternalRoc.g:1279:3: ruleMotion
             {
              before(grammarAccess.getMovementAccess().getMotionsMotionParserRuleCall_1_1_0()); 
             pushFollow(FOLLOW_2);
@@ -4598,17 +4311,17 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Motion__ActionAssignment_0_0"
-    // InternalRoc.g:1390:1: rule__Motion__ActionAssignment_0_0 : ( ruleAction ) ;
+    // InternalRoc.g:1288:1: rule__Motion__ActionAssignment_0_0 : ( ruleAction ) ;
     public final void rule__Motion__ActionAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1394:1: ( ( ruleAction ) )
-            // InternalRoc.g:1395:2: ( ruleAction )
+            // InternalRoc.g:1292:1: ( ( ruleAction ) )
+            // InternalRoc.g:1293:2: ( ruleAction )
             {
-            // InternalRoc.g:1395:2: ( ruleAction )
-            // InternalRoc.g:1396:3: ruleAction
+            // InternalRoc.g:1293:2: ( ruleAction )
+            // InternalRoc.g:1294:3: ruleAction
             {
              before(grammarAccess.getMotionAccess().getActionActionParserRuleCall_0_0_0()); 
             pushFollow(FOLLOW_2);
@@ -4639,17 +4352,17 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Motion__DurationAssignment_0_2"
-    // InternalRoc.g:1405:1: rule__Motion__DurationAssignment_0_2 : ( RULE_DURATION ) ;
+    // InternalRoc.g:1303:1: rule__Motion__DurationAssignment_0_2 : ( RULE_DURATION ) ;
     public final void rule__Motion__DurationAssignment_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1409:1: ( ( RULE_DURATION ) )
-            // InternalRoc.g:1410:2: ( RULE_DURATION )
+            // InternalRoc.g:1307:1: ( ( RULE_DURATION ) )
+            // InternalRoc.g:1308:2: ( RULE_DURATION )
             {
-            // InternalRoc.g:1410:2: ( RULE_DURATION )
-            // InternalRoc.g:1411:3: RULE_DURATION
+            // InternalRoc.g:1308:2: ( RULE_DURATION )
+            // InternalRoc.g:1309:3: RULE_DURATION
             {
              before(grammarAccess.getMotionAccess().getDurationDURATIONTerminalRuleCall_0_2_0()); 
             match(input,RULE_DURATION,FOLLOW_2); 
@@ -4676,17 +4389,17 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Motion__DurationUnitAssignment_0_3"
-    // InternalRoc.g:1420:1: rule__Motion__DurationUnitAssignment_0_3 : ( ruleDurationUnit ) ;
+    // InternalRoc.g:1318:1: rule__Motion__DurationUnitAssignment_0_3 : ( ruleDurationUnit ) ;
     public final void rule__Motion__DurationUnitAssignment_0_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1424:1: ( ( ruleDurationUnit ) )
-            // InternalRoc.g:1425:2: ( ruleDurationUnit )
+            // InternalRoc.g:1322:1: ( ( ruleDurationUnit ) )
+            // InternalRoc.g:1323:2: ( ruleDurationUnit )
             {
-            // InternalRoc.g:1425:2: ( ruleDurationUnit )
-            // InternalRoc.g:1426:3: ruleDurationUnit
+            // InternalRoc.g:1323:2: ( ruleDurationUnit )
+            // InternalRoc.g:1324:3: ruleDurationUnit
             {
              before(grammarAccess.getMotionAccess().getDurationUnitDurationUnitEnumRuleCall_0_3_0()); 
             pushFollow(FOLLOW_2);
@@ -4717,17 +4430,17 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Motion__ActionAssignment_1_0"
-    // InternalRoc.g:1435:1: rule__Motion__ActionAssignment_1_0 : ( ruleAction ) ;
+    // InternalRoc.g:1333:1: rule__Motion__ActionAssignment_1_0 : ( ruleAction ) ;
     public final void rule__Motion__ActionAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1439:1: ( ( ruleAction ) )
-            // InternalRoc.g:1440:2: ( ruleAction )
+            // InternalRoc.g:1337:1: ( ( ruleAction ) )
+            // InternalRoc.g:1338:2: ( ruleAction )
             {
-            // InternalRoc.g:1440:2: ( ruleAction )
-            // InternalRoc.g:1441:3: ruleAction
+            // InternalRoc.g:1338:2: ( ruleAction )
+            // InternalRoc.g:1339:3: ruleAction
             {
              before(grammarAccess.getMotionAccess().getActionActionParserRuleCall_1_0_0()); 
             pushFollow(FOLLOW_2);
@@ -4758,17 +4471,17 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Motion__SpeedAssignment_1_2"
-    // InternalRoc.g:1450:1: rule__Motion__SpeedAssignment_1_2 : ( ruleSpeed ) ;
+    // InternalRoc.g:1348:1: rule__Motion__SpeedAssignment_1_2 : ( ruleSpeed ) ;
     public final void rule__Motion__SpeedAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1454:1: ( ( ruleSpeed ) )
-            // InternalRoc.g:1455:2: ( ruleSpeed )
+            // InternalRoc.g:1352:1: ( ( ruleSpeed ) )
+            // InternalRoc.g:1353:2: ( ruleSpeed )
             {
-            // InternalRoc.g:1455:2: ( ruleSpeed )
-            // InternalRoc.g:1456:3: ruleSpeed
+            // InternalRoc.g:1353:2: ( ruleSpeed )
+            // InternalRoc.g:1354:3: ruleSpeed
             {
              before(grammarAccess.getMotionAccess().getSpeedSpeedParserRuleCall_1_2_0()); 
             pushFollow(FOLLOW_2);
@@ -4798,18 +4511,59 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Motion__SpeedAssignment_1_2"
 
 
+    // $ANTLR start "rule__Motion__ActionAssignment_2"
+    // InternalRoc.g:1363:1: rule__Motion__ActionAssignment_2 : ( ruleAction ) ;
+    public final void rule__Motion__ActionAssignment_2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalRoc.g:1367:1: ( ( ruleAction ) )
+            // InternalRoc.g:1368:2: ( ruleAction )
+            {
+            // InternalRoc.g:1368:2: ( ruleAction )
+            // InternalRoc.g:1369:3: ruleAction
+            {
+             before(grammarAccess.getMotionAccess().getActionActionParserRuleCall_2_0()); 
+            pushFollow(FOLLOW_2);
+            ruleAction();
+
+            state._fsp--;
+
+             after(grammarAccess.getMotionAccess().getActionActionParserRuleCall_2_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Motion__ActionAssignment_2"
+
+
     // $ANTLR start "rule__Action__ActionHolderAssignment_0"
-    // InternalRoc.g:1465:1: rule__Action__ActionHolderAssignment_0 : ( ruleCompleteAction ) ;
+    // InternalRoc.g:1378:1: rule__Action__ActionHolderAssignment_0 : ( ruleCompleteAction ) ;
     public final void rule__Action__ActionHolderAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1469:1: ( ( ruleCompleteAction ) )
-            // InternalRoc.g:1470:2: ( ruleCompleteAction )
+            // InternalRoc.g:1382:1: ( ( ruleCompleteAction ) )
+            // InternalRoc.g:1383:2: ( ruleCompleteAction )
             {
-            // InternalRoc.g:1470:2: ( ruleCompleteAction )
-            // InternalRoc.g:1471:3: ruleCompleteAction
+            // InternalRoc.g:1383:2: ( ruleCompleteAction )
+            // InternalRoc.g:1384:3: ruleCompleteAction
             {
              before(grammarAccess.getActionAccess().getActionHolderCompleteActionParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -4840,17 +4594,17 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Action__IntensityAssignment_1_0"
-    // InternalRoc.g:1480:1: rule__Action__IntensityAssignment_1_0 : ( ruleIntensity ) ;
+    // InternalRoc.g:1393:1: rule__Action__IntensityAssignment_1_0 : ( ruleIntensity ) ;
     public final void rule__Action__IntensityAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1484:1: ( ( ruleIntensity ) )
-            // InternalRoc.g:1485:2: ( ruleIntensity )
+            // InternalRoc.g:1397:1: ( ( ruleIntensity ) )
+            // InternalRoc.g:1398:2: ( ruleIntensity )
             {
-            // InternalRoc.g:1485:2: ( ruleIntensity )
-            // InternalRoc.g:1486:3: ruleIntensity
+            // InternalRoc.g:1398:2: ( ruleIntensity )
+            // InternalRoc.g:1399:3: ruleIntensity
             {
              before(grammarAccess.getActionAccess().getIntensityIntensityEnumRuleCall_1_0_0()); 
             pushFollow(FOLLOW_2);
@@ -4881,17 +4635,17 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Action__ActionHolderAssignment_1_1"
-    // InternalRoc.g:1495:1: rule__Action__ActionHolderAssignment_1_1 : ( ruleSingleAction ) ;
+    // InternalRoc.g:1408:1: rule__Action__ActionHolderAssignment_1_1 : ( ruleSingleAction ) ;
     public final void rule__Action__ActionHolderAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1499:1: ( ( ruleSingleAction ) )
-            // InternalRoc.g:1500:2: ( ruleSingleAction )
+            // InternalRoc.g:1412:1: ( ( ruleSingleAction ) )
+            // InternalRoc.g:1413:2: ( ruleSingleAction )
             {
-            // InternalRoc.g:1500:2: ( ruleSingleAction )
-            // InternalRoc.g:1501:3: ruleSingleAction
+            // InternalRoc.g:1413:2: ( ruleSingleAction )
+            // InternalRoc.g:1414:3: ruleSingleAction
             {
              before(grammarAccess.getActionAccess().getActionHolderSingleActionParserRuleCall_1_1_0()); 
             pushFollow(FOLLOW_2);
@@ -4922,17 +4676,17 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Action__IntensityAssignment_2_0"
-    // InternalRoc.g:1510:1: rule__Action__IntensityAssignment_2_0 : ( ruleIntensity ) ;
+    // InternalRoc.g:1423:1: rule__Action__IntensityAssignment_2_0 : ( ruleIntensity ) ;
     public final void rule__Action__IntensityAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1514:1: ( ( ruleIntensity ) )
-            // InternalRoc.g:1515:2: ( ruleIntensity )
+            // InternalRoc.g:1427:1: ( ( ruleIntensity ) )
+            // InternalRoc.g:1428:2: ( ruleIntensity )
             {
-            // InternalRoc.g:1515:2: ( ruleIntensity )
-            // InternalRoc.g:1516:3: ruleIntensity
+            // InternalRoc.g:1428:2: ( ruleIntensity )
+            // InternalRoc.g:1429:3: ruleIntensity
             {
              before(grammarAccess.getActionAccess().getIntensityIntensityEnumRuleCall_2_0_0()); 
             pushFollow(FOLLOW_2);
@@ -4963,17 +4717,17 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Action__ActionHolderAssignment_2_1"
-    // InternalRoc.g:1525:1: rule__Action__ActionHolderAssignment_2_1 : ( ruleDirectedAction ) ;
+    // InternalRoc.g:1438:1: rule__Action__ActionHolderAssignment_2_1 : ( ruleDirectedAction ) ;
     public final void rule__Action__ActionHolderAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1529:1: ( ( ruleDirectedAction ) )
-            // InternalRoc.g:1530:2: ( ruleDirectedAction )
+            // InternalRoc.g:1442:1: ( ( ruleDirectedAction ) )
+            // InternalRoc.g:1443:2: ( ruleDirectedAction )
             {
-            // InternalRoc.g:1530:2: ( ruleDirectedAction )
-            // InternalRoc.g:1531:3: ruleDirectedAction
+            // InternalRoc.g:1443:2: ( ruleDirectedAction )
+            // InternalRoc.g:1444:3: ruleDirectedAction
             {
              before(grammarAccess.getActionAccess().getActionHolderDirectedActionParserRuleCall_2_1_0()); 
             pushFollow(FOLLOW_2);
@@ -5003,30 +4757,30 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Action__ActionHolderAssignment_2_1"
 
 
-    // $ANTLR start "rule__CompleteAction__ActionNameAssignment_0"
-    // InternalRoc.g:1540:1: rule__CompleteAction__ActionNameAssignment_0 : ( ( 'neutral' ) ) ;
-    public final void rule__CompleteAction__ActionNameAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__CompleteAction__ActionNameAssignment"
+    // InternalRoc.g:1453:1: rule__CompleteAction__ActionNameAssignment : ( ( 'neutral face' ) ) ;
+    public final void rule__CompleteAction__ActionNameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1544:1: ( ( ( 'neutral' ) ) )
-            // InternalRoc.g:1545:2: ( ( 'neutral' ) )
+            // InternalRoc.g:1457:1: ( ( ( 'neutral face' ) ) )
+            // InternalRoc.g:1458:2: ( ( 'neutral face' ) )
             {
-            // InternalRoc.g:1545:2: ( ( 'neutral' ) )
-            // InternalRoc.g:1546:3: ( 'neutral' )
+            // InternalRoc.g:1458:2: ( ( 'neutral face' ) )
+            // InternalRoc.g:1459:3: ( 'neutral face' )
             {
-             before(grammarAccess.getCompleteActionAccess().getActionNameNeutralKeyword_0_0()); 
-            // InternalRoc.g:1547:3: ( 'neutral' )
-            // InternalRoc.g:1548:4: 'neutral'
+             before(grammarAccess.getCompleteActionAccess().getActionNameNeutralFaceKeyword_0()); 
+            // InternalRoc.g:1460:3: ( 'neutral face' )
+            // InternalRoc.g:1461:4: 'neutral face'
             {
-             before(grammarAccess.getCompleteActionAccess().getActionNameNeutralKeyword_0_0()); 
-            match(input,27,FOLLOW_2); 
-             after(grammarAccess.getCompleteActionAccess().getActionNameNeutralKeyword_0_0()); 
+             before(grammarAccess.getCompleteActionAccess().getActionNameNeutralFaceKeyword_0()); 
+            match(input,25,FOLLOW_2); 
+             after(grammarAccess.getCompleteActionAccess().getActionNameNeutralFaceKeyword_0()); 
 
             }
 
-             after(grammarAccess.getCompleteActionAccess().getActionNameNeutralKeyword_0_0()); 
+             after(grammarAccess.getCompleteActionAccess().getActionNameNeutralFaceKeyword_0()); 
 
             }
 
@@ -5045,28 +4799,28 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__CompleteAction__ActionNameAssignment_0"
+    // $ANTLR end "rule__CompleteAction__ActionNameAssignment"
 
 
     // $ANTLR start "rule__SingleAction__ActionNameAssignment_0"
-    // InternalRoc.g:1559:1: rule__SingleAction__ActionNameAssignment_0 : ( ( 'drop jaw' ) ) ;
+    // InternalRoc.g:1472:1: rule__SingleAction__ActionNameAssignment_0 : ( ( 'drop jaw' ) ) ;
     public final void rule__SingleAction__ActionNameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1563:1: ( ( ( 'drop jaw' ) ) )
-            // InternalRoc.g:1564:2: ( ( 'drop jaw' ) )
+            // InternalRoc.g:1476:1: ( ( ( 'drop jaw' ) ) )
+            // InternalRoc.g:1477:2: ( ( 'drop jaw' ) )
             {
-            // InternalRoc.g:1564:2: ( ( 'drop jaw' ) )
-            // InternalRoc.g:1565:3: ( 'drop jaw' )
-            {
-             before(grammarAccess.getSingleActionAccess().getActionNameDropJawKeyword_0_0()); 
-            // InternalRoc.g:1566:3: ( 'drop jaw' )
-            // InternalRoc.g:1567:4: 'drop jaw'
+            // InternalRoc.g:1477:2: ( ( 'drop jaw' ) )
+            // InternalRoc.g:1478:3: ( 'drop jaw' )
             {
              before(grammarAccess.getSingleActionAccess().getActionNameDropJawKeyword_0_0()); 
-            match(input,28,FOLLOW_2); 
+            // InternalRoc.g:1479:3: ( 'drop jaw' )
+            // InternalRoc.g:1480:4: 'drop jaw'
+            {
+             before(grammarAccess.getSingleActionAccess().getActionNameDropJawKeyword_0_0()); 
+            match(input,26,FOLLOW_2); 
              after(grammarAccess.getSingleActionAccess().getActionNameDropJawKeyword_0_0()); 
 
             }
@@ -5094,24 +4848,24 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SingleAction__ActionNameAssignment_1"
-    // InternalRoc.g:1578:1: rule__SingleAction__ActionNameAssignment_1 : ( ( 'nod head' ) ) ;
+    // InternalRoc.g:1491:1: rule__SingleAction__ActionNameAssignment_1 : ( ( 'nod head' ) ) ;
     public final void rule__SingleAction__ActionNameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1582:1: ( ( ( 'nod head' ) ) )
-            // InternalRoc.g:1583:2: ( ( 'nod head' ) )
+            // InternalRoc.g:1495:1: ( ( ( 'nod head' ) ) )
+            // InternalRoc.g:1496:2: ( ( 'nod head' ) )
             {
-            // InternalRoc.g:1583:2: ( ( 'nod head' ) )
-            // InternalRoc.g:1584:3: ( 'nod head' )
-            {
-             before(grammarAccess.getSingleActionAccess().getActionNameNodHeadKeyword_1_0()); 
-            // InternalRoc.g:1585:3: ( 'nod head' )
-            // InternalRoc.g:1586:4: 'nod head'
+            // InternalRoc.g:1496:2: ( ( 'nod head' ) )
+            // InternalRoc.g:1497:3: ( 'nod head' )
             {
              before(grammarAccess.getSingleActionAccess().getActionNameNodHeadKeyword_1_0()); 
-            match(input,29,FOLLOW_2); 
+            // InternalRoc.g:1498:3: ( 'nod head' )
+            // InternalRoc.g:1499:4: 'nod head'
+            {
+             before(grammarAccess.getSingleActionAccess().getActionNameNodHeadKeyword_1_0()); 
+            match(input,27,FOLLOW_2); 
              after(grammarAccess.getSingleActionAccess().getActionNameNodHeadKeyword_1_0()); 
 
             }
@@ -5139,17 +4893,17 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DirectedAction__ActionNameAssignment_0_0"
-    // InternalRoc.g:1597:1: rule__DirectedAction__ActionNameAssignment_0_0 : ( ruleLeftRightDirectedAction ) ;
+    // InternalRoc.g:1510:1: rule__DirectedAction__ActionNameAssignment_0_0 : ( ruleLeftRightDirectedAction ) ;
     public final void rule__DirectedAction__ActionNameAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1601:1: ( ( ruleLeftRightDirectedAction ) )
-            // InternalRoc.g:1602:2: ( ruleLeftRightDirectedAction )
+            // InternalRoc.g:1514:1: ( ( ruleLeftRightDirectedAction ) )
+            // InternalRoc.g:1515:2: ( ruleLeftRightDirectedAction )
             {
-            // InternalRoc.g:1602:2: ( ruleLeftRightDirectedAction )
-            // InternalRoc.g:1603:3: ruleLeftRightDirectedAction
+            // InternalRoc.g:1515:2: ( ruleLeftRightDirectedAction )
+            // InternalRoc.g:1516:3: ruleLeftRightDirectedAction
             {
              before(grammarAccess.getDirectedActionAccess().getActionNameLeftRightDirectedActionParserRuleCall_0_0_0()); 
             pushFollow(FOLLOW_2);
@@ -5180,17 +4934,17 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DirectedAction__DirectionAssignment_0_1"
-    // InternalRoc.g:1612:1: rule__DirectedAction__DirectionAssignment_0_1 : ( ruleLeftRightDirection ) ;
+    // InternalRoc.g:1525:1: rule__DirectedAction__DirectionAssignment_0_1 : ( ruleLeftRightDirection ) ;
     public final void rule__DirectedAction__DirectionAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1616:1: ( ( ruleLeftRightDirection ) )
-            // InternalRoc.g:1617:2: ( ruleLeftRightDirection )
+            // InternalRoc.g:1529:1: ( ( ruleLeftRightDirection ) )
+            // InternalRoc.g:1530:2: ( ruleLeftRightDirection )
             {
-            // InternalRoc.g:1617:2: ( ruleLeftRightDirection )
-            // InternalRoc.g:1618:3: ruleLeftRightDirection
+            // InternalRoc.g:1530:2: ( ruleLeftRightDirection )
+            // InternalRoc.g:1531:3: ruleLeftRightDirection
             {
              before(grammarAccess.getDirectedActionAccess().getDirectionLeftRightDirectionParserRuleCall_0_1_0()); 
             pushFollow(FOLLOW_2);
@@ -5221,17 +4975,17 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DirectedAction__ActionNameAssignment_1_0"
-    // InternalRoc.g:1627:1: rule__DirectedAction__ActionNameAssignment_1_0 : ( ruleFullDirectedAction ) ;
+    // InternalRoc.g:1540:1: rule__DirectedAction__ActionNameAssignment_1_0 : ( ruleFullDirectedAction ) ;
     public final void rule__DirectedAction__ActionNameAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1631:1: ( ( ruleFullDirectedAction ) )
-            // InternalRoc.g:1632:2: ( ruleFullDirectedAction )
+            // InternalRoc.g:1544:1: ( ( ruleFullDirectedAction ) )
+            // InternalRoc.g:1545:2: ( ruleFullDirectedAction )
             {
-            // InternalRoc.g:1632:2: ( ruleFullDirectedAction )
-            // InternalRoc.g:1633:3: ruleFullDirectedAction
+            // InternalRoc.g:1545:2: ( ruleFullDirectedAction )
+            // InternalRoc.g:1546:3: ruleFullDirectedAction
             {
              before(grammarAccess.getDirectedActionAccess().getActionNameFullDirectedActionParserRuleCall_1_0_0()); 
             pushFollow(FOLLOW_2);
@@ -5262,17 +5016,17 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DirectedAction__DirectionAssignment_1_1"
-    // InternalRoc.g:1642:1: rule__DirectedAction__DirectionAssignment_1_1 : ( ruleDirection ) ;
+    // InternalRoc.g:1555:1: rule__DirectedAction__DirectionAssignment_1_1 : ( ruleDirection ) ;
     public final void rule__DirectedAction__DirectionAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1646:1: ( ( ruleDirection ) )
-            // InternalRoc.g:1647:2: ( ruleDirection )
+            // InternalRoc.g:1559:1: ( ( ruleDirection ) )
+            // InternalRoc.g:1560:2: ( ruleDirection )
             {
-            // InternalRoc.g:1647:2: ( ruleDirection )
-            // InternalRoc.g:1648:3: ruleDirection
+            // InternalRoc.g:1560:2: ( ruleDirection )
+            // InternalRoc.g:1561:3: ruleDirection
             {
              before(grammarAccess.getDirectedActionAccess().getDirectionDirectionParserRuleCall_1_1_0()); 
             pushFollow(FOLLOW_2);
@@ -5302,30 +5056,30 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__DirectedAction__DirectionAssignment_1_1"
 
 
-    // $ANTLR start "rule__LeftRightDirectedAction__TiltHeadAssignment_0"
-    // InternalRoc.g:1657:1: rule__LeftRightDirectedAction__TiltHeadAssignment_0 : ( ( 'tilt' ) ) ;
-    public final void rule__LeftRightDirectedAction__TiltHeadAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__LeftRightDirectedAction__TiltHeadAssignment"
+    // InternalRoc.g:1570:1: rule__LeftRightDirectedAction__TiltHeadAssignment : ( ( 'tilt head' ) ) ;
+    public final void rule__LeftRightDirectedAction__TiltHeadAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1661:1: ( ( ( 'tilt' ) ) )
-            // InternalRoc.g:1662:2: ( ( 'tilt' ) )
+            // InternalRoc.g:1574:1: ( ( ( 'tilt head' ) ) )
+            // InternalRoc.g:1575:2: ( ( 'tilt head' ) )
             {
-            // InternalRoc.g:1662:2: ( ( 'tilt' ) )
-            // InternalRoc.g:1663:3: ( 'tilt' )
+            // InternalRoc.g:1575:2: ( ( 'tilt head' ) )
+            // InternalRoc.g:1576:3: ( 'tilt head' )
             {
-             before(grammarAccess.getLeftRightDirectedActionAccess().getTiltHeadTiltKeyword_0_0()); 
-            // InternalRoc.g:1664:3: ( 'tilt' )
-            // InternalRoc.g:1665:4: 'tilt'
+             before(grammarAccess.getLeftRightDirectedActionAccess().getTiltHeadTiltHeadKeyword_0()); 
+            // InternalRoc.g:1577:3: ( 'tilt head' )
+            // InternalRoc.g:1578:4: 'tilt head'
             {
-             before(grammarAccess.getLeftRightDirectedActionAccess().getTiltHeadTiltKeyword_0_0()); 
-            match(input,30,FOLLOW_2); 
-             after(grammarAccess.getLeftRightDirectedActionAccess().getTiltHeadTiltKeyword_0_0()); 
+             before(grammarAccess.getLeftRightDirectedActionAccess().getTiltHeadTiltHeadKeyword_0()); 
+            match(input,28,FOLLOW_2); 
+             after(grammarAccess.getLeftRightDirectedActionAccess().getTiltHeadTiltHeadKeyword_0()); 
 
             }
 
-             after(grammarAccess.getLeftRightDirectedActionAccess().getTiltHeadTiltKeyword_0_0()); 
+             after(grammarAccess.getLeftRightDirectedActionAccess().getTiltHeadTiltHeadKeyword_0()); 
 
             }
 
@@ -5344,28 +5098,28 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__LeftRightDirectedAction__TiltHeadAssignment_0"
+    // $ANTLR end "rule__LeftRightDirectedAction__TiltHeadAssignment"
 
 
     // $ANTLR start "rule__LeftRightDirection__LeftAssignment_0"
-    // InternalRoc.g:1676:1: rule__LeftRightDirection__LeftAssignment_0 : ( ( 'left' ) ) ;
+    // InternalRoc.g:1589:1: rule__LeftRightDirection__LeftAssignment_0 : ( ( 'left' ) ) ;
     public final void rule__LeftRightDirection__LeftAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1680:1: ( ( ( 'left' ) ) )
-            // InternalRoc.g:1681:2: ( ( 'left' ) )
+            // InternalRoc.g:1593:1: ( ( ( 'left' ) ) )
+            // InternalRoc.g:1594:2: ( ( 'left' ) )
             {
-            // InternalRoc.g:1681:2: ( ( 'left' ) )
-            // InternalRoc.g:1682:3: ( 'left' )
-            {
-             before(grammarAccess.getLeftRightDirectionAccess().getLeftLeftKeyword_0_0()); 
-            // InternalRoc.g:1683:3: ( 'left' )
-            // InternalRoc.g:1684:4: 'left'
+            // InternalRoc.g:1594:2: ( ( 'left' ) )
+            // InternalRoc.g:1595:3: ( 'left' )
             {
              before(grammarAccess.getLeftRightDirectionAccess().getLeftLeftKeyword_0_0()); 
-            match(input,31,FOLLOW_2); 
+            // InternalRoc.g:1596:3: ( 'left' )
+            // InternalRoc.g:1597:4: 'left'
+            {
+             before(grammarAccess.getLeftRightDirectionAccess().getLeftLeftKeyword_0_0()); 
+            match(input,29,FOLLOW_2); 
              after(grammarAccess.getLeftRightDirectionAccess().getLeftLeftKeyword_0_0()); 
 
             }
@@ -5393,24 +5147,24 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LeftRightDirection__RightAssignment_1"
-    // InternalRoc.g:1695:1: rule__LeftRightDirection__RightAssignment_1 : ( ( 'right' ) ) ;
+    // InternalRoc.g:1608:1: rule__LeftRightDirection__RightAssignment_1 : ( ( 'right' ) ) ;
     public final void rule__LeftRightDirection__RightAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1699:1: ( ( ( 'right' ) ) )
-            // InternalRoc.g:1700:2: ( ( 'right' ) )
+            // InternalRoc.g:1612:1: ( ( ( 'right' ) ) )
+            // InternalRoc.g:1613:2: ( ( 'right' ) )
             {
-            // InternalRoc.g:1700:2: ( ( 'right' ) )
-            // InternalRoc.g:1701:3: ( 'right' )
-            {
-             before(grammarAccess.getLeftRightDirectionAccess().getRightRightKeyword_1_0()); 
-            // InternalRoc.g:1702:3: ( 'right' )
-            // InternalRoc.g:1703:4: 'right'
+            // InternalRoc.g:1613:2: ( ( 'right' ) )
+            // InternalRoc.g:1614:3: ( 'right' )
             {
              before(grammarAccess.getLeftRightDirectionAccess().getRightRightKeyword_1_0()); 
-            match(input,32,FOLLOW_2); 
+            // InternalRoc.g:1615:3: ( 'right' )
+            // InternalRoc.g:1616:4: 'right'
+            {
+             before(grammarAccess.getLeftRightDirectionAccess().getRightRightKeyword_1_0()); 
+            match(input,30,FOLLOW_2); 
              after(grammarAccess.getLeftRightDirectionAccess().getRightRightKeyword_1_0()); 
 
             }
@@ -5438,24 +5192,24 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FullDirectedAction__TurnHeadAssignment_0"
-    // InternalRoc.g:1714:1: rule__FullDirectedAction__TurnHeadAssignment_0 : ( ( 'turn head' ) ) ;
+    // InternalRoc.g:1627:1: rule__FullDirectedAction__TurnHeadAssignment_0 : ( ( 'turn head' ) ) ;
     public final void rule__FullDirectedAction__TurnHeadAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1718:1: ( ( ( 'turn head' ) ) )
-            // InternalRoc.g:1719:2: ( ( 'turn head' ) )
+            // InternalRoc.g:1631:1: ( ( ( 'turn head' ) ) )
+            // InternalRoc.g:1632:2: ( ( 'turn head' ) )
             {
-            // InternalRoc.g:1719:2: ( ( 'turn head' ) )
-            // InternalRoc.g:1720:3: ( 'turn head' )
-            {
-             before(grammarAccess.getFullDirectedActionAccess().getTurnHeadTurnHeadKeyword_0_0()); 
-            // InternalRoc.g:1721:3: ( 'turn head' )
-            // InternalRoc.g:1722:4: 'turn head'
+            // InternalRoc.g:1632:2: ( ( 'turn head' ) )
+            // InternalRoc.g:1633:3: ( 'turn head' )
             {
              before(grammarAccess.getFullDirectedActionAccess().getTurnHeadTurnHeadKeyword_0_0()); 
-            match(input,33,FOLLOW_2); 
+            // InternalRoc.g:1634:3: ( 'turn head' )
+            // InternalRoc.g:1635:4: 'turn head'
+            {
+             before(grammarAccess.getFullDirectedActionAccess().getTurnHeadTurnHeadKeyword_0_0()); 
+            match(input,31,FOLLOW_2); 
              after(grammarAccess.getFullDirectedActionAccess().getTurnHeadTurnHeadKeyword_0_0()); 
 
             }
@@ -5483,24 +5237,24 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FullDirectedAction__TurnEyesAssignment_1"
-    // InternalRoc.g:1733:1: rule__FullDirectedAction__TurnEyesAssignment_1 : ( ( 'turn eyes' ) ) ;
+    // InternalRoc.g:1646:1: rule__FullDirectedAction__TurnEyesAssignment_1 : ( ( 'turn eyes' ) ) ;
     public final void rule__FullDirectedAction__TurnEyesAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1737:1: ( ( ( 'turn eyes' ) ) )
-            // InternalRoc.g:1738:2: ( ( 'turn eyes' ) )
+            // InternalRoc.g:1650:1: ( ( ( 'turn eyes' ) ) )
+            // InternalRoc.g:1651:2: ( ( 'turn eyes' ) )
             {
-            // InternalRoc.g:1738:2: ( ( 'turn eyes' ) )
-            // InternalRoc.g:1739:3: ( 'turn eyes' )
-            {
-             before(grammarAccess.getFullDirectedActionAccess().getTurnEyesTurnEyesKeyword_1_0()); 
-            // InternalRoc.g:1740:3: ( 'turn eyes' )
-            // InternalRoc.g:1741:4: 'turn eyes'
+            // InternalRoc.g:1651:2: ( ( 'turn eyes' ) )
+            // InternalRoc.g:1652:3: ( 'turn eyes' )
             {
              before(grammarAccess.getFullDirectedActionAccess().getTurnEyesTurnEyesKeyword_1_0()); 
-            match(input,34,FOLLOW_2); 
+            // InternalRoc.g:1653:3: ( 'turn eyes' )
+            // InternalRoc.g:1654:4: 'turn eyes'
+            {
+             before(grammarAccess.getFullDirectedActionAccess().getTurnEyesTurnEyesKeyword_1_0()); 
+            match(input,32,FOLLOW_2); 
              after(grammarAccess.getFullDirectedActionAccess().getTurnEyesTurnEyesKeyword_1_0()); 
 
             }
@@ -5528,24 +5282,24 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Direction__UPAssignment_0"
-    // InternalRoc.g:1752:1: rule__Direction__UPAssignment_0 : ( ( 'up' ) ) ;
+    // InternalRoc.g:1665:1: rule__Direction__UPAssignment_0 : ( ( 'up' ) ) ;
     public final void rule__Direction__UPAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1756:1: ( ( ( 'up' ) ) )
-            // InternalRoc.g:1757:2: ( ( 'up' ) )
+            // InternalRoc.g:1669:1: ( ( ( 'up' ) ) )
+            // InternalRoc.g:1670:2: ( ( 'up' ) )
             {
-            // InternalRoc.g:1757:2: ( ( 'up' ) )
-            // InternalRoc.g:1758:3: ( 'up' )
-            {
-             before(grammarAccess.getDirectionAccess().getUPUpKeyword_0_0()); 
-            // InternalRoc.g:1759:3: ( 'up' )
-            // InternalRoc.g:1760:4: 'up'
+            // InternalRoc.g:1670:2: ( ( 'up' ) )
+            // InternalRoc.g:1671:3: ( 'up' )
             {
              before(grammarAccess.getDirectionAccess().getUPUpKeyword_0_0()); 
-            match(input,35,FOLLOW_2); 
+            // InternalRoc.g:1672:3: ( 'up' )
+            // InternalRoc.g:1673:4: 'up'
+            {
+             before(grammarAccess.getDirectionAccess().getUPUpKeyword_0_0()); 
+            match(input,33,FOLLOW_2); 
              after(grammarAccess.getDirectionAccess().getUPUpKeyword_0_0()); 
 
             }
@@ -5573,24 +5327,24 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Direction__DOWNAssignment_1"
-    // InternalRoc.g:1771:1: rule__Direction__DOWNAssignment_1 : ( ( 'down' ) ) ;
+    // InternalRoc.g:1684:1: rule__Direction__DOWNAssignment_1 : ( ( 'down' ) ) ;
     public final void rule__Direction__DOWNAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1775:1: ( ( ( 'down' ) ) )
-            // InternalRoc.g:1776:2: ( ( 'down' ) )
+            // InternalRoc.g:1688:1: ( ( ( 'down' ) ) )
+            // InternalRoc.g:1689:2: ( ( 'down' ) )
             {
-            // InternalRoc.g:1776:2: ( ( 'down' ) )
-            // InternalRoc.g:1777:3: ( 'down' )
-            {
-             before(grammarAccess.getDirectionAccess().getDOWNDownKeyword_1_0()); 
-            // InternalRoc.g:1778:3: ( 'down' )
-            // InternalRoc.g:1779:4: 'down'
+            // InternalRoc.g:1689:2: ( ( 'down' ) )
+            // InternalRoc.g:1690:3: ( 'down' )
             {
              before(grammarAccess.getDirectionAccess().getDOWNDownKeyword_1_0()); 
-            match(input,36,FOLLOW_2); 
+            // InternalRoc.g:1691:3: ( 'down' )
+            // InternalRoc.g:1692:4: 'down'
+            {
+             before(grammarAccess.getDirectionAccess().getDOWNDownKeyword_1_0()); 
+            match(input,34,FOLLOW_2); 
              after(grammarAccess.getDirectionAccess().getDOWNDownKeyword_1_0()); 
 
             }
@@ -5618,24 +5372,24 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Direction__LEFTAssignment_2"
-    // InternalRoc.g:1790:1: rule__Direction__LEFTAssignment_2 : ( ( 'left' ) ) ;
+    // InternalRoc.g:1703:1: rule__Direction__LEFTAssignment_2 : ( ( 'left' ) ) ;
     public final void rule__Direction__LEFTAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1794:1: ( ( ( 'left' ) ) )
-            // InternalRoc.g:1795:2: ( ( 'left' ) )
+            // InternalRoc.g:1707:1: ( ( ( 'left' ) ) )
+            // InternalRoc.g:1708:2: ( ( 'left' ) )
             {
-            // InternalRoc.g:1795:2: ( ( 'left' ) )
-            // InternalRoc.g:1796:3: ( 'left' )
-            {
-             before(grammarAccess.getDirectionAccess().getLEFTLeftKeyword_2_0()); 
-            // InternalRoc.g:1797:3: ( 'left' )
-            // InternalRoc.g:1798:4: 'left'
+            // InternalRoc.g:1708:2: ( ( 'left' ) )
+            // InternalRoc.g:1709:3: ( 'left' )
             {
              before(grammarAccess.getDirectionAccess().getLEFTLeftKeyword_2_0()); 
-            match(input,31,FOLLOW_2); 
+            // InternalRoc.g:1710:3: ( 'left' )
+            // InternalRoc.g:1711:4: 'left'
+            {
+             before(grammarAccess.getDirectionAccess().getLEFTLeftKeyword_2_0()); 
+            match(input,29,FOLLOW_2); 
              after(grammarAccess.getDirectionAccess().getLEFTLeftKeyword_2_0()); 
 
             }
@@ -5663,24 +5417,24 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Direction__RIGHTAssignment_3"
-    // InternalRoc.g:1809:1: rule__Direction__RIGHTAssignment_3 : ( ( 'right' ) ) ;
+    // InternalRoc.g:1722:1: rule__Direction__RIGHTAssignment_3 : ( ( 'right' ) ) ;
     public final void rule__Direction__RIGHTAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1813:1: ( ( ( 'right' ) ) )
-            // InternalRoc.g:1814:2: ( ( 'right' ) )
+            // InternalRoc.g:1726:1: ( ( ( 'right' ) ) )
+            // InternalRoc.g:1727:2: ( ( 'right' ) )
             {
-            // InternalRoc.g:1814:2: ( ( 'right' ) )
-            // InternalRoc.g:1815:3: ( 'right' )
-            {
-             before(grammarAccess.getDirectionAccess().getRIGHTRightKeyword_3_0()); 
-            // InternalRoc.g:1816:3: ( 'right' )
-            // InternalRoc.g:1817:4: 'right'
+            // InternalRoc.g:1727:2: ( ( 'right' ) )
+            // InternalRoc.g:1728:3: ( 'right' )
             {
              before(grammarAccess.getDirectionAccess().getRIGHTRightKeyword_3_0()); 
-            match(input,32,FOLLOW_2); 
+            // InternalRoc.g:1729:3: ( 'right' )
+            // InternalRoc.g:1730:4: 'right'
+            {
+             before(grammarAccess.getDirectionAccess().getRIGHTRightKeyword_3_0()); 
+            match(input,30,FOLLOW_2); 
              after(grammarAccess.getDirectionAccess().getRIGHTRightKeyword_3_0()); 
 
             }
@@ -5708,24 +5462,24 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Speed__SLOWESTAssignment_0"
-    // InternalRoc.g:1828:1: rule__Speed__SLOWESTAssignment_0 : ( ( 'slowest' ) ) ;
+    // InternalRoc.g:1741:1: rule__Speed__SLOWESTAssignment_0 : ( ( 'slowest' ) ) ;
     public final void rule__Speed__SLOWESTAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1832:1: ( ( ( 'slowest' ) ) )
-            // InternalRoc.g:1833:2: ( ( 'slowest' ) )
+            // InternalRoc.g:1745:1: ( ( ( 'slowest' ) ) )
+            // InternalRoc.g:1746:2: ( ( 'slowest' ) )
             {
-            // InternalRoc.g:1833:2: ( ( 'slowest' ) )
-            // InternalRoc.g:1834:3: ( 'slowest' )
-            {
-             before(grammarAccess.getSpeedAccess().getSLOWESTSlowestKeyword_0_0()); 
-            // InternalRoc.g:1835:3: ( 'slowest' )
-            // InternalRoc.g:1836:4: 'slowest'
+            // InternalRoc.g:1746:2: ( ( 'slowest' ) )
+            // InternalRoc.g:1747:3: ( 'slowest' )
             {
              before(grammarAccess.getSpeedAccess().getSLOWESTSlowestKeyword_0_0()); 
-            match(input,37,FOLLOW_2); 
+            // InternalRoc.g:1748:3: ( 'slowest' )
+            // InternalRoc.g:1749:4: 'slowest'
+            {
+             before(grammarAccess.getSpeedAccess().getSLOWESTSlowestKeyword_0_0()); 
+            match(input,35,FOLLOW_2); 
              after(grammarAccess.getSpeedAccess().getSLOWESTSlowestKeyword_0_0()); 
 
             }
@@ -5753,24 +5507,24 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Speed__SLOWAssignment_1"
-    // InternalRoc.g:1847:1: rule__Speed__SLOWAssignment_1 : ( ( 'slow' ) ) ;
+    // InternalRoc.g:1760:1: rule__Speed__SLOWAssignment_1 : ( ( 'slow' ) ) ;
     public final void rule__Speed__SLOWAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1851:1: ( ( ( 'slow' ) ) )
-            // InternalRoc.g:1852:2: ( ( 'slow' ) )
+            // InternalRoc.g:1764:1: ( ( ( 'slow' ) ) )
+            // InternalRoc.g:1765:2: ( ( 'slow' ) )
             {
-            // InternalRoc.g:1852:2: ( ( 'slow' ) )
-            // InternalRoc.g:1853:3: ( 'slow' )
-            {
-             before(grammarAccess.getSpeedAccess().getSLOWSlowKeyword_1_0()); 
-            // InternalRoc.g:1854:3: ( 'slow' )
-            // InternalRoc.g:1855:4: 'slow'
+            // InternalRoc.g:1765:2: ( ( 'slow' ) )
+            // InternalRoc.g:1766:3: ( 'slow' )
             {
              before(grammarAccess.getSpeedAccess().getSLOWSlowKeyword_1_0()); 
-            match(input,38,FOLLOW_2); 
+            // InternalRoc.g:1767:3: ( 'slow' )
+            // InternalRoc.g:1768:4: 'slow'
+            {
+             before(grammarAccess.getSpeedAccess().getSLOWSlowKeyword_1_0()); 
+            match(input,36,FOLLOW_2); 
              after(grammarAccess.getSpeedAccess().getSLOWSlowKeyword_1_0()); 
 
             }
@@ -5798,24 +5552,24 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Speed__NORMALAssignment_2"
-    // InternalRoc.g:1866:1: rule__Speed__NORMALAssignment_2 : ( ( 'normal' ) ) ;
+    // InternalRoc.g:1779:1: rule__Speed__NORMALAssignment_2 : ( ( 'normal' ) ) ;
     public final void rule__Speed__NORMALAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1870:1: ( ( ( 'normal' ) ) )
-            // InternalRoc.g:1871:2: ( ( 'normal' ) )
+            // InternalRoc.g:1783:1: ( ( ( 'normal' ) ) )
+            // InternalRoc.g:1784:2: ( ( 'normal' ) )
             {
-            // InternalRoc.g:1871:2: ( ( 'normal' ) )
-            // InternalRoc.g:1872:3: ( 'normal' )
-            {
-             before(grammarAccess.getSpeedAccess().getNORMALNormalKeyword_2_0()); 
-            // InternalRoc.g:1873:3: ( 'normal' )
-            // InternalRoc.g:1874:4: 'normal'
+            // InternalRoc.g:1784:2: ( ( 'normal' ) )
+            // InternalRoc.g:1785:3: ( 'normal' )
             {
              before(grammarAccess.getSpeedAccess().getNORMALNormalKeyword_2_0()); 
-            match(input,39,FOLLOW_2); 
+            // InternalRoc.g:1786:3: ( 'normal' )
+            // InternalRoc.g:1787:4: 'normal'
+            {
+             before(grammarAccess.getSpeedAccess().getNORMALNormalKeyword_2_0()); 
+            match(input,37,FOLLOW_2); 
              after(grammarAccess.getSpeedAccess().getNORMALNormalKeyword_2_0()); 
 
             }
@@ -5843,24 +5597,24 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Speed__FASTAssignment_3"
-    // InternalRoc.g:1885:1: rule__Speed__FASTAssignment_3 : ( ( 'fast' ) ) ;
+    // InternalRoc.g:1798:1: rule__Speed__FASTAssignment_3 : ( ( 'fast' ) ) ;
     public final void rule__Speed__FASTAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1889:1: ( ( ( 'fast' ) ) )
-            // InternalRoc.g:1890:2: ( ( 'fast' ) )
+            // InternalRoc.g:1802:1: ( ( ( 'fast' ) ) )
+            // InternalRoc.g:1803:2: ( ( 'fast' ) )
             {
-            // InternalRoc.g:1890:2: ( ( 'fast' ) )
-            // InternalRoc.g:1891:3: ( 'fast' )
-            {
-             before(grammarAccess.getSpeedAccess().getFASTFastKeyword_3_0()); 
-            // InternalRoc.g:1892:3: ( 'fast' )
-            // InternalRoc.g:1893:4: 'fast'
+            // InternalRoc.g:1803:2: ( ( 'fast' ) )
+            // InternalRoc.g:1804:3: ( 'fast' )
             {
              before(grammarAccess.getSpeedAccess().getFASTFastKeyword_3_0()); 
-            match(input,40,FOLLOW_2); 
+            // InternalRoc.g:1805:3: ( 'fast' )
+            // InternalRoc.g:1806:4: 'fast'
+            {
+             before(grammarAccess.getSpeedAccess().getFASTFastKeyword_3_0()); 
+            match(input,38,FOLLOW_2); 
              after(grammarAccess.getSpeedAccess().getFASTFastKeyword_3_0()); 
 
             }
@@ -5888,24 +5642,24 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Speed__FULLAssignment_4"
-    // InternalRoc.g:1904:1: rule__Speed__FULLAssignment_4 : ( ( 'full' ) ) ;
+    // InternalRoc.g:1817:1: rule__Speed__FULLAssignment_4 : ( ( 'full' ) ) ;
     public final void rule__Speed__FULLAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRoc.g:1908:1: ( ( ( 'full' ) ) )
-            // InternalRoc.g:1909:2: ( ( 'full' ) )
+            // InternalRoc.g:1821:1: ( ( ( 'full' ) ) )
+            // InternalRoc.g:1822:2: ( ( 'full' ) )
             {
-            // InternalRoc.g:1909:2: ( ( 'full' ) )
-            // InternalRoc.g:1910:3: ( 'full' )
-            {
-             before(grammarAccess.getSpeedAccess().getFULLFullKeyword_4_0()); 
-            // InternalRoc.g:1911:3: ( 'full' )
-            // InternalRoc.g:1912:4: 'full'
+            // InternalRoc.g:1822:2: ( ( 'full' ) )
+            // InternalRoc.g:1823:3: ( 'full' )
             {
              before(grammarAccess.getSpeedAccess().getFULLFullKeyword_4_0()); 
-            match(input,41,FOLLOW_2); 
+            // InternalRoc.g:1824:3: ( 'full' )
+            // InternalRoc.g:1825:4: 'full'
+            {
+             before(grammarAccess.getSpeedAccess().getFULLFullKeyword_4_0()); 
+            match(input,39,FOLLOW_2); 
              after(grammarAccess.getSpeedAccess().getFULLFullKeyword_4_0()); 
 
             }
@@ -5935,42 +5689,43 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
 
 
     protected DFA2 dfa2 = new DFA2(this);
-    static final String dfa_1s = "\26\uffff";
-    static final String dfa_2s = "\1\21\1\31\5\34\2\6\1\32\2\37\1\6\2\uffff\1\37\6\6";
-    static final String dfa_3s = "\1\42\1\31\5\42\2\7\1\32\2\44\1\7\2\uffff\1\40\6\7";
-    static final String dfa_4s = "\15\uffff\1\1\1\2\7\uffff";
-    static final String dfa_5s = "\26\uffff}>";
-    static final String[] dfa_6s = {
-            "\1\2\1\3\1\4\1\5\1\6\5\uffff\1\1\1\7\1\10\1\11\2\uffff\1\12\1\13",
-            "\1\14",
+    static final String dfa_1s = "\25\uffff";
+    static final String dfa_2s = "\1\uffff\1\16\5\uffff\2\16\6\uffff\6\16";
+    static final String dfa_3s = "\1\21\1\4\5\32\2\4\3\35\3\uffff\6\4";
+    static final String dfa_4s = "\1\40\1\7\5\40\2\7\1\36\2\42\3\uffff\6\7";
+    static final String dfa_5s = "\14\uffff\1\2\1\1\1\3\6\uffff";
+    static final String dfa_6s = "\25\uffff}>";
+    static final String[] dfa_7s = {
+            "\1\2\1\3\1\4\1\5\1\6\3\uffff\1\1\1\7\1\10\1\11\2\uffff\1\12\1\13",
+            "\2\16\1\15\1\14",
             "\1\7\1\10\1\11\2\uffff\1\12\1\13",
             "\1\7\1\10\1\11\2\uffff\1\12\1\13",
             "\1\7\1\10\1\11\2\uffff\1\12\1\13",
             "\1\7\1\10\1\11\2\uffff\1\12\1\13",
             "\1\7\1\10\1\11\2\uffff\1\12\1\13",
-            "\1\15\1\16",
-            "\1\15\1\16",
-            "\1\17",
-            "\1\22\1\23\2\uffff\1\20\1\21",
-            "\1\22\1\23\2\uffff\1\20\1\21",
-            "\1\15\1\16",
+            "\2\16\1\15\1\14",
+            "\2\16\1\15\1\14",
+            "\1\17\1\20",
+            "\1\23\1\24\2\uffff\1\21\1\22",
+            "\1\23\1\24\2\uffff\1\21\1\22",
             "",
             "",
-            "\1\24\1\25",
-            "\1\15\1\16",
-            "\1\15\1\16",
-            "\1\15\1\16",
-            "\1\15\1\16",
-            "\1\15\1\16",
-            "\1\15\1\16"
+            "",
+            "\2\16\1\15\1\14",
+            "\2\16\1\15\1\14",
+            "\2\16\1\15\1\14",
+            "\2\16\1\15\1\14",
+            "\2\16\1\15\1\14",
+            "\2\16\1\15\1\14"
     };
 
     static final short[] dfa_1 = DFA.unpackEncodedString(dfa_1s);
-    static final char[] dfa_2 = DFA.unpackEncodedStringToUnsignedChars(dfa_2s);
+    static final short[] dfa_2 = DFA.unpackEncodedString(dfa_2s);
     static final char[] dfa_3 = DFA.unpackEncodedStringToUnsignedChars(dfa_3s);
-    static final short[] dfa_4 = DFA.unpackEncodedString(dfa_4s);
+    static final char[] dfa_4 = DFA.unpackEncodedStringToUnsignedChars(dfa_4s);
     static final short[] dfa_5 = DFA.unpackEncodedString(dfa_5s);
-    static final short[][] dfa_6 = unpackEncodedStringArray(dfa_6s);
+    static final short[] dfa_6 = DFA.unpackEncodedString(dfa_6s);
+    static final short[][] dfa_7 = unpackEncodedStringArray(dfa_7s);
 
     class DFA2 extends DFA {
 
@@ -5978,35 +5733,33 @@ public class InternalRocParser extends AbstractInternalContentAssistParser {
             this.recognizer = recognizer;
             this.decisionNumber = 2;
             this.eot = dfa_1;
-            this.eof = dfa_1;
-            this.min = dfa_2;
-            this.max = dfa_3;
-            this.accept = dfa_4;
-            this.special = dfa_5;
-            this.transition = dfa_6;
+            this.eof = dfa_2;
+            this.min = dfa_3;
+            this.max = dfa_4;
+            this.accept = dfa_5;
+            this.special = dfa_6;
+            this.transition = dfa_7;
         }
         public String getDescription() {
-            return "400:1: rule__Motion__Alternatives : ( ( ( rule__Motion__Group_0__0 ) ) | ( ( rule__Motion__Group_1__0 ) ) );";
+            return "400:1: rule__Motion__Alternatives : ( ( ( rule__Motion__Group_0__0 ) ) | ( ( rule__Motion__Group_1__0 ) ) | ( ( rule__Motion__ActionAssignment_2 ) ) );";
         }
     }
  
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x00000006783E0002L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x000000019E3E0002L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000000030L});
     public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x00000006783E0000L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x000000019E3E0000L});
     public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000200L});
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000001C00000L});
     public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x000003E000000000L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x000000F800000000L});
     public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x00000000303E0000L});
-    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000180000000L});
-    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000001980000000L});
-    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x000000000C3E0000L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000060000000L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000660000000L});
 
 }

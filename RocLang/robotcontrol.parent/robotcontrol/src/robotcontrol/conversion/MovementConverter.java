@@ -52,8 +52,14 @@ public class MovementConverter {
 		} 
 		else if (motion.getSpeed() != null) {
 			resultMotion.put("duration", getSpeed(motion.getSpeed()));
+		} else {
+			resultMotion.put("duration", getDefaultSpeed());
 		}
 		return resultMotion;
+	}
+	
+	private static int getDefaultSpeed() {
+		return 700;
 	}
 	
 	private static int getSpeed(Speed speed) {

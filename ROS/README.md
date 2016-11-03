@@ -12,3 +12,6 @@ The command message is a list of movements, were the movement are executed seque
 
 http://wiki.ros.org/ROS/Tutorials/CreatingMsgAndSrv
 
+1. Copy /roc directory to your ~/catkin_ws/src directory.
+2. Run catkin_make install to generate message classes for python and C++
+3. 

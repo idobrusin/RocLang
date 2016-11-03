@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: roc
+Description: Description of roc
+Version: 0.1.0
+Cflags: -I/usr/local/include
+Libs: -L/usr/local/lib -lroc
+Requires: message_runtime roscpp rospy

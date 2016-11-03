@@ -9,9 +9,11 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.xtext.validation.Check;
+import org.eclipse.xtext.xbase.lib.Pair;
 import robotcontrol.roc.Action;
 import robotcontrol.roc.CompleteAction;
 import robotcontrol.roc.DirectedAction;
+import robotcontrol.roc.Direction;
 import robotcontrol.roc.DurationUnit;
 import robotcontrol.roc.FullDirectedAction;
 import robotcontrol.roc.LeftRightDirectedAction;
@@ -37,6 +39,7 @@ public class RocValidator extends AbstractRocValidator {
   @Check
   public void checkMovementContraints(final Movement movement) {
     final HashMap<String, Boolean> actionMap = new HashMap<String, Boolean>();
+    final HashMap<Pair<String, String>, Boolean> directedActionMap = new HashMap<Pair<String, String>, Boolean>();
     EList<Motion> _motions = movement.getMotions();
     for (final Motion motion : _motions) {
       {
@@ -73,17 +76,19 @@ public class RocValidator extends AbstractRocValidator {
                 if ((_actionName_4 instanceof FullDirectedAction)) {
                   EObject _actionName_5 = ac_2.getActionName();
                   final FullDirectedAction directedAction_1 = ((FullDirectedAction) _actionName_5);
+                  EObject _direction = ac_2.getDirection();
+                  final Direction fullDirection = ((Direction) _direction);
                   String _turnEyes = directedAction_1.getTurnEyes();
                   boolean _notEquals_1 = (!Objects.equal(_turnEyes, null));
                   if (_notEquals_1) {
                     String _turnEyes_1 = directedAction_1.getTurnEyes();
-                    this.checkActionMapForAction(_turnEyes_1, actionMap);
+                    this.checkFullDirectedActionMapForAction(_turnEyes_1, fullDirection, directedActionMap);
                   } else {
                     String _turnHead = directedAction_1.getTurnHead();
                     boolean _notEquals_2 = (!Objects.equal(_turnHead, null));
                     if (_notEquals_2) {
-                      String _turnHead_1 = directedAction_1.getTurnHead();
-                      this.checkActionMapForAction(_turnHead_1, actionMap);
+                      String _turnEyes_2 = directedAction_1.getTurnEyes();
+                      this.checkFullDirectedActionMapForAction(_turnEyes_2, fullDirection, directedActionMap);
                     }
                   }
                 }
@@ -93,6 +98,19 @@ public class RocValidator extends AbstractRocValidator {
         }
       }
     }
+  }
+  
+  public Object checkFullDirectedActionMapForAction(final String actionName, final Direction direction, final HashMap directedActionMap) {
+    Object _xifexpression = null;
+    Pair<String, Direction> _pair = new Pair<String, Direction>(actionName, direction);
+    boolean _containsKey = directedActionMap.containsKey(_pair);
+    if (_containsKey) {
+      this.errorMultipleCommands(RocPackage.Literals.MOVEMENT__MOTIONS);
+    } else {
+      Pair<String, Direction> _pair_1 = new Pair<String, Direction>(actionName, direction);
+      _xifexpression = directedActionMap.put(_pair_1, Boolean.valueOf(true));
+    }
+    return _xifexpression;
   }
   
   public Object checkActionMapForAction(final String actionName, final HashMap actionMap) {

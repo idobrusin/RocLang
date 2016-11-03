@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/iliadobrusin/catkin_ws/src/roc_node/devel/setup.sh

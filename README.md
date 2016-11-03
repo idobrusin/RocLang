@@ -51,14 +51,11 @@ The are two possible methods to install the plugin: via an update site or as a m
 ### Alternative: Manual installation
 Export all projects as zip. Place zip file in Eclipse `dropins` folder (platform dependent) and extract (`jar` files should be located in folder dropins/plugins). After extraction restart Eclipse with -clean option in order to refresh plugins.
 
-
 ## 2. Roc demonstration installation
 The demonstration consists of a simulation of the robot InMoov and a 3D print of the InMoovs' head. 
 
 ### Prerequisites
 In order to use the demonstration system, ROS has to be installed. Please see [www.ros.org](http://www.ros.org/) for a detailed installation instruction. ROS works best under Ubuntu Linux. For Roc, Ubuntu 14.x in combination with ROS indigo is suggested.
-
-
 
 ### Installation
 #### 1. Install InMoov simulation
@@ -76,7 +73,7 @@ Note: source the /devel/setup.bash in your .bashrc, otherwise these steps need t
 Following python packages are needed for operating the robot:
   * `yaml`
   * `watchdog`
-  * `rospy`
+  * `rospy`  
 Install them via `pip`/`pip3`.
 
 ##### Create Roc node
@@ -96,18 +93,21 @@ source ./devel/setup.bash
 
 #### 3. (Optional) Install Arduino libraries and flash Arduino
 In order to communicate with the Arduino via ROS rosserial has to be installed.
-##### Install platform.io
-The Arduino should be flashed by using [platform.io](http://platformio.org/).
-Install the platform.io CLI following these [instructions](http://docs.platformio.org/en/stable/installation.html#super-quick-mac-linux).  
+##### Install platformIO
+The Arduino should be flashed by using [platformIO](http://platformio.org/).
+Install the platformIO CLI following these [instructions](http://docs.platformio.org/en/stable/installation.html#super-quick-mac-linux).  
 
-platform.io can also be used in an IDE (see [platform.io integration](http://platformio.org/get-started/integration) for details).
+platformIO can also be used in an IDE (see [platformIO integration](http://platformio.org/get-started/integration) for details).
 
 ##### Install rosserial
 To program the Arduino, `rosserial` must be installed and installed in the sketchbook/libraries folder.
 [Installation instructions](http://wiki.ros.org/rosserial_arduino/Tutorials/Arduino%20IDE%20Setup)
 
-##### Flash Arduino using platform.io
-
+##### Flash Arduino using platformIO
+Use the following commands to flash the firmware on the Arduino.
+  * `platformio run --target upload` to build and upload firmware to all devices specified in the `platformio.ini` file (see [PlatformIO Quickstart](http://docs.platformio.org/en/stable/quickstart.html) for details)
+  * `platformio run -e uno -t upload` to build and upload to a single environment (here: Arduino UNO).
+For a more detailed instruction on how to use PlatformIO see [PlatformIO documentation](http://docs.platformio.org/en/stable/).
 
 ## Usage
 ### Create a Roc project in Eclipse
@@ -163,6 +163,29 @@ Ubunutu : `/dev/ttyACM0`
 
 #### Control robot
 After all previous programs are running (Eclipse, simulation, Roc control node and optionally the Arduino node), it is possible to write a Roc program in Eclipse. After saving the `.roc` file the robot should move accordingly.
+
+## Troubleshooting
+### Roc language
+Some editors don't save files upon saving, but instead replace the file with a cached file. When using the watchdog without Eclipse, make sure that the editor performs a modification on the file, otherwise changes will not be registered. Known editors with this behaviour: vim and gedit. It is possible to change this behavior in the editor settings.
+
+### Arduino
+##### Permission denied for USB device (Ubuntu Linux)
+http://arduino-er.blogspot.de/2014/08/arduino-ide-error-avrdude-seropen-cant.html
+
+```bash
+sudo usermod -a -G dialout <username>
+```
+
+```bash
+# /dev/ttyACM0 is the Linux device
+sudo chmod a+rw /dev/ttyACM0
+```
+### Simulation
+#### Subscribe to joint commands
+To see joint published joint commands use the following subscriber:
+```bash
+    rostopic echo joint_states sensor_msgs/JointState
+```
 
 ## Support and Contribution
 Contributions to the Roc languages are welcome. Changing the language and its features is described under [Language Development](./RocLang).

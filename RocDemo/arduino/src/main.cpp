@@ -18,34 +18,48 @@
 #include <ros.h>
 #include <sensor_msgs/JointState.h>
 
-
+/**
+ * Number of servos used by the robot
+ */
 const int NUM_SERVOS = 6;
+
 
 ros::NodeHandle nh;
 Servo servos[NUM_SERVOS];
 Joint* jointList[NUM_SERVOS];
 
 // TODO: Configure ports / pins
-int PIN_HEAD_TILT               = 1;
+
+// Index used to locate head part in servo and joint list
+int INDEX_HEAD_TILT             = 0;
+int INDEX_HEAD_UPDOWN           = 1;
+int INDEX_HEAD_LEFTRIGHT        = 2;
+int INDEX_EYES_UPDOWN           = 3;
+int INDEX_EYE_LEFTRIGHT         = 4;
+int INDEX_JAW                   = 5;
+
+// Pin of servo connected to given head part
+int PIN_HEAD_TILT               = 5;
 int PIN_HEAD_UPDOWN             = 2;
 int PIN_HEAD_LEFTRIGHT          = 3;
 int PIN_EYES_UPDOWN             = 10;
-int PIN_EYE_LEFTRIGHT           = 9;
-int PIN_JAW                     = 6;
+int PIN_EYE_LEFTRIGHT           = 11;
+int PIN_JAW                     = 9;
 
+// Min and max angles of servos - DO NOT CHANGE WITHOUT TESTING
 int MIN_ANGLE_HEAD_TILT         = 0;
 int MIN_ANGLE_HEAD_UPDOWN       = 0;
-int MIN_ANGLE_HEAD_LEFTRIGHT    = 0;
-int MIN_ANGLE_EYES_UPDOWN       = 0;   // Correct
-int MIN_ANGLE_EYES_LEFTRIGHT    = 55;  // Correct
-int MIN_ANGLE_JAW               = 0;
+int MIN_ANGLE_HEAD_LEFTRIGHT    = 50;   // Correct
+int MIN_ANGLE_EYES_UPDOWN       = 0;    // Correct
+int MIN_ANGLE_EYES_LEFTRIGHT    = 55;   // Correct
+int MIN_ANGLE_JAW               = 0;    // Correct
 
 int MAX_ANGLE_HEAD_TILT         = 180;
 int MAX_ANGLE_HEAD_UPDOWN       = 180;
-int MAX_ANGLE_HEAD_LEFTRIGHT    = 180;
-int MAX_ANGLE_EYES_UPDOWN       = 90;  // Correct
-int MAX_ANGLE_EYES_LEFTRIGHT    = 125; // Correct
-int MAX_ANGLE_JAW               = 180;
+int MAX_ANGLE_HEAD_LEFTRIGHT    = 160;  // Correct
+int MAX_ANGLE_EYES_UPDOWN       = 90;   // Correct
+int MAX_ANGLE_EYES_LEFTRIGHT    = 125;  // Correct
+int MAX_ANGLE_JAW               = 60;   // Correct
 
 
 /**
@@ -57,19 +71,19 @@ void initServosJoints() {
         servos[i] = Servo();
     }
 
-    servos[0].attach(PIN_HEAD_TILT,      MIN_ANGLE_HEAD_TILT,      MAX_ANGLE_HEAD_TILT);
-    servos[1].attach(PIN_HEAD_UPDOWN,    MIN_ANGLE_HEAD_UPDOWN,    MAX_ANGLE_HEAD_UPDOWN);
-    servos[2].attach(PIN_HEAD_LEFTRIGHT, MIN_ANGLE_HEAD_LEFTRIGHT, MAX_ANGLE_HEAD_LEFTRIGHT);
-    servos[3].attach(PIN_EYES_UPDOWN,    MIN_ANGLE_EYES_UPDOWN,    MAX_ANGLE_EYES_UPDOWN);
-    servos[4].attach(PIN_EYE_LEFTRIGHT,  MIN_ANGLE_EYES_LEFTRIGHT, MAX_ANGLE_EYES_LEFTRIGHT);
-    servos[5].attach(PIN_JAW,            MIN_ANGLE_JAW,            MAX_ANGLE_JAW);
+    servos[INDEX_HEAD_TILT].attach(      PIN_HEAD_TILT,      MIN_ANGLE_HEAD_TILT,      MAX_ANGLE_HEAD_TILT);
+    servos[INDEX_HEAD_UPDOWN].attach(    PIN_HEAD_UPDOWN,    MIN_ANGLE_HEAD_UPDOWN,    MAX_ANGLE_HEAD_UPDOWN);
+    servos[INDEX_HEAD_LEFTRIGHT].attach( PIN_HEAD_LEFTRIGHT, MIN_ANGLE_HEAD_LEFTRIGHT, MAX_ANGLE_HEAD_LEFTRIGHT);
+    servos[INDEX_EYES_UPDOWN].attach(    PIN_EYES_UPDOWN,    MIN_ANGLE_EYES_UPDOWN,    MAX_ANGLE_EYES_UPDOWN);
+    servos[INDEX_EYE_LEFTRIGHT].attach(  PIN_EYE_LEFTRIGHT,  MIN_ANGLE_EYES_LEFTRIGHT, MAX_ANGLE_EYES_LEFTRIGHT);
+    servos[INDEX_JAW].attach(            PIN_JAW,            MIN_ANGLE_JAW,            MAX_ANGLE_JAW);
 
-    jointList[0] = new Joint("head_tilt",           -0.30f,  0.30f,  0, MIN_ANGLE_HEAD_TILT,      MAX_ANGLE_HEAD_TILT);
-    jointList[1] = new Joint("head_updown",         -0.30f,  0.30f,  1, MIN_ANGLE_HEAD_UPDOWN,    MAX_ANGLE_HEAD_UPDOWN);
-    jointList[2] = new Joint("head_leftright",      -1.57f,  1.57f,  2, MIN_ANGLE_HEAD_LEFTRIGHT, MAX_ANGLE_HEAD_LEFTRIGHT);
-    jointList[3] = new Joint("eyes_updown",         -0.45f,  0.45f,  3, MIN_ANGLE_EYES_UPDOWN,    MAX_ANGLE_EYES_UPDOWN);
-    jointList[4] = new Joint("eye_leftright",       -0.45f,  0.45f,  4, MIN_ANGLE_EYES_LEFTRIGHT, MAX_ANGLE_EYES_LEFTRIGHT);
-    jointList[5] = new Joint("jaw",                  0.00f,  0.15f,  5, MIN_ANGLE_JAW,            MAX_ANGLE_JAW);
+    jointList[INDEX_HEAD_TILT]      = new Joint("head_tilt",           -0.30f,  0.30f,  INDEX_HEAD_TILT,      MIN_ANGLE_HEAD_TILT,      MAX_ANGLE_HEAD_TILT);
+    jointList[INDEX_HEAD_UPDOWN]    = new Joint("head_updown",         -0.30f,  0.30f,  INDEX_HEAD_UPDOWN,    MIN_ANGLE_HEAD_UPDOWN,    MAX_ANGLE_HEAD_UPDOWN);
+    jointList[INDEX_HEAD_LEFTRIGHT] = new Joint("head_leftright",      -1.57f,  1.57f,  INDEX_HEAD_LEFTRIGHT, MIN_ANGLE_HEAD_LEFTRIGHT, MAX_ANGLE_HEAD_LEFTRIGHT);
+    jointList[INDEX_EYES_UPDOWN]    = new Joint("eyes_updown",         -0.45f,  0.45f,  INDEX_EYES_UPDOWN,    MIN_ANGLE_EYES_UPDOWN,    MAX_ANGLE_EYES_UPDOWN);
+    jointList[INDEX_EYE_LEFTRIGHT]  = new Joint("eye_leftright",       -0.45f,  0.45f,  INDEX_EYE_LEFTRIGHT,  MIN_ANGLE_EYES_LEFTRIGHT, MAX_ANGLE_EYES_LEFTRIGHT);
+    jointList[INDEX_JAW]            = new Joint("jaw",                  0.00f,  0.15f,  INDEX_JAW,            MIN_ANGLE_JAW,            MAX_ANGLE_JAW);
 }
 
 Joint* findJointByName(char* name) {
@@ -85,6 +99,8 @@ Joint* findJointByName(char* name) {
  * Servo callback with given joint state command
  */
 void servoCallback(const sensor_msgs::JointState &cmd_msg) {
+    digitalWrite(13, HIGH - digitalRead(13));  //toggle led
+
     for (unsigned int i = 0; i < cmd_msg.name_length; i++) {
         // Retrieve joint configuration
         Joint* joint = findJointByName(cmd_msg.name[i]);
@@ -93,15 +109,17 @@ void servoCallback(const sensor_msgs::JointState &cmd_msg) {
             servos[joint->servoIndex].write(joint->convertJointPositionToServoAngle(cmd_msg.position[i]));
         }
     }
-    digitalWrite(13, HIGH - digitalRead(13));  //toggle led
 }
 
 ros::Subscriber<sensor_msgs::JointState> sub("joint_command", servoCallback);
 
 void setup() {
 //    Servo servo = Servo();
-//    servo.attach(9, 0, 180);
-//    servo.write(87);
+//    servo.attach(9);
+////    for (int i = 70; i < 80; i++) {
+//        servo.write(50);
+////        delay(2000);
+////    }
 
     pinMode(13, OUTPUT);
     nh.initNode();

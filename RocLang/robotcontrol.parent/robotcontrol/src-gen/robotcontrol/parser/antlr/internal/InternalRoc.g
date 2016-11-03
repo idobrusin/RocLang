@@ -309,6 +309,26 @@ ruleMotion returns [EObject current=null]
 				newLeafNode(this_SPEED_KEY_7, grammarAccess.getMotionAccess().getSPEED_KEYTerminalRuleCall_1_3());
 			}
 		)
+		    |
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getMotionAccess().getActionActionParserRuleCall_2_0());
+				}
+				lv_action_8_0=ruleAction
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getMotionRule());
+					}
+					set(
+						$current,
+						"action",
+						lv_action_8_0,
+						"robotcontrol.Roc.Action");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
 	)
 ;
 
@@ -449,23 +469,17 @@ ruleCompleteAction returns [EObject current=null]
 }:
 	(
 		(
-			(
-				lv_actionName_0_0='neutral'
-				{
-					newLeafNode(lv_actionName_0_0, grammarAccess.getCompleteActionAccess().getActionNameNeutralKeyword_0_0());
+			lv_actionName_0_0='neutral face'
+			{
+				newLeafNode(lv_actionName_0_0, grammarAccess.getCompleteActionAccess().getActionNameNeutralFaceKeyword_0());
+			}
+			{
+				if ($current==null) {
+					$current = createModelElement(grammarAccess.getCompleteActionRule());
 				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getCompleteActionRule());
-					}
-					setWithLastConsumed($current, "actionName", lv_actionName_0_0, "neutral");
-				}
-			)
+				setWithLastConsumed($current, "actionName", lv_actionName_0_0, "neutral face");
+			}
 		)
-		otherlv_1='face'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getCompleteActionAccess().getFaceKeyword_1());
-		}
 	)
 ;
 
@@ -634,23 +648,17 @@ ruleLeftRightDirectedAction returns [EObject current=null]
 }:
 	(
 		(
-			(
-				lv_tiltHead_0_0='tilt'
-				{
-					newLeafNode(lv_tiltHead_0_0, grammarAccess.getLeftRightDirectedActionAccess().getTiltHeadTiltKeyword_0_0());
+			lv_tiltHead_0_0='tilt head'
+			{
+				newLeafNode(lv_tiltHead_0_0, grammarAccess.getLeftRightDirectedActionAccess().getTiltHeadTiltHeadKeyword_0());
+			}
+			{
+				if ($current==null) {
+					$current = createModelElement(grammarAccess.getLeftRightDirectedActionRule());
 				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getLeftRightDirectedActionRule());
-					}
-					setWithLastConsumed($current, "tiltHead", lv_tiltHead_0_0, "tilt");
-				}
-			)
+				setWithLastConsumed($current, "tiltHead", lv_tiltHead_0_0, "tilt head");
+			}
 		)
-		otherlv_1='head'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getLeftRightDirectedActionAccess().getHeadKeyword_1());
-		}
 	)
 ;
 

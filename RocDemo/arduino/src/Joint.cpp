@@ -18,6 +18,14 @@ Joint::Joint(const char *name, float jointMinPosition, float jointMaxPosition, i
 }
 
 float Joint::convertJointPositionToServoAngle(float position) {
+    // Limit position to min or max value to prevent damage on robot
+    if (position > this->jointMaxPositiom) {
+        position = this->jointMaxPositiom;
+    }
+    if (position < this->jointMinPosition) {
+        position = this->jointMinPosition;
+    }
+
     return mapfloat(position, this->jointMinPosition, this->jointMaxPositiom, this->servoMinAngle, this->servoMaxAngle);
 }
 

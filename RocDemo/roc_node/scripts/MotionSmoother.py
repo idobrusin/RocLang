@@ -9,7 +9,6 @@ import logging
 
 class MotionSmoother:
     def __init__(self, rate=100, show_plot=False):
-        super().__init__()
         self.rate = rate  # determines the number of steps for the motions
         self.show_plot = show_plot
 
@@ -19,7 +18,7 @@ class MotionSmoother:
         :return: tau, smoothed_trajectory
         >>> data_points = [\
         [('a',0, 0),    ('b', 0, 0), ('c', 0, 0)], \
-        [('b', 2, 500), ('a', 2, 250)], \
+        [('b', 2, 40), ('a', 2, 250)], \
         [('c', 1, 100)], \
         [('b', 4, 250), ('a', 0, 500)]]
         >>> motion_smoother = MotionSmoother(show_plot=True)

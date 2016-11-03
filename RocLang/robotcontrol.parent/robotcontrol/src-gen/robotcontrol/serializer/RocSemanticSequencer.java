@@ -100,7 +100,7 @@ public class RocSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     CompleteAction returns CompleteAction
 	 *
 	 * Constraint:
-	 *     actionName='neutral'
+	 *     actionName='neutral face'
 	 */
 	protected void sequence_CompleteAction(ISerializationContext context, CompleteAction semanticObject) {
 		if (errorAcceptor != null) {
@@ -108,7 +108,7 @@ public class RocSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RocPackage.Literals.COMPLETE_ACTION__ACTION_NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getCompleteActionAccess().getActionNameNeutralKeyword_0_0(), semanticObject.getActionName());
+		feeder.accept(grammarAccess.getCompleteActionAccess().getActionNameNeutralFaceKeyword_0(), semanticObject.getActionName());
 		feeder.finish();
 	}
 	
@@ -154,7 +154,7 @@ public class RocSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     LeftRightDirectedAction returns LeftRightDirectedAction
 	 *
 	 * Constraint:
-	 *     tiltHead='tilt'
+	 *     tiltHead='tilt head'
 	 */
 	protected void sequence_LeftRightDirectedAction(ISerializationContext context, LeftRightDirectedAction semanticObject) {
 		if (errorAcceptor != null) {
@@ -162,7 +162,7 @@ public class RocSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RocPackage.Literals.LEFT_RIGHT_DIRECTED_ACTION__TILT_HEAD));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getLeftRightDirectedActionAccess().getTiltHeadTiltKeyword_0_0(), semanticObject.getTiltHead());
+		feeder.accept(grammarAccess.getLeftRightDirectedActionAccess().getTiltHeadTiltHeadKeyword_0(), semanticObject.getTiltHead());
 		feeder.finish();
 	}
 	
@@ -184,7 +184,7 @@ public class RocSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Motion returns Motion
 	 *
 	 * Constraint:
-	 *     ((action=Action duration=DURATION durationUnit=DurationUnit) | (action=Action speed=Speed))
+	 *     ((action=Action duration=DURATION durationUnit=DurationUnit) | (action=Action speed=Speed) | action=Action)
 	 */
 	protected void sequence_Motion(ISerializationContext context, Motion semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

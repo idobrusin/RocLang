@@ -16,6 +16,8 @@ import org.eclipse.emf.ecore.EStructuralFeature
 import robotcontrol.roc.DirectedAction
 import robotcontrol.roc.LeftRightDirectedAction
 import robotcontrol.roc.FullDirectedAction
+import robotcontrol.roc.Direction
+import java.awt.image.DirectColorModel
 
 /**
  * This class contains custom validation rules. 
@@ -33,8 +35,14 @@ class RocValidator extends AbstractRocValidator {
 	 */
 	@Check
 	def checkMovementContraints(Movement movement) {
-		val actionMap = new HashMap<String, Boolean>;
 		
+		// Map which stores whether an action is already used in given motion.
+		val actionMap = new HashMap<String, Boolean>; 
+		
+		// Special map for FullDirectedActions, since each direction can be used twice (l/r and u/d)
+		val directedActionMap = new HashMap<Pair<String, String>, Boolean>
+		
+		// Iterate over all motion for given movement.
 		for (Motion motion : movement.motions) {
 			val actionHolder = motion.action.actionHolder;
   			if (actionHolder instanceof CompleteAction) {
@@ -52,14 +60,24 @@ class RocValidator extends AbstractRocValidator {
   					}
   				} else if (ac.actionName instanceof FullDirectedAction) {
   					val directedAction = ac.actionName as FullDirectedAction;
+  					val fullDirection = ac.direction as Direction
   					if (directedAction.turnEyes != null) {
-  						checkActionMapForAction(directedAction.turnEyes, actionMap)
+  						checkFullDirectedActionMapForAction(directedAction.turnEyes, fullDirection, directedActionMap)
   					} else if (directedAction.turnHead != null) {
-   						checkActionMapForAction(directedAction.turnHead, actionMap) 							
+  						// check whether left / right or up down is used simultaneously.
+  						checkFullDirectedActionMapForAction(directedAction.turnEyes, fullDirection, directedActionMap)						
   					}
   				}
   			}
 		}
+	}
+	
+	def checkFullDirectedActionMapForAction(String actionName, Direction direction, HashMap directedActionMap) {
+		if (directedActionMap.containsKey(new Pair(actionName, direction))) {
+ 			errorMultipleCommands(RocPackage.Literals.MOVEMENT__MOTIONS)
+  		} else {
+ 			directedActionMap.put(new Pair(actionName, direction), true)
+  		}
 	}
 	
 	def checkActionMapForAction(String actionName, HashMap actionMap) {

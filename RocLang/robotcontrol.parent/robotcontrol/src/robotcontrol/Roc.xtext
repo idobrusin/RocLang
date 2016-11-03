@@ -11,7 +11,7 @@ Movement hidden(WS, ML_COMMENT, SL_COMMENT):
 Motion:
 	  action=Action FOR duration=DURATION durationUnit=DurationUnit
 	| action=Action WITH speed=Speed SPEED_KEY
-	;
+	| action=Action;
 
 Action:
     actionHolder=CompleteAction
