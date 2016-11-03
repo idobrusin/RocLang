@@ -71,15 +71,15 @@ Following packages are needed for operating the robot:
   * `watchdog`
   * `rospy`
 
-----
 
-1.Copy the contents of the /roc_node folder to your catkin workspace `src` directory (typically `~/catkin_ws/src`).
-2. Generate message classes by running
+
+  1. Copy the contents of the /roc_node folder to your catkin workspace `src` directory (typically `~/catkin_ws/src`).
+  2. Generate message classes by running
 ```
 cd ~/catkin_ws
 catkin_make install
 ```
-3. Source the devel folder
+  3. Source the devel folder
 ```
 cd ~/catkin_ws
 source ./devel/setup.bash
