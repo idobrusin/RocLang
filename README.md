@@ -32,36 +32,59 @@ The demonstration system consumes the file and send movement instructions to the
 ## Project structure
 The main language project consists of the language definition created with the Xtext language workbench. The language can be used as an Eclipse plugin which can be installed via the provided Eclipse update site. See [Roc language project](./RocLang) for a detailed instruction and further information about the language development. 
 
-In order to control a robot head, a demonstration system is created based on the head of the robot [InMoov](http://inmoov.fr), an anthropomorphic life-size robot which can be printed with an off-the-shelf 3D printer. The demonstration system uses the output of the language which a serialized representation of the movement instructions encoded with JSON for moving the different parts of the head. The system consists of the robot head and a simulation, which is an integral part of the working system. 
-[Roc demonstration project](./RocDemo)
+In order to control a robot head, a [demonstration system](./RocDemo) is created based on the head of the robot [InMoov](http://inmoov.fr), an anthropomorphic life-size robot which can be printed with an off-the-shelf 3D printer. The demonstration system uses the output of the language which a serialized representation of the movement instructions encoded with JSON for moving the different parts of the head. The system consists of the robot head and a simulation, which is an integral part of the working system. 
 
 ## Installation
 The Roc language can be used by using the provided Eclipse plugin. For controlling the head of the robot InMoov (simulated and real-life) the [Roc demonstration project](./RocDemo) needs to be installed. 
 
-#### Roc language 
+### Roc language 
+The language can be used via an Eclipse plugin.
+The are two possible methods to install the plugin: via an update site or as a manual plugin installation. It is recommended to use the first method.  
+
+
+#### Install via update site
+  * Open Help -> Install new Software.
+  * Click add to add a repository
+  * Use the following URL: https://github.com/idobrusin/RocLang/raw/master/RocLang/robotcontrol.parent/robotcontrol.update-site
+  * Install Roc feature and restart Eclipse.
+  * Confirm with yes, when asked to convert project to Xtext project.
+
+#### Manual install
+Export all projects as zip.
+Place zip file in Eclipse `dropins` folder (platform dependent) and extract (`jar` files should be located in folder dropins/plugins)
+After extraction restart Eclipse with -clean option in order to refresh plugins.
+
+
 Following steps are necessary for using the Roc language plugin:
 1. Install Eclipse 
 2. Add Roc Update site to Eclipse
 3. Install Roc language plugin
 4. Use the language by creating a project
 
-#### Roc demonstration
+### Roc demonstration
 The demonstration consists of a simulation of the robot InMoov and a 3D print of the InMoovs' head. 
 
-###### Prerequisites
+#### Prerequisites
 In order to use the demonstration system, ROS has to be installed. Please see [www.ros.org](http://www.ros.org/) for a detailed installation instruction. ROS works best under Ubuntu Linux. For Roc, Ubuntu 14.x in combination with ROS indigo is suggested.
+_____
 
-Following steps are necessary for controlling InMoov:
-1. Install InMoov simulation
-2. Install Roc node which is used for controlling the simulation and robot 
-3. For the real-life robot: Flash Arduino code 
-
+#### Installation
 ##### 1. Install InMoov simulation
 ##### 2. Install Roc node
-##### 3. (Optional) Flash Arduino code 
+##### 3. (Optional) Install Arduino libraries and flash Arduino
+###### Rosserial
+`rosserial` is used for the communication between the Arduino and the controlling computer.
+###### python packages:
+  * `yaml`
+  * `watchdog`
+  * `rospy`
+
 
 ## Usage
+Important note: When using the plugin, Eclipse asks if the project should be converted to a Xtext project. Press Yes, otherwise the code generation will not work properly.
 
+
+Start ROS with the `roscore` command in a Terminal.
 
 ## Support and Contribution
 Contributions to the Roc languages are welcome. Changing the language and its features is described under [Language Development](./RocLang).
