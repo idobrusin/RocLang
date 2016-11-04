@@ -64,17 +64,17 @@ public class MovementConverter {
 	
 	private static int getSpeed(Speed speed) {
 		if (speed.getSLOWEST() != null) {
-			return 1000;
+			return 5000;
 		} else if (speed.getSLOW() != null) {
-			return 800;
+			return 3000;
 		} else if (speed.getNORMAL() != null) {
-			return 700;
+			return 2000;
 		} else if (speed.getFAST() != null) {
-			return 500;
+			return 1500;
 		} else if (speed.getFULL() != null) {
-			return 400;
+			return 1000;
 		}
-		return 1000;
+		return 2000;
 	}
 
 	private static int getDurationFromUnit(int duration, DurationUnit unit) {
