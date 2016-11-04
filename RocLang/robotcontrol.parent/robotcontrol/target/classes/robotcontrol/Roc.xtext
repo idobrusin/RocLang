@@ -1,0 +1,90 @@
+grammar robotcontrol.Roc with org.eclipse.xtext.common.Terminals
+
+generate roc "http://www.Roc.robotcontrol"
+
+Program hidden(WS, ML_COMMENT, SL_COMMENT):
+	(movements+=Movement)*;
+
+Movement hidden(WS, ML_COMMENT, SL_COMMENT):
+	motions+=Motion(AND motions+=Motion)* PERIOD;
+
+Motion:
+	  action=Action FOR duration=DURATION durationUnit=DurationUnit
+	| action=Action WITH speed=Speed SPEED_KEY
+	| action=Action;
+
+Action:
+    actionHolder=CompleteAction
+    | (intensity=Intensity)? actionHolder=SingleAction
+    | (intensity=Intensity)? actionHolder=DirectedAction;
+
+// Intensity------------------------------------------------------------------------
+enum Intensity:
+	  C='pronounced'  // First position is used as default value
+    | A='trace of'
+    | B='slightly'
+    | D='severe'
+    | E='maximum';
+
+// Actions ------------------------------------------------------------------------
+CompleteAction:
+    actionName='neutral face';
+
+SingleAction:
+      actionName='drop jaw'
+    | actionName='nod head';
+
+DirectedAction:
+      actionName=LeftRightDirectedAction direction=LeftRightDirection
+    | actionName=FullDirectedAction direction=Direction;
+
+LeftRightDirectedAction:
+      tiltHead='tilt head';
+
+LeftRightDirection:
+      left='left'
+    | right='right';
+
+FullDirectedAction:
+      turnHead='turn head'
+    | turnEyes='turn eyes';
+
+Direction:
+      UP='up'
+    | DOWN='down'
+    | LEFT='left'
+    | RIGHT='right';
+
+Speed:
+	  SLOWEST = 'slowest'
+	| SLOW = 'slow'
+	| NORMAL = 'normal'
+	| FAST = 'fast'
+	| FULL = 'full'  
+;
+
+// Duration ------------------------------------------------------------------------
+terminal DURATION:
+	INT;
+
+enum DurationUnit:
+	  MILLISECONDS='milliseconds'
+	| SECONDS='seconds'
+	| MINUTES='minutes';
+
+// Keywords ------------------------------------------------------------------------
+terminal FOR:
+	'for';
+	
+terminal WITH:
+	'with';
+
+terminal SPEED_KEY:
+	'speed';
+	
+terminal AND:
+	'and';
+
+// Punctuation ---------------------------------------------------------------------
+terminal PERIOD:
+	'.';
