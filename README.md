@@ -38,18 +38,25 @@ In order to control a robot head, a [demonstration system](./RocDemo) is created
 The Roc language can be used by using the provided Eclipse plugin. For controlling the head of the robot InMoov (simulated and real-life) the [Roc demonstration project](./RocDemo) needs to be installed. 
 
 ## 1. Roc language installation
-The language can be used via an Eclipse plugin.
-The are two possible methods to install the plugin: via an update site or as a manual plugin installation. It is recommended to use the first method.  
+The language can be used via an Eclipse plugin. Before installing the language plugin, the Xtext plugin has to be installed. Follow the instruction provided on the [Xtext homepage](https://eclipse.org/Xtext/download.html).  
+In case the update site of Xtext doesn't work, try to use one of the sites listed [here](https://www.eclipse.org/modeling/tmf/updates/).  
+
+The are two possible methods to install the plugin: via an update site or as a manual plugin installation. It is recommended to use the update site.  
 
 ### Regular installation via Update Site
   * Open Help -> Install new Software.
   * Click add to add a repository
-  * Use the following URL: https://github.com/idobrusin/RocLang/raw/master/RocLang/robotcontrol.parent/robotcontrol.update-site
+  * Use the following URL: https://idobrusin.github.io/RocLang/update/site.xml
   * Install Roc feature and restart Eclipse.
   * Confirm with yes, when asked to convert project to Xtext project.
 
 ### Alternative: Manual installation
-Export all projects as zip. Place zip file in Eclipse `dropins` folder (platform dependent) and extract (`jar` files should be located in folder dropins/plugins). After extraction restart Eclipse with -clean option in order to refresh plugins.
+Extract the RocLang.zip and place contents to the Eclipse dropins folder.  
+Following folder structure should be present: dropins/plugins/*Roc.jars.  
+In order to reload plugins, start Eclipse with -clean option.
+```
+./opt/eclipse/eclipse -clean
+```
 
 ## 2. Roc demonstration installation
 The demonstration consists of a simulation of the robot InMoov and a 3D print of the InMoovs' head. 
@@ -180,12 +187,7 @@ sudo usermod -a -G dialout <username>
 # /dev/ttyACM0 is the Linux device
 sudo chmod a+rw /dev/ttyACM0
 ```
-### Simulation
-#### Subscribe to joint commands
-To see joint published joint commands use the following subscriber:
-```bash
-    rostopic echo joint_states sensor_msgs/JointState
-```
+
 
 ## Support and Contribution
 Contributions to the Roc languages are welcome. Changing the language and its features is described under [Language Development](./RocLang).

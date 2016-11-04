@@ -65,8 +65,10 @@ The language plugin uses an [converter](./robotcontrol.parent/robotcontrol/src/r
 The generation itself is handled by the [generator class](./robotcontrol.parent/robotcontrol/src/robot/generator/RocGenerator.xtend).
 
 #### Update update-site
-To update the update site, open the site.xml file in Eclipse and press build all to rebuild the update site folder.
+To update the update site, open the site.xml file in Eclipse and press build all to rebuild the update site folder. The update site is distributed using Github Pages. Checkout the `gh-pages` branch of the Roc language repository (to a seperate directory) and copy the contents of the `robotcontrol.update-site` folder to the `update` folder in the gh-pages branch. Commit and push the changes to the repository, after that it is possible to install the Roc plugin via the update site URL: [https://idobrusin.github.io/RocLang/update/site.xml]    
 
+Alternative:  
+In order to generate the plugin zip from source export all projects as zip by using Export->Plug-In Development->Deployable plugins and fragments. Place zip file in Eclipse `dropins` folder (platform dependent) and extract (`jar` files should be located in folder dropins/plugins). After extraction restart Eclipse with -clean option in order to refresh plugins.
 
 Note: How to create an Eclipse update site project for Xtext based languages:
 https://charandeepmatta.com/2012/09/01/how-to-generate-eclipse-plugin-for-your-dsl-written-in-xtext/

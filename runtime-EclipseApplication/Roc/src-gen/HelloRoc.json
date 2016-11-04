@@ -2,24 +2,24 @@
   {"motions": [
     {
       "intensity": "B",
-      "duration": 400,
+      "duration": 1000,
       "action_unit": "51"
     },
     {
       "intensity": "E",
-      "duration": 400,
+      "duration": 1000,
       "action_unit": "26"
     }
   ]},
   {"motions": [
     {
       "intensity": "D",
-      "duration": 500,
+      "duration": 1500,
       "action_unit": "52"
     },
     {
       "intensity": "A",
-      "duration": 500,
+      "duration": 1500,
       "action_unit": "26"
     }
   ]},
@@ -31,19 +31,19 @@
     },
     {
       "intensity": "E",
-      "duration": 800,
+      "duration": 3000,
       "action_unit": "26"
     }
   ]},
   {"motions": [
     {
       "intensity": "D",
-      "duration": 700,
+      "duration": 2000,
       "action_unit": "52"
     },
     {
       "intensity": "A",
-      "duration": 700,
+      "duration": 2000,
       "action_unit": "26"
     }
   ]}
