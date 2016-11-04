@@ -1,0 +1,78 @@
+2016-07-18 12:39:42,563 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-07-18 12:43:30,886 [Worker-12] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using DEFAULT lifecycle mapping for MavenProject: robotcontrol:robotcontrol:1.0.0-SNAPSHOT @ /Volumes/Mac HDD/Documents/Uni/16 - Sommersemester/Bachelorarbeit/Code/Roc/RocLang/robotcontrol.parent/robotcontrol/pom.xml.
+2016-07-18 12:43:35,713 [Worker-23] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using DEFAULT lifecycle mapping for MavenProject: robotcontrol:robotcontrol:1.0.0-SNAPSHOT @ /Volumes/Mac HDD/Documents/Uni/16 - Sommersemester/Bachelorarbeit/Code/Roc/RocLang/robotcontrol.parent/robotcontrol/pom.xml.
+2016-07-18 12:43:36,193 [Worker-23] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using DEFAULT lifecycle mapping for MavenProject: robotcontrol:robotcontrol.feature:1.0.0-SNAPSHOT @ /Volumes/Mac HDD/Documents/Uni/16 - Sommersemester/Bachelorarbeit/Code/Roc/RocLang/robotcontrol.parent/robotcontrol.feature/pom.xml.
+2016-07-18 12:43:36,527 [Worker-23] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using DEFAULT lifecycle mapping for MavenProject: robotcontrol:robotcontrol.ide:1.0.0-SNAPSHOT @ /Volumes/Mac HDD/Documents/Uni/16 - Sommersemester/Bachelorarbeit/Code/Roc/RocLang/robotcontrol.parent/robotcontrol.ide/pom.xml.
+2016-07-18 12:43:36,536 [Worker-23] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: robotcontrol:robotcontrol.parent:1.0.0-SNAPSHOT @ /Volumes/Mac HDD/Documents/Uni/16 - Sommersemester/Bachelorarbeit/Code/Roc/RocLang/robotcontrol.parent/pom.xml.
+2016-07-18 12:43:36,849 [Worker-23] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using DEFAULT lifecycle mapping for MavenProject: robotcontrol:robotcontrol.repository:1.0.0-SNAPSHOT @ /Volumes/Mac HDD/Documents/Uni/16 - Sommersemester/Bachelorarbeit/Code/Roc/RocLang/robotcontrol.parent/robotcontrol.repository/pom.xml.
+2016-07-18 12:43:37,021 [Worker-23] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using DEFAULT lifecycle mapping for MavenProject: robotcontrol:robotcontrol.target:1.0.0-SNAPSHOT @ /Volumes/Mac HDD/Documents/Uni/16 - Sommersemester/Bachelorarbeit/Code/Roc/RocLang/robotcontrol.parent/robotcontrol.target/pom.xml.
+2016-07-18 12:43:37,343 [Worker-23] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using DEFAULT lifecycle mapping for MavenProject: robotcontrol:robotcontrol.tests:1.0.0-SNAPSHOT @ /Volumes/Mac HDD/Documents/Uni/16 - Sommersemester/Bachelorarbeit/Code/Roc/RocLang/robotcontrol.parent/robotcontrol.tests/pom.xml.
+2016-07-18 12:43:37,672 [Worker-23] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using DEFAULT lifecycle mapping for MavenProject: robotcontrol:robotcontrol.ui:1.0.0-SNAPSHOT @ /Volumes/Mac HDD/Documents/Uni/16 - Sommersemester/Bachelorarbeit/Code/Roc/RocLang/robotcontrol.parent/robotcontrol.ui/pom.xml.
+2016-07-18 12:43:37,974 [Worker-23] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using DEFAULT lifecycle mapping for MavenProject: robotcontrol:robotcontrol.ui.tests:1.0.0-SNAPSHOT @ /Volumes/Mac HDD/Documents/Uni/16 - Sommersemester/Bachelorarbeit/Code/Roc/RocLang/robotcontrol.parent/robotcontrol.ui.tests/pom.xml.
+2016-07-18 12:45:03,572 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-08-12 19:08:33,009 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-09-27 17:43:07,760 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-09-27 17:43:10,700 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2016-09-27 17:56:16,813 [Worker-19] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using DEFAULT lifecycle mapping for MavenProject: robotcontrol:robotcontrol.feature:1.0.0-SNAPSHOT @ /Volumes/Mac HDD/Documents/Uni/16 - Sommersemester/Bachelorarbeit/Code/Roc/RocLang/robotcontrol.parent/robotcontrol.feature/pom.xml.
+2016-10-03 18:57:12,793 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-10-03 19:22:39,594 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-10-03 22:31:31,723 [Worker-37] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:31:32,389 [Worker-37] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:31:32,401 [Worker-37] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:31:58,216 [Worker-45] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:31:58,954 [Worker-45] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:31:58,968 [Worker-45] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:37:52,592 [Worker-47] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:37:53,422 [Worker-47] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:37:53,439 [Worker-47] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:37:57,376 [Worker-40] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:37:58,102 [Worker-40] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:37:58,116 [Worker-40] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:38:10,483 [Worker-40] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:38:11,157 [Worker-40] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:38:11,166 [Worker-40] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:38:16,982 [Worker-48] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:38:17,608 [Worker-48] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:38:17,630 [Worker-48] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:38:48,840 [Worker-50] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:38:49,522 [Worker-50] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:38:49,535 [Worker-50] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:39:48,898 [Worker-50] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:39:49,589 [Worker-50] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:39:49,599 [Worker-50] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:41:49,338 [Worker-40] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:41:49,594 [Worker-40] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:41:58,923 [Worker-44] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:42:25,789 [Worker-37] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:42:25,886 [Worker-37] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:42:25,903 [Worker-37] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:42:28,587 [Worker-44] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:42:28,627 [Worker-44] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:42:52,675 [Worker-44] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:42:59,919 [Worker-43] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:43:00,152 [Worker-43] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:44:21,999 [Worker-49] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:44:22,673 [Worker-49] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:44:22,682 [Worker-49] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:45:40,365 [Worker-44] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:45:40,476 [Worker-49] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:46:00,553 [Worker-43] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:46:02,358 [Worker-43] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:46:02,972 [Worker-43] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:46:03,062 [Worker-43] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:46:03,309 [Worker-43] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:46:03,564 [Worker-43] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:46:03,650 [Worker-43] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:46:03,702 [Worker-43] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:46:03,737 [Worker-43] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:46:03,769 [Worker-43] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:46:03,809 [Worker-43] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 22:46:03,844 [Worker-43] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 23:19:09,638 [Worker-59] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 23:19:10,408 [Worker-59] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-03 23:19:10,468 [Worker-59] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2016-10-04 00:51:47,814 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-10-05 22:59:45,727 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-10-06 11:10:17,784 [Worker-12] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-11-04 14:18:31,984 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-11-04 14:45:59,014 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
