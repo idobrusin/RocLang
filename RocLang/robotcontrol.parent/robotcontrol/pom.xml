@@ -136,4 +136,8 @@
 		</pluginManagement>
 	</build>
 
+	<name>Robot control language</name>
+	<url>https://github.com/idobrusin/RocLang/</url>
+	<version>1.0.0</version>
+	<groupId>roc</groupId>
 </project>

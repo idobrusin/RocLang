@@ -16,7 +16,7 @@
       {
         "joint": {
           "name": "head_leftright",
-          "range": "lower"
+          "range": "upper"
         }
       }
     ],
@@ -24,7 +24,7 @@
       {
         "joint": {
           "name": "head_leftright",
-          "range": "upper"
+          "range": "lower"
         }
       }
     ],

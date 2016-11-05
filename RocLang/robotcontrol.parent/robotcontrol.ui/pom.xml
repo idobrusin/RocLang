@@ -18,4 +18,8 @@
 		</plugins>
 	</build>
 
+	<version>1.0.0</version>
+	<groupId>roc</groupId>
+	<name>Robot control language</name>
+	<url>https://github.com/idobrusin/RocLang/</url>
 </project>

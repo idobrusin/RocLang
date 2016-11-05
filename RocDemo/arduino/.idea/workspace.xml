@@ -20,117 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec922180-b3d3-40f1-af0b-2568113a9075" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../.idea/Roc.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.idea/RocDemo.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/catkin/catkin_generated/version/package.cmake" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/catkin_generated/env_cached.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/catkin_generated/generate_cached_setup.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/catkin_generated/installspace/.rosinstall" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/catkin_generated/installspace/_setup_util.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/catkin_generated/installspace/env.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/catkin_generated/installspace/roc-msg-extras.cmake" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/catkin_generated/installspace/roc-msg-paths.cmake" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/catkin_generated/installspace/roc.pc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/catkin_generated/installspace/rocConfig-version.cmake" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/catkin_generated/installspace/rocConfig.cmake" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/catkin_generated/installspace/setup.bash" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/catkin_generated/installspace/setup.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/catkin_generated/installspace/setup.zsh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/catkin_generated/ordered_paths.cmake" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/catkin_generated/package.cmake" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/catkin_generated/pkg.develspace.context.pc.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/catkin_generated/pkg.installspace.context.pc.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/catkin_generated/roc-msg-extras.cmake.develspace.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/catkin_generated/roc-msg-extras.cmake.installspace.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/catkin_generated/setup_cached.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/catkin_generated/stamps/roc/_setup_util.py.stamp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/catkin_generated/stamps/roc/interrogate_setup_dot_py.py.stamp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/catkin_generated/stamps/roc/package.xml.stamp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/catkin_generated/stamps/roc/pkg-genmsg.cmake.em.stamp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/catkin_generated/stamps/roc/pkg.pc.em.stamp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/cmake/roc-genmsg-context.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/cmake/roc-genmsg.cmake" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/devel/.catkin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/devel/.rosinstall" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/devel/_setup_util.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/devel/env.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/devel/setup.bash" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/devel/setup.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/devel/setup.zsh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/devel/share/roc/cmake/roc-msg-extras.cmake" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/devel/share/roc/cmake/roc-msg-paths.cmake" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/devel/share/roc/cmake/rocConfig-version.cmake" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../roc_node/devel/share/roc/cmake/rocConfig.cmake" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.ui/plugin.xml_gen" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/plugin.xml_gen" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/src-gen/robotcontrol/roc/Speed.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/src-gen/robotcontrol/roc/impl/SpeedImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../runtime-EclipseApplication/Roc/HelloRoc.roc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../runtime-EclipseApplication/Roc/src-gen/HelloRoc.json" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.update-site/features/robotcontrol.feature_1.0.0.201607181259.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.update-site/features/robotcontrol.feature_1.0.0.201607181326.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.update-site/features/robotcontrol.roc_1.0.0.201607181327.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.update-site/plugins/robotcontrol.ide_1.0.0.201607181259.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.update-site/plugins/robotcontrol.ide_1.0.0.201607181326.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.update-site/plugins/robotcontrol.ide_1.0.0.201607181327.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.update-site/plugins/robotcontrol.ui_1.0.0.201607181259.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.update-site/plugins/robotcontrol.ui_1.0.0.201607181326.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.update-site/plugins/robotcontrol.ui_1.0.0.201607181327.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.update-site/plugins/robotcontrol_1.0.0.201607181259.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.update-site/plugins/robotcontrol_1.0.0.201607181326.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.update-site/plugins/robotcontrol_1.0.0.201607181327.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.tests/xtend-gen/robotcontrol/tests/.RocParsingTest.xtendbin" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.tests/xtend-gen/robotcontrol/tests/.RocParsingTest.xtendbin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.ui/xtend-gen/robotcontrol/ui/.RocUiModule.xtendbin" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.ui/xtend-gen/robotcontrol/ui/.RocUiModule.xtendbin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.ui/xtend-gen/robotcontrol/ui/contentassist/.RocProposalProvider.xtendbin" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.ui/xtend-gen/robotcontrol/ui/contentassist/.RocProposalProvider.xtendbin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.ui/xtend-gen/robotcontrol/ui/labeling/.RocDescriptionLabelProvider.xtendbin" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.ui/xtend-gen/robotcontrol/ui/labeling/.RocDescriptionLabelProvider.xtendbin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.ui/xtend-gen/robotcontrol/ui/labeling/.RocLabelProvider.xtendbin" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.ui/xtend-gen/robotcontrol/ui/labeling/.RocLabelProvider.xtendbin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.ui/xtend-gen/robotcontrol/ui/outline/.RocOutlineTreeProvider.xtendbin" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.ui/xtend-gen/robotcontrol/ui/outline/.RocOutlineTreeProvider.xtendbin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.ui/xtend-gen/robotcontrol/ui/quickfix/.RocQuickfixProvider.xtendbin" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.ui/xtend-gen/robotcontrol/ui/quickfix/.RocQuickfixProvider.xtendbin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.update-site/.DS_Store" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.update-site/.DS_Store" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.update-site/artifacts.jar" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.update-site/artifacts.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.update-site/content.jar" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.update-site/content.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/src-gen/robotcontrol/Roc.xtextbin" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/src-gen/robotcontrol/Roc.xtextbin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/xtend-gen/robotcontrol/.RocRuntimeModule.xtendbin" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/xtend-gen/robotcontrol/.RocRuntimeModule.xtendbin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/xtend-gen/robotcontrol/.RocStandaloneSetup.xtendbin" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/xtend-gen/robotcontrol/.RocStandaloneSetup.xtendbin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/xtend-gen/robotcontrol/generator/.RocGenerator.xtendbin" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/xtend-gen/robotcontrol/generator/.RocGenerator.xtendbin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/xtend-gen/robotcontrol/scoping/.RocScopeProvider.xtendbin" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/xtend-gen/robotcontrol/scoping/.RocScopeProvider.xtendbin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/xtend-gen/robotcontrol/validation/.RocValidator.xtendbin" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/xtend-gen/robotcontrol/validation/.RocValidator.xtendbin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../README.md" afterPath="$PROJECT_DIR$/../../README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../ROS/README.md" afterPath="$PROJECT_DIR$/../../ROS/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Readme.md" afterPath="$PROJECT_DIR$/../Readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/clion.iml" afterPath="$PROJECT_DIR$/.idea/clion.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Readme.md" afterPath="$PROJECT_DIR$/Readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Joint.cpp" afterPath="$PROJECT_DIR$/src/Joint.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.cpp" afterPath="$PROJECT_DIR$/src/main.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../roc_node/.idea/misc.xml" afterPath="$PROJECT_DIR$/../roc_node/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../roc_node/.idea/roc_node.iml" afterPath="$PROJECT_DIR$/../roc_node/.idea/roc_node.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../roc_node/README.md" afterPath="$PROJECT_DIR$/../roc_node/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../roc_node/scripts/MotionSmoother.py" afterPath="$PROJECT_DIR$/../roc_node/scripts/MotionSmoother.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/README.md" afterPath="$PROJECT_DIR$/../../RocLang/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.feature/pom.xml" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.feature/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.ide/src-gen/robotcontrol/ide/contentassist/antlr/RocParser.java" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.ide/src-gen/robotcontrol/ide/contentassist/antlr/RocParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.ide/src-gen/robotcontrol/ide/contentassist/antlr/internal/InternalRoc.g" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.ide/src-gen/robotcontrol/ide/contentassist/antlr/internal/InternalRoc.g" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.ide/src-gen/robotcontrol/ide/contentassist/antlr/internal/InternalRoc.tokens" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.ide/src-gen/robotcontrol/ide/contentassist/antlr/internal/InternalRoc.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.ide/src-gen/robotcontrol/ide/contentassist/antlr/internal/InternalRocLexer.java" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.ide/src-gen/robotcontrol/ide/contentassist/antlr/internal/InternalRocLexer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.ide/src-gen/robotcontrol/ide/contentassist/antlr/internal/InternalRocParser.java" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.ide/src-gen/robotcontrol/ide/contentassist/antlr/internal/InternalRocParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.update-site/site.xml" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol.update-site/site.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/src-gen/robotcontrol/parser/antlr/internal/InternalRoc.g" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/src-gen/robotcontrol/parser/antlr/internal/InternalRoc.g" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/src-gen/robotcontrol/parser/antlr/internal/InternalRoc.tokens" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/src-gen/robotcontrol/parser/antlr/internal/InternalRoc.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/src-gen/robotcontrol/parser/antlr/internal/InternalRocLexer.java" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/src-gen/robotcontrol/parser/antlr/internal/InternalRocLexer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/src-gen/robotcontrol/parser/antlr/internal/InternalRocParser.java" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/src-gen/robotcontrol/parser/antlr/internal/InternalRocParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/src-gen/robotcontrol/serializer/RocSemanticSequencer.java" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/src-gen/robotcontrol/serializer/RocSemanticSequencer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/src-gen/robotcontrol/services/RocGrammarAccess.java" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/src-gen/robotcontrol/services/RocGrammarAccess.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/src/robotcontrol/Roc.xtext" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/src/robotcontrol/Roc.xtext" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/src/robotcontrol/conversion/MovementConverter.java" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/src/robotcontrol/conversion/MovementConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/src/robotcontrol/validation/RocValidator.xtend" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/src/robotcontrol/validation/RocValidator.xtend" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/xtend-gen/robotcontrol/validation/RocValidator.java" afterPath="$PROJECT_DIR$/../../RocLang/robotcontrol.parent/robotcontrol/xtend-gen/robotcontrol/validation/RocValidator.java" />
     </list>
     <ignored path="platformio.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -528,7 +418,7 @@
     <frame x="0" y="23" width="1920" height="1173" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1517572" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1517572" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
