@@ -48,7 +48,9 @@ The are two possible methods to install the plugin: via an update site or as a m
   * Click add to add a repository
   * Use the following URL: https://idobrusin.github.io/RocLang/update/site.xml
   * Install Roc feature and restart Eclipse.
-  * Confirm with yes, when asked to convert project to Xtext project.
+  * Confirm with yes, when asked to convert project to Xtext project.  
+
+Important note: Eclipse has to to run using Java 1.8, otherwise the Roc plugin wont work.
 
 ### Alternative: Manual installation
 Extract the RocLang.zip and place contents to the Eclipse dropins folder.  
@@ -81,6 +83,9 @@ Following python packages are needed for operating the robot:
   * `yaml`
   * `watchdog`
   * `rospy`  
+  * `numpy`  
+  * `scipy`  
+  * `matplotlib`  
 Install them via `pip`/`pip3`.
 
 ##### Create Roc node
@@ -118,6 +123,10 @@ For a more detailed instruction on how to use PlatformIO see [PlatformIO documen
 
 ## Usage
 ### Create a Roc project in Eclipse
+  1. Create a new project in your Eclipse Workspace (File->New->Java Project or File->New->Project).
+  2. Create a .roc file
+  3. Create a src-gen folder, this will be used as the output for the compiler and should be registered in the RobotController as the folder to watch.   
+
 Important note: When using the plugin, Eclipse asks if the project should be converted to a Xtext project. Press Yes, otherwise the code generation will not work properly.
 
 ##### Options
@@ -153,6 +162,23 @@ rosrun roc RocController.py -p ./
 3. `-P` or `--pattern`: File pattern to be monitored (one or more). Default: `*.json`
 
 Use RocController.py -h to see usage help and arguments.
+
+#### Troubleshooting
+Following package needs to be installed for python3:
+  1. `sudo pip3 install catkin_pkg` 
+Install one by one and try to run the script until all dependencies are resolved.  
+
+The path for the robot configuration located in roc_node/scripts/config/config.json has to be adjusted in RocController.py.
+
+### Run motion control node
+```
+roscore
+```
+
+Run node:
+```
+rosrun roc MotionController.py
+```
 
 ### Start Arduino ROS node
 Start rosserial in order to forward messages to Arduino

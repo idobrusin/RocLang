@@ -8,9 +8,10 @@ import logging
 
 
 class MotionSmoother:
-    def __init__(self, rate=100, show_plot=False):
+    def __init__(self, rate=100, show_plot=False, k=3):
         self.rate = rate  # determines the number of steps for the motions
         self.show_plot = show_plot
+        self.k = k
 
     def smooth(self, data_points):
         """
@@ -21,6 +22,18 @@ class MotionSmoother:
         [('b', 2, 40), ('a', 2, 250)], \
         [('c', 1, 100)], \
         [('b', 4, 250), ('a', 0, 500)]]
+        >>> motion_smoother = MotionSmoother(show_plot=True)
+        >>> joints, trajectories = motion_smoother.smooth(data_points)
+
+        >>> data_points = [\
+        [('a',0, 0),    ('b', 0, 0)], \
+        [('b', 4, 250), ('a', 1, 500)]]
+        >>> motion_smoother = MotionSmoother(show_plot=True)
+        >>> joints, trajectories = motion_smoother.smooth(data_points)
+
+        >>> data_points = [\
+        [('a',0, 0),    ('b', 0, 0)], \
+        [('b', 4, 250), ('a', 2, 250)]]
         >>> motion_smoother = MotionSmoother(show_plot=True)
         >>> joints, trajectories = motion_smoother.smooth(data_points)
         """
@@ -39,7 +52,7 @@ class MotionSmoother:
         # Normalize durations
         durations_norm = self.normalize_duration(durations[-1])
         for i, positions in enumerate(positions_list):
-            tck = interpolate.splrep(durations, positions, k=3, s=0.08)
+            tck = interpolate.splrep(durations, positions, k=self.k, s=0.08)
             trajectories[i] = interpolate.splev(durations_norm, tck)
 
             if self.show_plot:
@@ -58,6 +71,7 @@ class MotionSmoother:
         Scale movements in relation to each other.
         Creates intermediate data points for an equal number of data points
         in a movement for each motion.
+
         :param data_points:
         :return:
         >>> data_points = [\
@@ -72,6 +86,25 @@ class MotionSmoother:
 ('b', 2, 500), ('c', 0, 500)], [('a', 2, 600), ('b', 2, 600), ('c', 1, 600)], \
 [('a', 1.0, 850), ('b', 4, 850), ('c', 1, 850)], [('a', 0, 1100), \
 ('b', 4, 1100), ('c', 1, 1100)]]
+
+        >>> data_points = [\
+        [('a',0, 0)], \
+        [('a', 2, 250)]]
+        >>> motion_smoother.interpolate_data_points(data_points)
+        [[('a', 0, 0)], [('a', 2, 250)], [('a', 2, 251)], [('a', 2, 252)]]
+        >>> data_points = [\
+        [('a',0, 0), ('b',0, 0)], \
+        [('a', 2, 200)], \
+        [('b', 1, 300)]]
+        >>> motion_smoother.interpolate_data_points(data_points)
+        [[('a', 0, 0), ('b', 0, 0)], [('a', 2, 200), ('b', 0, 200)], [('a', 2, 500), ('b', 1, 500)], [('a', 2, 501), \
+('b', 1, 501)]]
+        >>> data_points = [\
+        [('a',0, 0), ('b',0, 0)], \
+        [('a', 2, 200), ('b', 1, 200)]]
+        >>> motion_smoother.interpolate_data_points(data_points)
+        [[('a', 0, 0), ('b', 0, 0)], [('a', 2, 200), ('b', 1, 200)], [('a', 2, 201), ('b', 1, 201)], [('a', 2, 202), \
+('b', 1, 202)]]
         """
         movements = list()
         movements.append(data_points[0])
@@ -79,6 +112,7 @@ class MotionSmoother:
         # Stores last known positions for interpolating intermediate points
         last_positions = self.get_joint_position_dict(data_points[0])  # Init with first data point
         last_duration = 0
+
         for movement in data_points[1:]:  # first data point contains init_positions
             # Appends interpolated motions and updates last position for further computation
             interpolated_movement, last_positions, duration = self.interpolate_movement(movement, last_positions)
@@ -86,6 +120,18 @@ class MotionSmoother:
                 inter_mov = self.increase_duration_for_movement(inter_mov, last_duration)
                 movements.append(inter_mov)
             last_duration = last_duration + duration
+
+        # Insert intermediate movements, so the smoother will work correctly.
+        offset = 1  # used to append motion with slightly higher duration
+        last_movement = movements[-1]
+        while len(movements) <= self.k:
+            movement = list()
+            for motion in last_movement:
+                # Append a motion with duration + offset millisecond to the the data points
+                movement.append((motion[0], motion[1], motion[2] + offset))
+            offset += 1
+            movements.append(movement)
+
         # Returns sorted list for keeping order after smoothing
         return self.sort_data_by_name(movements)
 
@@ -136,9 +182,19 @@ class MotionSmoother:
             current_position = motion[1]
             current_duration = motion[2]
 
+            # Skip motion if already fixed position: can happen when duration of previous motion was the same as current
+            if current_joint_name in fixed_joints:
+                continue
+
             # Process current motion
             last_positions[current_joint_name] = current_position
             fixed_joints.append(current_joint_name)
+
+            # Process all motions with same duration as current motion
+            for j in range(i + 1, len(movement)):
+                if movement[j][2] == current_duration:  # if duration is the same, append motion
+                    last_positions[movement[j][0]] = movement[j][1]  # Update last position of joint
+                    fixed_joints.append(movement[j][0])  # add to fixed joints
 
             # Append value for already fixed motions (including current motion)
             for fixed_joint in fixed_joints:
@@ -146,11 +202,16 @@ class MotionSmoother:
 
             # Insert new data point for each non-fixed motion for current duration
             for j in range(i + 1, len(movement)):
+                # Skip already fixed joints, this happens for motions with the same duration as the current
+                if movement[j][0] in fixed_joints:
+                    continue
+
                 # Linear interpolation between two points:
                 # pos = init_pos + (current_dur - init_dur) / (goal_dur - init_dur) * (init_pos - goal_pos)
                 # where init_dur = 0, since a movement starts at duration 0.
                 # Resulting formula:
                 # pos = init_pos + (current_dur) / (goal_dur) * (init_pos - goal_pos)
+
                 init_position = init_positions[movement[j][0]]
                 interpolated_position = init_position + current_duration / movement[j][2] * (movement[j][1] - init_position)
                 motion_list.append((movement[j][0], interpolated_position, current_duration))
@@ -267,16 +328,16 @@ class MotionSmoother:
         [ 0 10 20 30 40 50]
         """
         num_joints = len(movements[0])  # equals number of joints in movements
-        positions = list()
+        position_list = list()
         for i in range(num_joints):
-            positions.append(list())
+            position_list.append(list())
         durations = list()
 
         for movement in movements:
             durations.append(movement[0][2])
             for i, motion in enumerate(movement):
-                positions[i].append(motion[1])
-        return np.array(positions,), np.array(durations)
+                position_list[i].append(motion[1])
+        return np.array(position_list), np.array(durations)
 
     def normalize_duration(self, duration):
         """
