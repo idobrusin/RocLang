@@ -8,8 +8,6 @@ from models.Joint import Joint
 class ActionUnitJointAdapter:
     def __init__(self, config_file):
         """
-        >>> action_unit_mapper = ActionUnitJointAdapter("config/config.json")
-
         :param config_file:
         """
 
@@ -47,12 +45,12 @@ class ActionUnitJointAdapter:
         >>> print(joint_list[0].min_angle)
         0.0
         >>> print(joint_list[0].max_angle)
-        -1.57
+        1.57
         >>> joint_list = action_unit_mapper.action_unit_joint_dict["52"]
         >>> print(joint_list[0].min_angle)
         0.0
         >>> print(joint_list[0].max_angle)
-        1.57
+        -1.57
 
         :param joint_info:
         :return:

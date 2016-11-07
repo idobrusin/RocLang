@@ -15,8 +15,9 @@ class FileEventHandler(PatternMatchingEventHandler):
 
         # file was updated
         print("Created file: %s", event.src_path)
-        if self.callback:
-            self.callback(event.src_path)
+        print("Skips file creation - Enable in FileEventHandler")
+        # if self.callback:
+        #     self.callback(event.src_path)
 
     def on_modified(self, event):
         super(FileEventHandler, self).on_modified(event)
@@ -30,4 +31,3 @@ class FileEventHandler(PatternMatchingEventHandler):
         print("File moved, operation not supported. ")
         print("vim and gedit use buffers to edit files. Disable behaviour in settings.")
         print("See http://stackoverflow.com/questions/34821933/python-watchdog-event-not-returning-entire-src-path")
-
