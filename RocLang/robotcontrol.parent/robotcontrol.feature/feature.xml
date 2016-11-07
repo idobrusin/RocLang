@@ -22,10 +22,6 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
       <discovery label="Roc Github repository" url="https://idobrusin.github.io/RocLang/"/>
    </url>
 
-   <requires>
-      <import plugin="org.eclipse.xtext"/>
-   </requires>
-
    <plugin
          id="robotcontrol"
          download-size="0"

@@ -115,6 +115,7 @@ platformIO can also be used in an IDE (see [platformIO integration](http://platf
 To program the Arduino, `rosserial` must be installed and installed in the sketchbook/libraries folder.
 [Installation instructions](http://wiki.ros.org/rosserial_arduino/Tutorials/Arduino%20IDE%20Setup)
 
+
 ##### Flash Arduino using platformIO
 Use the following commands to flash the firmware on the Arduino.
   * `platformio run --target upload` to build and upload firmware to all devices specified in the `platformio.ini` file (see [PlatformIO Quickstart](http://docs.platformio.org/en/stable/quickstart.html) for details)
