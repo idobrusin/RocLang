@@ -3,7 +3,7 @@
    <description name="Robot control language (Roc)" url="https://github.com/idobrusin/RocLang">
       The Robot control language is a domain specific language for controlling robotic heads.
    </description>
-   <feature url="features/robotcontrol.roc_1.0.0.beta.jar" id="robotcontrol.roc" version="1.0.0.beta">
+   <feature url="features/robotcontrol.roc_1.0.1.beta.jar" id="robotcontrol.roc" version="1.0.1.beta">
       <category name="RobotControlLanguage"/>
    </feature>
    <category-def name="RobotControlLanguage" label="Robot Control Language">
