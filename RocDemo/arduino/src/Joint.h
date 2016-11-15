@@ -6,18 +6,18 @@
  */
 class Joint {
   public:
-    Joint(const char *name, float jointMinPosition, float jointMaxPosition, int servoIndex, int servoMinAngle, int servoMaxAngle);
+    Joint(const char *name, float jointMinPosition, float jointMaxPosition, int servoIndex, float servoMinAngle, float servoMaxAngle);
 
     // Members
     const char *name;
     float jointMinPosition;
-    float jointMaxPositiom;
+    float jointMaxPosition;
     int servoIndex;
-    int servoMinAngle;
-    int servoMaxAngle;
+    float servoMinAngle;
+    float servoMaxAngle;
 
     // Methods
-    float convertJointPositionToServoAngle(float position);
+    int convertJointPositionToServoAngle(float position);
 };
 
 

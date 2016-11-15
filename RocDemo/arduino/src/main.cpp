@@ -39,27 +39,27 @@ int INDEX_EYE_LEFTRIGHT         = 4;
 int INDEX_JAW                   = 5;
 
 // Pin of servo connected to given head part
-int PIN_HEAD_TILT               = 5;
-int PIN_HEAD_UPDOWN             = 2;
-int PIN_HEAD_LEFTRIGHT          = 3;
-int PIN_EYES_UPDOWN             = 10;
-int PIN_EYE_LEFTRIGHT           = 11;
-int PIN_JAW                     = 9;
+int PIN_HEAD_TILT               = 4;
+int PIN_HEAD_UPDOWN             = 11;
+int PIN_HEAD_LEFTRIGHT          = 9;
+int PIN_EYES_UPDOWN             = 6;
+int PIN_EYE_LEFTRIGHT           = 7;
+int PIN_JAW                     = 3;
 
 // Min and max angles of servos - DO NOT CHANGE WITHOUT TESTING
-int MIN_ANGLE_HEAD_TILT         = 0;
-int MIN_ANGLE_HEAD_UPDOWN       = 0;
-int MIN_ANGLE_HEAD_LEFTRIGHT    = 50;   // Correct
-int MIN_ANGLE_EYES_UPDOWN       = 0;    // Correct
-int MIN_ANGLE_EYES_LEFTRIGHT    = 55;   // Correct
-int MIN_ANGLE_JAW               = 0;    // Correct
+float MIN_ANGLE_HEAD_TILT         = 90;   // Correct
+float MIN_ANGLE_HEAD_UPDOWN       = 50;   // Correct
+float MIN_ANGLE_HEAD_LEFTRIGHT    = 50;   // Correct1
+float MIN_ANGLE_EYES_UPDOWN       = 40;   // Correct1
+float MIN_ANGLE_EYES_LEFTRIGHT    = 20;   // Correct1
+float MIN_ANGLE_JAW               = 45;   // Correct1
 
-int MAX_ANGLE_HEAD_TILT         = 180;
-int MAX_ANGLE_HEAD_UPDOWN       = 180;
-int MAX_ANGLE_HEAD_LEFTRIGHT    = 160;  // Correct
-int MAX_ANGLE_EYES_UPDOWN       = 90;   // Correct
-int MAX_ANGLE_EYES_LEFTRIGHT    = 125;  // Correct
-int MAX_ANGLE_JAW               = 60;   // Correct
+float MAX_ANGLE_HEAD_TILT         = 90;   // Correct
+float MAX_ANGLE_HEAD_UPDOWN       = 130;  // Correct
+float MAX_ANGLE_HEAD_LEFTRIGHT    = 150;  // Correct1
+float MAX_ANGLE_EYES_UPDOWN       = 95;  // Correct1
+float MAX_ANGLE_EYES_LEFTRIGHT    = 90;   // Correct1
+float MAX_ANGLE_JAW               = 90;   // Correct1
 
 
 /**
@@ -71,12 +71,12 @@ void initServosJoints() {
         servos[i] = Servo();
     }
 
-    servos[INDEX_HEAD_TILT].attach(      PIN_HEAD_TILT,      MIN_ANGLE_HEAD_TILT,      MAX_ANGLE_HEAD_TILT);
-    servos[INDEX_HEAD_UPDOWN].attach(    PIN_HEAD_UPDOWN,    MIN_ANGLE_HEAD_UPDOWN,    MAX_ANGLE_HEAD_UPDOWN);
-    servos[INDEX_HEAD_LEFTRIGHT].attach( PIN_HEAD_LEFTRIGHT, MIN_ANGLE_HEAD_LEFTRIGHT, MAX_ANGLE_HEAD_LEFTRIGHT);
-    servos[INDEX_EYES_UPDOWN].attach(    PIN_EYES_UPDOWN,    MIN_ANGLE_EYES_UPDOWN,    MAX_ANGLE_EYES_UPDOWN);
-    servos[INDEX_EYE_LEFTRIGHT].attach(  PIN_EYE_LEFTRIGHT,  MIN_ANGLE_EYES_LEFTRIGHT, MAX_ANGLE_EYES_LEFTRIGHT);
-    servos[INDEX_JAW].attach(            PIN_JAW,            MIN_ANGLE_JAW,            MAX_ANGLE_JAW);
+    servos[INDEX_HEAD_TILT].attach(      PIN_HEAD_TILT);
+    servos[INDEX_HEAD_UPDOWN].attach(    PIN_HEAD_UPDOWN);
+    servos[INDEX_HEAD_LEFTRIGHT].attach( PIN_HEAD_LEFTRIGHT);
+    servos[INDEX_EYES_UPDOWN].attach(    PIN_EYES_UPDOWN);
+    servos[INDEX_EYE_LEFTRIGHT].attach(  PIN_EYE_LEFTRIGHT);
+    servos[INDEX_JAW].attach(            PIN_JAW);
 
     jointList[INDEX_HEAD_TILT]      = new Joint("head_tilt",           -0.30f,  0.30f,  INDEX_HEAD_TILT,      MIN_ANGLE_HEAD_TILT,      MAX_ANGLE_HEAD_TILT);
     jointList[INDEX_HEAD_UPDOWN]    = new Joint("head_updown",         -0.30f,  0.30f,  INDEX_HEAD_UPDOWN,    MIN_ANGLE_HEAD_UPDOWN,    MAX_ANGLE_HEAD_UPDOWN);
@@ -114,13 +114,6 @@ void servoCallback(const sensor_msgs::JointState &cmd_msg) {
 ros::Subscriber<sensor_msgs::JointState> sub("joint_command", servoCallback);
 
 void setup() {
-//    Servo servo = Servo();
-//    servo.attach(9);
-////    for (int i = 70; i < 80; i++) {
-//        servo.write(50);
-////        delay(2000);
-////    }
-
     pinMode(13, OUTPUT);
     nh.initNode();
     nh.subscribe(sub);
@@ -132,3 +125,41 @@ void loop() {
     nh.spinOnce();
     delay(1);
 }
+
+//
+//Servo pinNine;  // create servo object to control a servo
+//Servo pinTen;  // create servo object to control a servo
+//// twelve servo objects can be created on most boards
+//
+//int pos = 0;    // variable to store the servo position
+//bool isSweeping = false;
+//
+//void setup() {
+//    pinNine.attach(9);  // attaches the servo on pin 9 to the servo object
+//    pinTen.attach(10);  // attaches the servo on pin 9 to the servo object
+//    isSweeping = false;
+////    isSweeping = true;
+//}
+//
+//void loop() {
+//    int min_leftright = 50;
+//    int max_leftright = 130;
+//
+//    if (isSweeping) {
+//        for (pos = min_leftright; pos <= max_leftright; pos += 1) {
+//            pinNine.write(pos);
+//            delay(20);
+//        }
+//        for (pos = max_leftright; pos >= min_leftright; pos -= 1) {
+//            pinNine.write(pos);              // tell servo to go to position in variable 'pos'
+//            delay(20);                       // waits 15ms for the servo to reach the position
+//        }
+//    } else {
+//        int angle = 50;
+//        pinNine.write(angle);
+//        delay(100);
+//
+//    }
+//    pinTen.write(90);
+//
+//}
