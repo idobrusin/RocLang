@@ -8,13 +8,14 @@ float mapfloat(float x, float in_min, float in_max, float out_min, float out_max
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
-Joint::Joint(const char *name, float jointMinPosition, float jointMaxPosition, int servoIndex, float servoMinAngle, float servoMaxAngle) {
+Joint::Joint(const char *name, float jointMinPosition, float jointMaxPosition, int servoIndex, float servoMinAngle, float servoMaxAngle, int servoPin) {
     this->name = name;
     this->jointMinPosition = jointMinPosition;
     this->jointMaxPosition = jointMaxPosition;
     this->servoIndex = servoIndex;
     this->servoMinAngle = servoMinAngle;
     this->servoMaxAngle = servoMaxAngle;
+    this->servoPin = servoPin;
 }
 
 int Joint::convertJointPositionToServoAngle(float position) {

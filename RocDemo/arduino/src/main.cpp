@@ -78,17 +78,26 @@ void initServosJoints() {
     servos[INDEX_EYE_LEFTRIGHT].attach(  PIN_EYE_LEFTRIGHT);
     servos[INDEX_JAW].attach(            PIN_JAW);
 
-    jointList[INDEX_HEAD_TILT]      = new Joint("head_tilt",           -0.30f,  0.30f,  INDEX_HEAD_TILT,      MIN_ANGLE_HEAD_TILT,      MAX_ANGLE_HEAD_TILT);
-    jointList[INDEX_HEAD_UPDOWN]    = new Joint("head_updown",         -0.30f,  0.30f,  INDEX_HEAD_UPDOWN,    MIN_ANGLE_HEAD_UPDOWN,    MAX_ANGLE_HEAD_UPDOWN);
-    jointList[INDEX_HEAD_LEFTRIGHT] = new Joint("head_leftright",      -1.57f,  1.57f,  INDEX_HEAD_LEFTRIGHT, MIN_ANGLE_HEAD_LEFTRIGHT, MAX_ANGLE_HEAD_LEFTRIGHT);
-    jointList[INDEX_EYES_UPDOWN]    = new Joint("eyes_updown",         -0.45f,  0.45f,  INDEX_EYES_UPDOWN,    MIN_ANGLE_EYES_UPDOWN,    MAX_ANGLE_EYES_UPDOWN);
-    jointList[INDEX_EYE_LEFTRIGHT]  = new Joint("eye_leftright",       -0.45f,  0.45f,  INDEX_EYE_LEFTRIGHT,  MIN_ANGLE_EYES_LEFTRIGHT, MAX_ANGLE_EYES_LEFTRIGHT);
-    jointList[INDEX_JAW]            = new Joint("jaw",                  0.00f,  0.15f,  INDEX_JAW,            MIN_ANGLE_JAW,            MAX_ANGLE_JAW);
+    jointList[INDEX_HEAD_TILT]      = new Joint("head_tilt",           -0.30f,  0.30f,  INDEX_HEAD_TILT,      MIN_ANGLE_HEAD_TILT,      MAX_ANGLE_HEAD_TILT, PIN_HEAD_TILT);
+    jointList[INDEX_HEAD_UPDOWN]    = new Joint("head_updown",         -0.30f,  0.30f,  INDEX_HEAD_UPDOWN,    MIN_ANGLE_HEAD_UPDOWN,    MAX_ANGLE_HEAD_UPDOWN, PIN_HEAD_UPDOWN);
+    jointList[INDEX_HEAD_LEFTRIGHT] = new Joint("head_leftright",      -1.57f,  1.57f,  INDEX_HEAD_LEFTRIGHT, MIN_ANGLE_HEAD_LEFTRIGHT, MAX_ANGLE_HEAD_LEFTRIGHT, PIN_HEAD_LEFTRIGHT);
+    jointList[INDEX_EYES_UPDOWN]    = new Joint("eyes_updown",         -0.45f,  0.45f,  INDEX_EYES_UPDOWN,    MIN_ANGLE_EYES_UPDOWN,    MAX_ANGLE_EYES_UPDOWN, PIN_EYES_UPDOWN);
+    jointList[INDEX_EYE_LEFTRIGHT]  = new Joint("eye_leftright",       -0.45f,  0.45f,  INDEX_EYE_LEFTRIGHT,  MIN_ANGLE_EYES_LEFTRIGHT, MAX_ANGLE_EYES_LEFTRIGHT, PIN_EYE_LEFTRIGHT);
+    jointList[INDEX_JAW]            = new Joint("jaw",                  0.00f,  0.15f,  INDEX_JAW,            MIN_ANGLE_JAW,            MAX_ANGLE_JAW, PIN_JAW);
 }
 
 Joint* findJointByName(char* name) {
     for (unsigned int i = 0; i < NUM_SERVOS; i++) {
         if (strcmp(name, jointList[i]->name) == 0) {
+            return jointList[i];
+        };
+    }
+    return NULL;
+}
+
+Joint* findJointByPinString(char *name) {
+    for (unsigned int i = 0; i < NUM_SERVOS; i++) {
+        if (atoi(name) == jointList[i]->servoPin) {
             return jointList[i];
         };
     }
@@ -103,7 +112,8 @@ void servoCallback(const sensor_msgs::JointState &cmd_msg) {
 
     for (unsigned int i = 0; i < cmd_msg.name_length; i++) {
         // Retrieve joint configuration
-        Joint* joint = findJointByName(cmd_msg.name[i]);
+//        Joint* joint = findJointByName(cmd_msg.name[i]);
+        Joint* joint = findJointByPinString(cmd_msg.name[i]);
         if (joint != NULL) {
             // Move servo to specified position
             servos[joint->servoIndex].write(joint->convertJointPositionToServoAngle(cmd_msg.position[i]));
@@ -111,7 +121,7 @@ void servoCallback(const sensor_msgs::JointState &cmd_msg) {
     }
 }
 
-ros::Subscriber<sensor_msgs::JointState> sub("joint_command", servoCallback);
+ros::Subscriber<sensor_msgs::JointState> sub("joint_command_pins", servoCallback);
 
 void setup() {
     pinMode(13, OUTPUT);

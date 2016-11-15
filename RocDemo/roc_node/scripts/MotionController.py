@@ -43,6 +43,7 @@ class MotionController:
         # ROS specific init
         self.roc_command_subscriber = rospy.Subscriber('roc_command', CommandMsg, self.roc_command_callback)
         self.joint_command_publisher = rospy.Publisher('joint_command', JointState, queue_size=10)
+        self.joint_command_pin_publisher = rospy.Publisher('joint_command_pins', JointState, queue_size=10)
 
         # # Start ROS loop
         self.run()
@@ -75,6 +76,22 @@ class MotionController:
         Main loop, runs until ROS node is shut down
         """
         print("Running main loop")
+
+        # PIN_HEAD_TILT = 4;
+        # PIN_HEAD_UPDOWN = 11;
+        # PIN_HEAD_LEFTRIGHT = 9;
+        # PIN_EYES_UPDOWN = 6;
+        # PIN_EYE_LEFTRIGHT = 7;
+        # PIN_JAW = 3;
+
+        joint_pin_dict = dict()
+        joint_pin_dict['head_leftright'] = '9'
+        joint_pin_dict['head_tilt'] = '4'
+        joint_pin_dict['head_updown'] = '11'
+        joint_pin_dict['eyes_updown'] = '6'
+        joint_pin_dict['eye_leftright'] = '7'
+        joint_pin_dict['jaw'] = '3'
+
         while not rospy.is_shutdown():
             if not self.__roc_command_queue.empty():
                 print("Run Roc programm")
@@ -99,10 +116,27 @@ class MotionController:
                     cmd.position = self.__motion_smoother.get_position_list_from_trajectory(trajectories, i)
                     cmd.velocity = []
                     cmd.effort = []
+
+                    cmd2 = JointState()
+                    cmd2.header.stamp = rospy.get_rostime()
+                    cmd2.name = self.get_joint_pins_from_names(joint_pin_dict, joint_names)
+                    cmd2.position = self.__motion_smoother.get_position_list_from_trajectory(trajectories, i)
+                    cmd2.velocity = []
+                    cmd2.effort = []
+
                     self.joint_command_publisher.publish(cmd)
+                    self.joint_command_pin_publisher.publish(cmd2)
                     self.__rate.sleep()
 
             self.__rate.sleep()
+
+    def get_joint_pins_from_names(self, joint_pin_dict, joint_names):
+        result = list()
+        for joint_name in joint_names:
+            result.append(joint_pin_dict[joint_name])
+        return result
+
+
 
     def get_data_point_for_roc_command(self, current_joint_positions, roc_command):
         """
