@@ -5,6 +5,7 @@ import numpy as np
 from scipy import interpolate
 import matplotlib.pyplot as plt
 import logging
+import math
 
 
 class MotionSmoother:
@@ -51,8 +52,32 @@ class MotionSmoother:
 
         # Normalize durations
         durations_norm = self.normalize_duration(durations[-1])
+
+        control_rate = 40 # controlles after how many ms seconds we insert a knot to control the spline
+        # Avoid overshooting by inserting virtual intermediate way points to force the smoother
+        # to go through it, reducing overshoot and maintaing smooth trajectory.
+        durations_controlled = list() # duration list updated with controlled timing
+        diff_list = list() # maintin the duration diff
+        for i in range(0, len(durations) - 1):
+            diff = durations[i+1] - durations[i]
+            temp_list = np.linspace(durations[i], durations[i+1], diff/control_rate, False)
+            temp_list = temp_list.tolist()
+            durations_controlled = np.append(durations_controlled, temp_list)
+            diff_list.append(diff/control_rate)
+        np.append(durations_controlled, durations[-1]) # append last input in list as it is not added by append
+
+
+        
         for i, positions in enumerate(positions_list):
-            tck = interpolate.splrep(durations, positions, k=self.k, s=0.08)
+            positions_controlled = list() # list to be filled with updated positons controlled
+            for j in range(0, len(positions) - 1):
+                diff = positions[j+1] - positions[j]
+                temp_list = np.linspace(positions[j], positions[j+1], diff_list[j], False)
+                temp_list = temp_list.tolist()
+                positions_controlled = np.append(positions_controlled, temp_list)
+            np.append(positions_controlled, positions[-1])
+
+            tck = interpolate.splrep(durations_controlled, positions_controlled, k=self.k, s=0, per=0)
             trajectories[i] = interpolate.splev(durations_norm, tck)
 
             if self.show_plot:
@@ -63,7 +88,6 @@ class MotionSmoother:
         if self.show_plot:
             plt.show()
 
-        # print(joint_names, trajectories)
         return joint_names, trajectories
 
     def interpolate_data_points(self, data_points):
@@ -372,3 +396,23 @@ class MotionSmoother:
         for i in range(len(trajectories)):
             result.append(trajectories[i][pos])
         return result
+
+if  __name__ =='__main__':
+
+    data_points = [\
+    [('a',0, 0),    ('b', 0, 0), ('c', 0, 0)], \
+    [('b', 2, 40), ('a', 2, 250)], \
+    [('c', 1, 100)], \
+    [('b', 4, 250), ('a', 0, 500)]]
+    motion_smoother = MotionSmoother(show_plot=True)
+    joints, trajectories = motion_smoother.smooth(data_points)
+    
+
+
+    # data_points = [\
+    # [('c', 0, 0)], \
+    # [('c', 0, 250)], \
+    # [('c', 1, 100)], \
+    # [('c', 0, 500)]]
+    # motion_smoother = MotionSmoother(show_plot=True)
+    # joints, trajectories = motion_smoother.smooth(data_points)
