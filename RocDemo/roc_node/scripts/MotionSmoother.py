@@ -397,15 +397,16 @@ class MotionSmoother:
             result.append(trajectories[i][pos])
         return result
 
-if  __name__ =='__main__':
+# main method for testing
+# if  __name__ =='__main__':
 
-    data_points = [\
-    [('a',0, 0),    ('b', 0, 0), ('c', 0, 0)], \
-    [('b', 2, 40), ('a', 2, 250)], \
-    [('c', 1, 100)], \
-    [('b', 4, 250), ('a', 0, 500)]]
-    motion_smoother = MotionSmoother(show_plot=True)
-    joints, trajectories = motion_smoother.smooth(data_points)
+#     data_points = [\
+#     [('a',0, 0),    ('b', 0, 0), ('c', 0, 0)], \
+#     [('b', 2, 40), ('a', 2, 250)], \
+#     [('c', 1, 100)], \
+#     [('b', 4, 250), ('a', 0, 500)]]
+#     motion_smoother = MotionSmoother(show_plot=True)
+#     joints, trajectories = motion_smoother.smooth(data_points)
     
 
 
